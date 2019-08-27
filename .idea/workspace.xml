@@ -6,9 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="796b70b0-39d7-4e5f-a4eb-c17fa66cdeb1" name="Default Changelist" comment="update json.jar version">
+    <list default="true" id="796b70b0-39d7-4e5f-a4eb-c17fa66cdeb1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +52,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.44942528" />
-    <property name="settings.editor.selected.configurable" value="spring" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -224,7 +223,8 @@
       <option name="presentableId" value="Default" />
       <updated>1566788560391</updated>
       <workItem from="1566788563132" duration="14883000" />
-      <workItem from="1566831017091" duration="4012000" />
+      <workItem from="1566831017091" duration="4106000" />
+      <workItem from="1566870771382" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1566835109015</created>
@@ -247,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566835928566</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test commit">
+      <created>1566836276970</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566836276970</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,15 +275,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test commit" />
     <MESSAGE value="update json.jar version" />
-    <option name="LAST_COMMIT_MESSAGE" value="update json.jar version" />
+    <MESSAGE value="test commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
   </component>
 </project>
