@@ -23,4 +23,7 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
 
+<!--    引入静态资源-->
+    <mvc:resources mapping="**/**" location="WEB-INF/"/>
+
 </beans>

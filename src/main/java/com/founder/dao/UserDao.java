@@ -11,8 +11,6 @@ public interface UserDao {
 
     List<User> selectAll();
 
-    void delete();
-
-    void insert(User user);
+    String findPasswordByUsername(String username);
 
 }
