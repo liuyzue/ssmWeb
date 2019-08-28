@@ -21,7 +21,7 @@
 <div class="" id="home">
     <nav class="navbar navbar-expand-xl">
         <div class="container h-100">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index">
                 <h1 class="tm-site-title mb-0">Product Admin</h1>
             </a>
             <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -52,12 +52,6 @@
                             <a class="dropdown-item" href="#">Weekly Report</a>
                             <a class="dropdown-item" href="#">Yearly Report</a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">
-                            <i class="fas fa-shopping-cart"></i>
-                            Products
-                        </a>
                     </li>
 
                     <li class="nav-item">
@@ -95,7 +89,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="text-white mt-5 mb-5">Welcome back, <b>Admin</b></p>
+                <p class="text-white mt-5 mb-5">Welcome back, <b>${username}</b></p>
             </div>
         </div>
         <!-- row -->
@@ -125,70 +119,6 @@
                     <h2 class="tm-block-title">Notification List</h2>
                     <div class="tm-notification-items">
                         <div class="media tm-notification-item">
-                            <div class="tm-gray-circle"><img src="img/notification-01.jpg" alt="Avatar Image" class="rounded-circle"></div>
-                            <div class="media-body">
-                                <p class="mb-2"><b>Jessica</b> and <b>6 others</b> sent you new <a href="#"
-                                                                                                   class="tm-notification-link">product updates</a>. Check new orders.</p>
-                                <span class="tm-small tm-text-color-secondary">6h ago.</span>
-                            </div>
-                        </div>
-                        <div class="media tm-notification-item">
-                            <div class="tm-gray-circle"><img src="img/notification-02.jpg" alt="Avatar Image" class="rounded-circle"></div>
-                            <div class="media-body">
-                                <p class="mb-2"><b>Oliver Too</b> and <b>6 others</b> sent you existing <a href="#"
-                                                                                                           class="tm-notification-link">product updates</a>. Read more reports.</p>
-                                <span class="tm-small tm-text-color-secondary">6h ago.</span>
-                            </div>
-                        </div>
-                        <div class="media tm-notification-item">
-                            <div class="tm-gray-circle"><img src="img/notification-03.jpg" alt="Avatar Image" class="rounded-circle"></div>
-                            <div class="media-body">
-                                <p class="mb-2"><b>Victoria</b> and <b>6 others</b> sent you <a href="#"
-                                                                                                class="tm-notification-link">order updates</a>. Read order information.</p>
-                                <span class="tm-small tm-text-color-secondary">6h ago.</span>
-                            </div>
-                        </div>
-                        <div class="media tm-notification-item">
-                            <div class="tm-gray-circle"><img src="img/notification-01.jpg" alt="Avatar Image" class="rounded-circle"></div>
-                            <div class="media-body">
-                                <p class="mb-2"><b>Laura Cute</b> and <b>6 others</b> sent you <a href="#"
-                                                                                                  class="tm-notification-link">product records</a>.</p>
-                                <span class="tm-small tm-text-color-secondary">6h ago.</span>
-                            </div>
-                        </div>
-                        <div class="media tm-notification-item">
-                            <div class="tm-gray-circle"><img src="img/notification-02.jpg" alt="Avatar Image" class="rounded-circle"></div>
-                            <div class="media-body">
-                                <p class="mb-2"><b>Samantha</b> and <b>6 others</b> sent you <a href="#"
-                                                                                                class="tm-notification-link">order stuffs</a>.</p>
-                                <span class="tm-small tm-text-color-secondary">6h ago.</span>
-                            </div>
-                        </div>
-                        <div class="media tm-notification-item">
-                            <div class="tm-gray-circle"><img src="img/notification-03.jpg" alt="Avatar Image" class="rounded-circle"></div>
-                            <div class="media-body">
-                                <p class="mb-2"><b>Sophie</b> and <b>6 others</b> sent you <a href="#"
-                                                                                              class="tm-notification-link">product updates</a>.</p>
-                                <span class="tm-small tm-text-color-secondary">6h ago.</span>
-                            </div>
-                        </div>
-                        <div class="media tm-notification-item">
-                            <div class="tm-gray-circle"><img src="img/notification-01.jpg" alt="Avatar Image" class="rounded-circle"></div>
-                            <div class="media-body">
-                                <p class="mb-2"><b>Lily A</b> and <b>6 others</b> sent you <a href="#"
-                                                                                              class="tm-notification-link">product updates</a>.</p>
-                                <span class="tm-small tm-text-color-secondary">6h ago.</span>
-                            </div>
-                        </div>
-                        <div class="media tm-notification-item">
-                            <div class="tm-gray-circle"><img src="img/notification-02.jpg" alt="Avatar Image" class="rounded-circle"></div>
-                            <div class="media-body">
-                                <p class="mb-2"><b>Amara</b> and <b>6 others</b> sent you <a href="#"
-                                                                                             class="tm-notification-link">product updates</a>.</p>
-                                <span class="tm-small tm-text-color-secondary">6h ago.</span>
-                            </div>
-                        </div>
-                        <div class="media tm-notification-item">
                             <div class="tm-gray-circle"><img src="img/notification-03.jpg" alt="Avatar Image" class="rounded-circle"></div>
                             <div class="media-body">
                                 <p class="mb-2"><b>Cinthela</b> and <b>6 others</b> sent you <a href="#"
@@ -199,7 +129,6 @@
                     </div>
                 </div>
             </div>
-            <div class="tlinks">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
             <div class="col-12 tm-block-col">
                 <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
                     <h2 class="tm-block-title">Orders List</h2>
@@ -216,126 +145,6 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th scope="row"><b>#122349</b></th>
-                            <td>
-                                <div class="tm-status-circle moving">
-                                </div>Moving
-                            </td>
-                            <td><b>Oliver Trag</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>485 km</b></td>
-                            <td>16:00, 12 NOV 2018</td>
-                            <td>08:00, 18 NOV 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122348</b></th>
-                            <td>
-                                <div class="tm-status-circle pending">
-                                </div>Pending
-                            </td>
-                            <td><b>Jacob Miller</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>360 km</b></td>
-                            <td>11:00, 10 NOV 2018</td>
-                            <td>04:00, 14 NOV 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122347</b></th>
-                            <td>
-                                <div class="tm-status-circle cancelled">
-                                </div>Cancelled
-                            </td>
-                            <td><b>George Wilson</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>340 km</b></td>
-                            <td>12:00, 22 NOV 2018</td>
-                            <td>06:00, 28 NOV 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122346</b></th>
-                            <td>
-                                <div class="tm-status-circle moving">
-                                </div>Moving
-                            </td>
-                            <td><b>William Aung</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>218 km</b></td>
-                            <td>15:00, 10 NOV 2018</td>
-                            <td>09:00, 14 NOV 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122345</b></th>
-                            <td>
-                                <div class="tm-status-circle pending">
-                                </div>Pending
-                            </td>
-                            <td><b>Harry Ryan</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>280 km</b></td>
-                            <td>15:00, 11 NOV 2018</td>
-                            <td>09:00, 17 NOV 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122344</b></th>
-                            <td>
-                                <div class="tm-status-circle pending">
-                                </div>Pending
-                            </td>
-                            <td><b>Michael Jones</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>218 km</b></td>
-                            <td>18:00, 12 OCT 2018</td>
-                            <td>06:00, 18 OCT 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122343</b></th>
-                            <td>
-                                <div class="tm-status-circle moving">
-                                </div>Moving
-                            </td>
-                            <td><b>Timmy Davis</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>218 km</b></td>
-                            <td>12:00, 10 OCT 2018</td>
-                            <td>08:00, 18 OCT 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122342</b></th>
-                            <td>
-                                <div class="tm-status-circle moving">
-                                </div>Moving
-                            </td>
-                            <td><b>Oscar Phyo</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>420 km</b></td>
-                            <td>15:30, 06 OCT 2018</td>
-                            <td>09:30, 16 OCT 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122341</b></th>
-                            <td>
-                                <div class="tm-status-circle moving">
-                                </div>Moving
-                            </td>
-                            <td><b>Charlie Brown</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>300 km</b></td>
-                            <td>11:00, 10 OCT 2018</td>
-                            <td>03:00, 14 OCT 2018</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"><b>#122340</b></th>
-                            <td>
-                                <div class="tm-status-circle cancelled">
-                                </div>Cancelled
-                            </td>
-                            <td><b>Wilson Cookies</b></td>
-                            <td><b>London, UK</b></td>
-                            <td><b>218 km</b></td>
-                            <td>17:30, 12 OCT 2018</td>
-                            <td>08:30, 22 OCT 2018</td>
-                        </tr>
                         <tr>
                             <th scope="row"><b>#122339</b></th>
                             <td>
@@ -355,13 +164,7 @@
         </div>
     </div>
     <footer class="tm-footer row tm-mt-small">
-        <div class="col-12 font-weight-light">
-            <p class="text-center text-white mb-0 px-4 small">
-                Copyright &copy; <b>2018</b> Template Mo All rights reserved.
 
-                More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-            </p>
-        </div>
     </footer>
 </div>
 

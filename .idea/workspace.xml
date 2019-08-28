@@ -7,14 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="796b70b0-39d7-4e5f-a4eb-c17fa66cdeb1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/TestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/TestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/TestServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/mvcConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/mvcConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/founder/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/founder/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmWeb/WEB-INF/classes/com/founder/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmWeb/WEB-INF/classes/com/founder/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmWeb/WEB-INF/classes/com/founder/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmWeb/WEB-INF/classes/com/founder/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmWeb/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmWeb/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmWeb/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmWeb/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ssmWeb/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ssmWeb/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +75,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../code/XinTai" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -250,7 +256,7 @@
       <workItem from="1566788563132" duration="14883000" />
       <workItem from="1566831017091" duration="4106000" />
       <workItem from="1566870771382" duration="1947000" />
-      <workItem from="1566893091096" duration="15718000" />
+      <workItem from="1566893091096" duration="24297000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1566835109015</created>
@@ -294,7 +300,21 @@
       <option name="project" value="LOCAL" />
       <updated>1566871500269</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add login model">
+      <created>1566953071510</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566953071510</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add login model">
+      <created>1566953135657</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566953135657</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +346,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update json.jar version" />
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="add login model" />
+    <option name="LAST_COMMIT_MESSAGE" value="add login model" />
   </component>
 </project>

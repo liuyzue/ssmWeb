@@ -31,8 +31,13 @@ public class LoginController {
     public String login1(){
         return "login";
     }
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
+    }
 
-    @RequestMapping("/homepage")
+
+    @RequestMapping("/check")
     public ModelAndView check(String username, String password){
         logger.info("check");
 

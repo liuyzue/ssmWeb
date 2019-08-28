@@ -9,8 +9,14 @@ import java.util.List;
 @Repository
 public interface UserDao {
 
+    /*
+    * 查询所有用户
+    * */
     List<User> selectAll();
 
+    /*
+    * 通过用户名查询密码
+    * */
     String findPasswordByUsername(String username);
 
 }
