@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +54,12 @@
                             <a class="dropdown-item" href="#">Yearly Report</a>
                         </div>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="/operation">
+                            <i class="fas fa-shopping-cart"></i>
+                            Operation
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="accounts.html">
                             <i class="far fa-user"></i>

@@ -17,43 +17,45 @@ import org.springframework.web.servlet.ModelAndView;
  */
 
 @Controller
+@RequestMapping("/")
 public class LoginController {
     private static final Logger logger= LogManager.getLogger(LoginController.class.getName());
 
     @Autowired
     UserService userService;
 
-    @RequestMapping("/doLogin")
+    @RequestMapping("/index")
     public String login(){
         return "login";
     }
-    @RequestMapping("")
-    public String login1(){
-        return "login";
-    }
-    @RequestMapping("/index")
-    public String index(){
-        return "index";
+
+    @RequestMapping("/home")
+    public String home(){
+        return "base";
     }
 
+    @RequestMapping("/login")
+    public ModelAndView Login(String username, String password){
 
-    @RequestMapping("/check")
-    public ModelAndView check(String username, String password){
-        logger.info("check");
-
-        if (userService.findPasswordByUsername(username) == null) {
-            return new ModelAndView("redirect:/doLogin");
-        }else {
-            if (userService.findPasswordByUsername(username).equals(password)) {
-                ModelAndView model = new ModelAndView("index");
+        if (checkPassword(username,password)) {
+                ModelAndView model = new ModelAndView("base");
                 model.addObject("username",username);
                 return model;
-            } else {
-                return new ModelAndView("redirect:/doLogin");
-            }
+        }else {
+            return new ModelAndView("redirect:/login");
         }
     }
 
 
+    public boolean checkPassword(String username,String password){
+        if (username == null)
+            return false;
+        else {
+            if (userService.findPasswordByUsername(username).equals(password) && password != null)
+                return true;
+            else
+                return false;
+        }
+    }
 
 }
