@@ -1,6 +1,6 @@
 package com.founder.dao;
 
-import com.founder.entity.EhrHealthEvent;
+import com.founder.entity.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,14 +26,14 @@ import static org.junit.Assert.*;
 public class EhrHealthEventDaoTest {
 
     @Autowired
-    EhrHealthEventDao ehrHealthEventDao;
+    MsSurgeryInfoDao ehrHealthEventDao;
 
     @Test
     public void findPersonByEhrid() {
 
-        ArrayList<EhrHealthEvent> ehrHealthEvents=
+        ArrayList<MsSurgeryInfo> ehrHealthEvents=
                 ehrHealthEventDao.selectAllByUploadTime("2019/7/30 0:0:0","2019/7/31 1:0:0");
-        for (EhrHealthEvent e :ehrHealthEvents
+        for (MsSurgeryInfo e :ehrHealthEvents
                 ) {
             System.out.println(e.getPersonId()+'\t'+e.getEhrId());
         }

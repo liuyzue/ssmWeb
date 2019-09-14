@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsDiseaseDiagnosisInfoDao">
+    <select id="selectByPeronId" resultType="com.founder.entity.MsDiseaseDiagnosisInfo" parameterType="String">
+        select id, ehr_id, person_id, diagnosis_code, diagnosis_desc, diagnosis_type_code, pathogenesis_date,
+        primary_site, secondary_site, nlohmsi_code, nlohmsi_name, treatment_plan, health_assessment, disposal_plan,
+        hospital_code, hospital_name, diagnose_date, diagnose_room_code, diagnose_room_name, diagnose_doctor_code,
+        diagnose_doctor_name, diagnose_doctor_idcard, update_name, update_idcard, update_date, is_delete, name, age,
+        gender, marriage, disease_code, disease_name, inhos_condition_code, inhos_condition_name, diagnosis_number,
+        init_subs_mark, cm_mdis_code, cm_mdis_name, pirncipal_diagnosis, cm_dis_name, cm_dis_code, wm_dis_name,
+        analysis_status, is_limit, is_analyse, gather_date, op_em_hp_mark
+        from MS_DISEASE_DIAGNOSIS_INFO
+        where PERSON_ID=#{person_id}
+    </select>
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsDiseaseDiagnosisInfo">
+        select id, ehr_id, person_id, diagnosis_code, diagnosis_desc, diagnosis_type_code, pathogenesis_date,
+        primary_site, secondary_site, nlohmsi_code, nlohmsi_name, treatment_plan, health_assessment, disposal_plan,
+        hospital_code, hospital_name, diagnose_date, diagnose_room_code, diagnose_room_name, diagnose_doctor_code,
+        diagnose_doctor_name, diagnose_doctor_idcard, update_name, update_idcard, update_date, is_delete, name, age,
+        gender, marriage, disease_code, disease_name, inhos_condition_code, inhos_condition_name, diagnosis_number,
+        init_subs_mark, cm_mdis_code, cm_mdis_name, pirncipal_diagnosis, cm_dis_name, cm_dis_code, wm_dis_name,
+        analysis_status, is_limit, is_analyse, gather_date, op_em_hp_mark
+        from MS_DISEASE_DIAGNOSIS_INFO
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsDiseaseDiagnosisInfo" parameterType="String">
+        select id, ehr_id, person_id, diagnosis_code, diagnosis_desc, diagnosis_type_code, pathogenesis_date,
+        primary_site, secondary_site, nlohmsi_code, nlohmsi_name, treatment_plan, health_assessment, disposal_plan,
+        hospital_code, hospital_name, diagnose_date, diagnose_room_code, diagnose_room_name, diagnose_doctor_code,
+        diagnose_doctor_name, diagnose_doctor_idcard, update_name, update_idcard, update_date, is_delete, name, age,
+        gender, marriage, disease_code, disease_name, inhos_condition_code, inhos_condition_name, diagnosis_number,
+        init_subs_mark, cm_mdis_code, cm_mdis_name, pirncipal_diagnosis, cm_dis_name, cm_dis_code, wm_dis_name,
+        analysis_status, is_limit, is_analyse, gather_date, op_em_hp_mark
+        from MS_DISEASE_DIAGNOSIS_INFO
+        where GATHER_DATE &gt; to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE&lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+
+    </select>
+
+    <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsDiseaseDiagnosisInfo">
+        select id, ehr_id, person_id, diagnosis_code, diagnosis_desc, diagnosis_type_code, pathogenesis_date,
+        primary_site, secondary_site, nlohmsi_code, nlohmsi_name, treatment_plan, health_assessment, disposal_plan,
+        hospital_code, hospital_name, diagnose_date, diagnose_room_code, diagnose_room_name, diagnose_doctor_code,
+        diagnose_doctor_name, diagnose_doctor_idcard, update_name, update_idcard, update_date, is_delete, name, age,
+        gender, marriage, disease_code, disease_name, inhos_condition_code, inhos_condition_name, diagnosis_number,
+        init_subs_mark, cm_mdis_code, cm_mdis_name, pirncipal_diagnosis, cm_dis_name, cm_dis_code, wm_dis_name,
+        analysis_status, is_limit, is_analyse, gather_date, op_em_hp_mark
+        from MS_DISEASE_DIAGNOSIS_INFO
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+
+
+</mapper>

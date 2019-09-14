@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsOutpatientInfoDao">
+    <select id="selectByPeronId" resultType="com.founder.entity.MsOutpatientInfo" parameterType="String">
+        select id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
+        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
+        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
+        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
+        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
+        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
+        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
+        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
+        prescription_count, prescription_route_count, gather_date
+        from MS_OUTPATIENT_INFO
+        where PERSON_ID=#{person_id}
+    </select>
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsOutpatientInfo">
+        select id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
+        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
+        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
+        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
+        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
+        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
+        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
+        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
+        prescription_count, prescription_route_count, gather_date
+        from MS_OUTPATIENT_INFO
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsOutpatientInfo" parameterType="String">
+        select id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
+        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
+        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
+        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
+        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
+        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
+        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
+        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
+        prescription_count, prescription_route_count, gather_date
+        from MS_OUTPATIENT_INFO
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+    </select>
+
+    <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsOutpatientInfo">
+        select id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
+        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
+        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
+        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
+        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
+        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
+        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
+        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
+        prescription_count, prescription_route_count, gather_date
+        from MS_OUTPATIENT_INFO
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+
+
+</mapper>

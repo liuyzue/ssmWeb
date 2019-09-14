@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsOuthospitalSummaryDao">
+    <select id="selectByPeronId" resultType="com.founder.entity.MsOuthospitalSummary" parameterType="String">
+        select id, ehr_id, person_id, record_number, admission_no, medical_record_no, idcard_hos, name, gender, age,
+        hospital_code, hospital_name, department_code, department_name, sick_area_name, sickroom_no, sickbed_no,
+        inhos_date, inhos_condition, ae_result, treatment_process_desc, outhos_state, outhos_symptom_body_feature,
+        outhos_advice, outhos_date, actual_admission_day_times, signature_date, is_delete, marriage, occupation,
+        occupation_name, inhos_state, doctor_signature, doctor_signature_date, attending_doctor_signature,
+        attending_signature_date, icd_code, othercardtype, othercardno, hp_s_no, wound_heal, dpt_code, rcd_dt,
+        hp_cur_pro, process_status, is_limit, gather_date
+        from MS_OUTHOSPITAL_SUMMARY
+        where PERSON_ID=#{person_id}
+    </select>
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsOuthospitalSummary">
+        select id, ehr_id, person_id, record_number, admission_no, medical_record_no, idcard_hos, name, gender, age,
+        hospital_code, hospital_name, department_code, department_name, sick_area_name, sickroom_no, sickbed_no,
+        inhos_date, inhos_condition, ae_result, treatment_process_desc, outhos_state, outhos_symptom_body_feature,
+        outhos_advice, outhos_date, actual_admission_day_times, signature_date, is_delete, marriage, occupation,
+        occupation_name, inhos_state, doctor_signature, doctor_signature_date, attending_doctor_signature,
+        attending_signature_date, icd_code, othercardtype, othercardno, hp_s_no, wound_heal, dpt_code, rcd_dt,
+        hp_cur_pro, process_status, is_limit, gather_date
+        from MS_OUTHOSPITAL_SUMMARY
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsOuthospitalSummary" parameterType="String">
+        select id, ehr_id, person_id, record_number, admission_no, medical_record_no, idcard_hos, name, gender, age,
+        hospital_code, hospital_name, department_code, department_name, sick_area_name, sickroom_no, sickbed_no,
+        inhos_date, inhos_condition, ae_result, treatment_process_desc, outhos_state, outhos_symptom_body_feature,
+        outhos_advice, outhos_date, actual_admission_day_times, signature_date, is_delete, marriage, occupation,
+        occupation_name, inhos_state, doctor_signature, doctor_signature_date, attending_doctor_signature,
+        attending_signature_date, icd_code, othercardtype, othercardno, hp_s_no, wound_heal, dpt_code, rcd_dt,
+        hp_cur_pro, process_status, is_limit, gather_date
+        from MS_OUTHOSPITAL_SUMMARY
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+    </select>
+
+    <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsOuthospitalSummary">
+        select id, ehr_id, person_id, record_number, admission_no, medical_record_no, idcard_hos, name, gender, age,
+        hospital_code, hospital_name, department_code, department_name, sick_area_name, sickroom_no, sickbed_no,
+        inhos_date, inhos_condition, ae_result, treatment_process_desc, outhos_state, outhos_symptom_body_feature,
+        outhos_advice, outhos_date, actual_admission_day_times, signature_date, is_delete, marriage, occupation,
+        occupation_name, inhos_state, doctor_signature, doctor_signature_date, attending_doctor_signature,
+        attending_signature_date, icd_code, othercardtype, othercardno, hp_s_no, wound_heal, dpt_code, rcd_dt,
+        hp_cur_pro, process_status, is_limit, gather_date
+        from MS_OUTHOSPITAL_SUMMARY
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+
+
+</mapper>

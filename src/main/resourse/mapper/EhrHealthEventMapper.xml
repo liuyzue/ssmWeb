@@ -32,7 +32,7 @@
           clinic_organ_name, clinic_room_code, clinic_room_name, is_delete, gender, data_source, ehr_old_pepole_flag,
           is_limit, gather_date, id_card
           from EHR_HEALTH_EVENT
-          where GATHER_DATE &gt; to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE&lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+          where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE&lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
           and (EHR_TYPE="1" or EHR_TYPE="2")
     </select>
 

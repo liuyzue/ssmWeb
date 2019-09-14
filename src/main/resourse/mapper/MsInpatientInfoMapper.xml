@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsInpatientInfoDao">
+    <select id="selectByPeronId" resultType="com.founder.entity.MsInpatientInfo" parameterType="String">
+        select id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
+        inhos_state_code, inhos_days, inhos_rescue_times, inhos_rescue_success_times, inhos_condition_code,
+        dest_dept_code, dest_dept_name, dest_room_code, dest_room_name, referral_hospital_code, referral_hospital_name,
+         referral_dept_code, referral_dept_name, inhos_reason, inhos_date, name, gender, age, birthday, marriage,
+         inhos_infectivity_flag, inhos_cost_visit_flag, inhos_autopsy_flag, inhos_teach_case_flag,
+         other_medical_treatment, underlying_death_code, death_date, sick_area_name, sickroom_no, sickbed_no,
+         pathogenesis_date, treatment_results_code, related_physician_role_name, related_physician_name,
+         attending_physician_no, attending_physician_name, attending_physician_idcard, inhos_cost_pay_code,
+         inhos_settlement_code, personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum,
+         inhos_cost_sum, out_hospital_date, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
+         update_date, is_delete, othercardtype, othercardno, hp_s_no, source_code, providehx_name, rela_code,
+         ifaller_mark, dialectical, rcd_dt, process_status, is_limit, is_analyse, gather_date
+        from MS_INPATIENT_INFO
+        where PERSON_ID=#{person_id}
+    </select>
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsInpatientInfo">
+        select id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
+        inhos_state_code, inhos_days, inhos_rescue_times, inhos_rescue_success_times, inhos_condition_code,
+        dest_dept_code, dest_dept_name, dest_room_code, dest_room_name, referral_hospital_code, referral_hospital_name,
+         referral_dept_code, referral_dept_name, inhos_reason, inhos_date, name, gender, age, birthday, marriage,
+         inhos_infectivity_flag, inhos_cost_visit_flag, inhos_autopsy_flag, inhos_teach_case_flag,
+         other_medical_treatment, underlying_death_code, death_date, sick_area_name, sickroom_no, sickbed_no,
+         pathogenesis_date, treatment_results_code, related_physician_role_name, related_physician_name,
+         attending_physician_no, attending_physician_name, attending_physician_idcard, inhos_cost_pay_code,
+         inhos_settlement_code, personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum,
+         inhos_cost_sum, out_hospital_date, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
+         update_date, is_delete, othercardtype, othercardno, hp_s_no, source_code, providehx_name, rela_code,
+         ifaller_mark, dialectical, rcd_dt, process_status, is_limit, is_analyse, gather_date
+        from MS_INPATIENT_INFO
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsInpatientInfo" parameterType="String">
+        select id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
+        inhos_state_code, inhos_days, inhos_rescue_times, inhos_rescue_success_times, inhos_condition_code,
+        dest_dept_code, dest_dept_name, dest_room_code, dest_room_name, referral_hospital_code, referral_hospital_name,
+         referral_dept_code, referral_dept_name, inhos_reason, inhos_date, name, gender, age, birthday, marriage,
+         inhos_infectivity_flag, inhos_cost_visit_flag, inhos_autopsy_flag, inhos_teach_case_flag,
+         other_medical_treatment, underlying_death_code, death_date, sick_area_name, sickroom_no, sickbed_no,
+         pathogenesis_date, treatment_results_code, related_physician_role_name, related_physician_name,
+         attending_physician_no, attending_physician_name, attending_physician_idcard, inhos_cost_pay_code,
+         inhos_settlement_code, personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum,
+         inhos_cost_sum, out_hospital_date, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
+         update_date, is_delete, othercardtype, othercardno, hp_s_no, source_code, providehx_name, rela_code,
+         ifaller_mark, dialectical, rcd_dt, process_status, is_limit, is_analyse, gather_date
+        from MS_INPATIENT_INFO
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+    </select>
+
+    <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsInpatientInfo">
+        select id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
+        inhos_state_code, inhos_days, inhos_rescue_times, inhos_rescue_success_times, inhos_condition_code,
+        dest_dept_code, dest_dept_name, dest_room_code, dest_room_name, referral_hospital_code, referral_hospital_name,
+         referral_dept_code, referral_dept_name, inhos_reason, inhos_date, name, gender, age, birthday, marriage,
+         inhos_infectivity_flag, inhos_cost_visit_flag, inhos_autopsy_flag, inhos_teach_case_flag,
+         other_medical_treatment, underlying_death_code, death_date, sick_area_name, sickroom_no, sickbed_no,
+         pathogenesis_date, treatment_results_code, related_physician_role_name, related_physician_name,
+         attending_physician_no, attending_physician_name, attending_physician_idcard, inhos_cost_pay_code,
+         inhos_settlement_code, personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum,
+         inhos_cost_sum, out_hospital_date, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
+         update_date, is_delete, othercardtype, othercardno, hp_s_no, source_code, providehx_name, rela_code,
+         ifaller_mark, dialectical, rcd_dt, process_status, is_limit, is_analyse, gather_date
+        from MS_INPATIENT_INFO
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+
+
+</mapper>

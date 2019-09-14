@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsExpenseDetailDao">
+    <select id="selectByPeronId" resultType="com.founder.entity.MsExpenseDetail" parameterType="String">
+        select id, ehr_id, person_id, record_number, hospital_code, hospital_name, charge_code, detail_item_code,
+        detail_item_name, detail_item_unit, detail_item_price, detail_item_quantity, detail_item_amount,
+        medical_insurance_cost_sum, personal_expenses, is_delete, cost_number, total_cost, admission_no, medicare_code,
+        clinic_date, clinic_mark, expense_type, batch_no, create_date, is_close, gather_date
+        from MS_EXPENSE_DETAIL
+        where PERSON_ID=#{person_id}
+    </select>
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsExpenseDetail">
+        select id, ehr_id, person_id, record_number, hospital_code, hospital_name, charge_code, detail_item_code,
+        detail_item_name, detail_item_unit, detail_item_price, detail_item_quantity, detail_item_amount,
+        medical_insurance_cost_sum, personal_expenses, is_delete, cost_number, total_cost, admission_no, medicare_code,
+        clinic_date, clinic_mark, expense_type, batch_no, create_date, is_close, gather_date
+        from MS_EXPENSE_DETAIL
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsExpenseDetail" parameterType="String">
+        select id, ehr_id, person_id, record_number, hospital_code, hospital_name, charge_code, detail_item_code,
+        detail_item_name, detail_item_unit, detail_item_price, detail_item_quantity, detail_item_amount,
+        medical_insurance_cost_sum, personal_expenses, is_delete, cost_number, total_cost, admission_no, medicare_code,
+        clinic_date, clinic_mark, expense_type, batch_no, create_date, is_close, gather_date
+        from MS_EXPENSE_DETAIL
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+    </select>
+
+    <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsExpenseDetail">
+        select id, ehr_id, person_id, record_number, hospital_code, hospital_name, charge_code, detail_item_code,
+        detail_item_name, detail_item_unit, detail_item_price, detail_item_quantity, detail_item_amount,
+        medical_insurance_cost_sum, personal_expenses, is_delete, cost_number, total_cost, admission_no, medicare_code,
+        clinic_date, clinic_mark, expense_type, batch_no, create_date, is_close, gather_date
+        from MS_EXPENSE_DETAIL
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+</mapper>

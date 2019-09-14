@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsExpenseInfoDao">
+    <select id="selectByPeronId" resultType="com.founder.entity.MsExpenseInfo" parameterType="String">
+        select id, ehr_id, person_id, record_number, pay_bar_code, hospital_code, hospital_name, cost_type_code,
+        cost_type_name, medical_pay_way, medical_pay_way_name, other_desc, medical_settlement_way_code,
+        medical_settlement_way_name, total_cost, personal_expenses, medical_insurance_cost_sum,
+        other_subsidies_cost_sum, settlement_date, is_delete, name, age, gender, marriage, cost_number, othercardtype,
+         othercardno, op_em_hp_mark, op_em_hp_no, rcd_idcard, invoice_no, account_no, process_status, is_limit,
+         gather_date
+        from MS_EXPENSE_INFO
+        where PERSON_ID=#{person_id}
+    </select>
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsExpenseInfo">
+        select id, ehr_id, person_id, record_number, pay_bar_code, hospital_code, hospital_name, cost_type_code,
+        cost_type_name, medical_pay_way, medical_pay_way_name, other_desc, medical_settlement_way_code,
+        medical_settlement_way_name, total_cost, personal_expenses, medical_insurance_cost_sum,
+        other_subsidies_cost_sum, settlement_date, is_delete, name, age, gender, marriage, cost_number, othercardtype,
+         othercardno, op_em_hp_mark, op_em_hp_no, rcd_idcard, invoice_no, account_no, process_status, is_limit,
+         gather_date
+        from MS_EXPENSE_INFO
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsExpenseInfo" parameterType="String">
+        select id, ehr_id, person_id, record_number, pay_bar_code, hospital_code, hospital_name, cost_type_code,
+        cost_type_name, medical_pay_way, medical_pay_way_name, other_desc, medical_settlement_way_code,
+        medical_settlement_way_name, total_cost, personal_expenses, medical_insurance_cost_sum,
+        other_subsidies_cost_sum, settlement_date, is_delete, name, age, gender, marriage, cost_number, othercardtype,
+         othercardno, op_em_hp_mark, op_em_hp_no, rcd_idcard, invoice_no, account_no, process_status, is_limit,
+         gather_date
+        from MS_EXPENSE_INFO
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+    </select>
+
+    <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsExpenseInfo">
+        select id, ehr_id, person_id, record_number, pay_bar_code, hospital_code, hospital_name, cost_type_code,
+        cost_type_name, medical_pay_way, medical_pay_way_name, other_desc, medical_settlement_way_code,
+        medical_settlement_way_name, total_cost, personal_expenses, medical_insurance_cost_sum,
+        other_subsidies_cost_sum, settlement_date, is_delete, name, age, gender, marriage, cost_number, othercardtype,
+         othercardno, op_em_hp_mark, op_em_hp_no, rcd_idcard, invoice_no, account_no, process_status, is_limit,
+         gather_date
+        from MS_EXPENSE_INFO
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+</mapper>

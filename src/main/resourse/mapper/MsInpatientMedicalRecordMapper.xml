@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsInpatientMedicalRecordDao">
+    <select id="selectByPeronId" resultType="com.founder.entity.MsInpatientMedicalRecord" parameterType="String">
+        select id, ehr_id, person_id, medical_record_no, admission_no, hospital_code, hospital_name, name, age,
+        month_age, neonatal_birth_weight, neonatalinhos_weight, birth_province, birth_city, birth_country, inhos_date,
+        inhos_method, inhos_dept_code, inhos_dept_name, inhos_room_code, inhos_count, inhos_patient_name,
+        inhos_rescue_times, inhos_rescue_success_times, inhos_treatment_result, inhos_condition,
+        inhos_allergic_start_date, inhos_blood_type_code, inhos_blood_volume, inhos_blood_volume_count,
+        inhos_blood_reaction_flag, inhos_days, inhos_counts, inhos_autopsy_flag, inhos_teach_case_flag,
+        inhos_medical_quality_code, outhos_method, outhos_flag, outhos_purpose, bef_inho_smu_date, aft_inho_smu_date,
+        medical_pay_way, medical_settlement_way_code, personal_expenses, medical_insurance_cost_sum,
+        other_subsidies_cost_sum, admission_total_amount, dept_master_signature, director_doctor_signature,
+        attending_doctor_signature, admission_doctor_signature, primary_nurse_signature, refresher_doctors_signature,
+        intern_signature, medical_record_signature, qc_doctor_signature, qc_nurse_signature, qc_date, outhos_room,
+         outhos_dept_name, out_hospital_date, is_delete, gender, marriage, injury_posion_reason, injury_disease_code,
+         injury_pathology_no, medicals_expense, treatment_expense, nurse_expense, other_medicals_expense,
+         pathology_diagnosis_expense, lab_diagnosis_expense, imaging_diagnosis_expense, clinical_item_expense,
+         non_surgical_item_expense, clinical_therapy_expense, surgery_treatment_expense, anesthesia_expense,
+         surgery_expense, rehabilitation_expense, cm_treatment_expense, wm_expense, antibacterial_expense,
+         proprietary_cm_expense, chm_expense, blood_expense, albumin_expense, globulin_expense, clotting_factor_expense,
+          cytokines_expense, check_dmm_expense, treatment_dmm_expense, surgery_dmm_expense, other_expense,
+          transition_dept_code, transition_dept_name, othercardtype, othercardno, hp_s_no, nation, cure_type,
+          cpw_mana_type, cpw_mana_code, if_ch_dp, if_ch_eqpt, if_ch_tech, if_dial_nu, ccasediag_ci, ophpdiag_ci,
+          addiag_ci, operdiag_ci, rcasediag_ci, process_status, is_limit, gather_date, outhos15_flag
+        from MS_INPATIENT_MEDICAL_RECORD
+        where PERSON_ID=#{person_id}
+    </select>
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsInpatientMedicalRecord">
+        select id, ehr_id, person_id, medical_record_no, admission_no, hospital_code, hospital_name, name, age,
+        month_age, neonatal_birth_weight, neonatalinhos_weight, birth_province, birth_city, birth_country, inhos_date,
+        inhos_method, inhos_dept_code, inhos_dept_name, inhos_room_code, inhos_count, inhos_patient_name,
+        inhos_rescue_times, inhos_rescue_success_times, inhos_treatment_result, inhos_condition,
+        inhos_allergic_start_date, inhos_blood_type_code, inhos_blood_volume, inhos_blood_volume_count,
+        inhos_blood_reaction_flag, inhos_days, inhos_counts, inhos_autopsy_flag, inhos_teach_case_flag,
+        inhos_medical_quality_code, outhos_method, outhos_flag, outhos_purpose, bef_inho_smu_date, aft_inho_smu_date,
+        medical_pay_way, medical_settlement_way_code, personal_expenses, medical_insurance_cost_sum,
+        other_subsidies_cost_sum, admission_total_amount, dept_master_signature, director_doctor_signature,
+        attending_doctor_signature, admission_doctor_signature, primary_nurse_signature, refresher_doctors_signature,
+        intern_signature, medical_record_signature, qc_doctor_signature, qc_nurse_signature, qc_date, outhos_room,
+         outhos_dept_name, out_hospital_date, is_delete, gender, marriage, injury_posion_reason, injury_disease_code,
+         injury_pathology_no, medicals_expense, treatment_expense, nurse_expense, other_medicals_expense,
+         pathology_diagnosis_expense, lab_diagnosis_expense, imaging_diagnosis_expense, clinical_item_expense,
+         non_surgical_item_expense, clinical_therapy_expense, surgery_treatment_expense, anesthesia_expense,
+         surgery_expense, rehabilitation_expense, cm_treatment_expense, wm_expense, antibacterial_expense,
+         proprietary_cm_expense, chm_expense, blood_expense, albumin_expense, globulin_expense, clotting_factor_expense,
+          cytokines_expense, check_dmm_expense, treatment_dmm_expense, surgery_dmm_expense, other_expense,
+          transition_dept_code, transition_dept_name, othercardtype, othercardno, hp_s_no, nation, cure_type,
+          cpw_mana_type, cpw_mana_code, if_ch_dp, if_ch_eqpt, if_ch_tech, if_dial_nu, ccasediag_ci, ophpdiag_ci,
+          addiag_ci, operdiag_ci, rcasediag_ci, process_status, is_limit, gather_date, outhos15_flag
+        from MS_INPATIENT_MEDICAL_RECORD
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsInpatientMedicalRecord" parameterType="String">
+        select id, ehr_id, person_id, medical_record_no, admission_no, hospital_code, hospital_name, name, age,
+        month_age, neonatal_birth_weight, neonatalinhos_weight, birth_province, birth_city, birth_country, inhos_date,
+        inhos_method, inhos_dept_code, inhos_dept_name, inhos_room_code, inhos_count, inhos_patient_name,
+        inhos_rescue_times, inhos_rescue_success_times, inhos_treatment_result, inhos_condition,
+        inhos_allergic_start_date, inhos_blood_type_code, inhos_blood_volume, inhos_blood_volume_count,
+        inhos_blood_reaction_flag, inhos_days, inhos_counts, inhos_autopsy_flag, inhos_teach_case_flag,
+        inhos_medical_quality_code, outhos_method, outhos_flag, outhos_purpose, bef_inho_smu_date, aft_inho_smu_date,
+        medical_pay_way, medical_settlement_way_code, personal_expenses, medical_insurance_cost_sum,
+        other_subsidies_cost_sum, admission_total_amount, dept_master_signature, director_doctor_signature,
+        attending_doctor_signature, admission_doctor_signature, primary_nurse_signature, refresher_doctors_signature,
+        intern_signature, medical_record_signature, qc_doctor_signature, qc_nurse_signature, qc_date, outhos_room,
+         outhos_dept_name, out_hospital_date, is_delete, gender, marriage, injury_posion_reason, injury_disease_code,
+         injury_pathology_no, medicals_expense, treatment_expense, nurse_expense, other_medicals_expense,
+         pathology_diagnosis_expense, lab_diagnosis_expense, imaging_diagnosis_expense, clinical_item_expense,
+         non_surgical_item_expense, clinical_therapy_expense, surgery_treatment_expense, anesthesia_expense,
+         surgery_expense, rehabilitation_expense, cm_treatment_expense, wm_expense, antibacterial_expense,
+         proprietary_cm_expense, chm_expense, blood_expense, albumin_expense, globulin_expense, clotting_factor_expense,
+          cytokines_expense, check_dmm_expense, treatment_dmm_expense, surgery_dmm_expense, other_expense,
+          transition_dept_code, transition_dept_name, othercardtype, othercardno, hp_s_no, nation, cure_type,
+          cpw_mana_type, cpw_mana_code, if_ch_dp, if_ch_eqpt, if_ch_tech, if_dial_nu, ccasediag_ci, ophpdiag_ci,
+          addiag_ci, operdiag_ci, rcasediag_ci, process_status, is_limit, gather_date, outhos15_flag
+        from MS_INPATIENT_MEDICAL_RECORD
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+    </select>
+
+    <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsInpatientMedicalRecord">
+        select id, ehr_id, person_id, medical_record_no, admission_no, hospital_code, hospital_name, name, age,
+        month_age, neonatal_birth_weight, neonatalinhos_weight, birth_province, birth_city, birth_country, inhos_date,
+        inhos_method, inhos_dept_code, inhos_dept_name, inhos_room_code, inhos_count, inhos_patient_name,
+        inhos_rescue_times, inhos_rescue_success_times, inhos_treatment_result, inhos_condition,
+        inhos_allergic_start_date, inhos_blood_type_code, inhos_blood_volume, inhos_blood_volume_count,
+        inhos_blood_reaction_flag, inhos_days, inhos_counts, inhos_autopsy_flag, inhos_teach_case_flag,
+        inhos_medical_quality_code, outhos_method, outhos_flag, outhos_purpose, bef_inho_smu_date, aft_inho_smu_date,
+        medical_pay_way, medical_settlement_way_code, personal_expenses, medical_insurance_cost_sum,
+        other_subsidies_cost_sum, admission_total_amount, dept_master_signature, director_doctor_signature,
+        attending_doctor_signature, admission_doctor_signature, primary_nurse_signature, refresher_doctors_signature,
+        intern_signature, medical_record_signature, qc_doctor_signature, qc_nurse_signature, qc_date, outhos_room,
+         outhos_dept_name, out_hospital_date, is_delete, gender, marriage, injury_posion_reason, injury_disease_code,
+         injury_pathology_no, medicals_expense, treatment_expense, nurse_expense, other_medicals_expense,
+         pathology_diagnosis_expense, lab_diagnosis_expense, imaging_diagnosis_expense, clinical_item_expense,
+         non_surgical_item_expense, clinical_therapy_expense, surgery_treatment_expense, anesthesia_expense,
+         surgery_expense, rehabilitation_expense, cm_treatment_expense, wm_expense, antibacterial_expense,
+         proprietary_cm_expense, chm_expense, blood_expense, albumin_expense, globulin_expense, clotting_factor_expense,
+          cytokines_expense, check_dmm_expense, treatment_dmm_expense, surgery_dmm_expense, other_expense,
+          transition_dept_code, transition_dept_name, othercardtype, othercardno, hp_s_no, nation, cure_type,
+          cpw_mana_type, cpw_mana_code, if_ch_dp, if_ch_eqpt, if_ch_tech, if_dial_nu, ccasediag_ci, ophpdiag_ci,
+          addiag_ci, operdiag_ci, rcasediag_ci, process_status, is_limit, gather_date, outhos15_flag
+        from MS_INPATIENT_MEDICAL_RECORD
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+
+
+</mapper>

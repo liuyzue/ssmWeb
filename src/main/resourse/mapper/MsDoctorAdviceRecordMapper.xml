@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsDoctorAdviceRecordDao">
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsDoctorAdviceRecord">
+        select id, ehr_id, hp_no, hp_s_no, odr_no, othercardtype, othercardno, gather_date
+        from MS_DOCTOR_ADVICE_RECORD
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsDoctorAdviceRecord" parameterType="String">
+        select id, ehr_id, hp_no, hp_s_no, odr_no, othercardtype, othercardno, gather_date
+        from MS_DOCTOR_ADVICE_RECORD
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+    </select>
+
+</mapper>
