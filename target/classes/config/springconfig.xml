@@ -82,7 +82,10 @@
     </bean>
 <!--    由mybatis-spring提供的SqlSessionTemplate方法创建sqlsession-->
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
+        <constructor-arg index="0" ref="sqlSessionFactory">
+
+        </constructor-arg>
+
     </bean>
 
 <!--    spring自动给dao层注入实现类-->
