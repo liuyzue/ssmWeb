@@ -1,8 +1,6 @@
-package com.founder.dao;
+package com.founder.service;
 
-import com.founder.entity.MsExpenseDetail;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
+import com.founder.entity.MsDiseaseDiagnosisInfo;
 
 import java.util.ArrayList;
 
@@ -11,10 +9,9 @@ import java.util.ArrayList;
  * @version: v1.0
  * @description: com.founder.dao
  * @date:2019/9/14
- * @time:22:57
+ * @time:17:40
  */
-@Repository
-public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
+public interface MsDiseaseDiagnosisInfoService extends BaseService<MsDiseaseDiagnosisInfo> {
 
     /**
      * 根据一段upload_time查询所有记录
@@ -24,7 +21,7 @@ public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
      * @return
      */
     @Override
-    ArrayList<MsExpenseDetail> selectAllByUploadTime(@Param("startTime") String startTime, @Param("endTime") String endTime);
+    ArrayList<MsDiseaseDiagnosisInfo> selectAllByUploadTime(String startTime, String endTime);
 
     /**
      * 根据person_id查询记录
@@ -33,7 +30,7 @@ public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
      * @return
      */
     @Override
-    ArrayList<MsExpenseDetail> selectByPeronId(String personId);
+    ArrayList<MsDiseaseDiagnosisInfo> selectByPeronId(String personId);
 
     /**
      * 根据ehr_id查询记录
@@ -42,7 +39,7 @@ public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
      * @return
      */
     @Override
-    ArrayList<MsExpenseDetail> selectByEhrId(String ehrId);
+    ArrayList<MsDiseaseDiagnosisInfo> selectByEhrId(String ehrId);
 
     /**
      * 根据ehr_id和person_id查询记录
@@ -52,5 +49,5 @@ public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
      * @return
      */
     @Override
-    ArrayList<MsExpenseDetail> selectByEhrAndPersonId(@Param("ehr_id") String ehrId, @Param("person_id") String personId);
+    ArrayList<MsDiseaseDiagnosisInfo> selectByEhrAndPersonId(String ehrId, String personId);
 }

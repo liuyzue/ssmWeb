@@ -2,6 +2,7 @@ package com.founder.dao;
 
 import com.founder.entity.MsDoctorAdvice;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
@@ -12,6 +13,7 @@ import java.util.ArrayList;
  * @date:2019/9/14
  * @time:22:18
  */
+@Repository
 public interface MsDoctorAdviceDao extends BaseDao<MsDoctorAdvice> {
 
     /**

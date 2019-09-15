@@ -1,18 +1,15 @@
 package com.founder.service;
 
-import com.founder.entity.EhrHealthEvent;
-
 import java.util.ArrayList;
 
 /**
  * @author create by lyz
  * @version: v1.0
- * @description: com.founder.service.impl
- * @date:2019/9/13
- * @time:16:27
+ * @description: com.founder.service
+ * @date:2019/9/15
+ * @time:11:47
  */
-public interface EhrHealthEventService extends BaseService<EhrHealthEvent> {
-
+public interface BaseService<T> {
 
     /**
      * 根据一段upload_time查询所有记录
@@ -21,8 +18,7 @@ public interface EhrHealthEventService extends BaseService<EhrHealthEvent> {
      * @param endTime   yyyy-MM-dd hh24:mi:ss
      * @return
      */
-    @Override
-    ArrayList<EhrHealthEvent> selectAllByUploadTime(String startTime, String endTime);
+    ArrayList<T> selectAllByUploadTime(String startTime, String endTime);
 
     /**
      * 根据person_id查询记录
@@ -30,8 +26,7 @@ public interface EhrHealthEventService extends BaseService<EhrHealthEvent> {
      * @param personId
      * @return
      */
-    @Override
-    ArrayList<EhrHealthEvent> selectByPeronId(String personId);
+    ArrayList<T> selectByPeronId(String personId);
 
     /**
      * 根据ehr_id查询记录
@@ -39,8 +34,7 @@ public interface EhrHealthEventService extends BaseService<EhrHealthEvent> {
      * @param ehrId
      * @return
      */
-    @Override
-    ArrayList<EhrHealthEvent> selectByEhrId(String ehrId);
+    ArrayList<T> selectByEhrId(String ehrId);
 
     /**
      * 根据ehr_id和person_id查询记录
@@ -49,7 +43,5 @@ public interface EhrHealthEventService extends BaseService<EhrHealthEvent> {
      * @param personId
      * @return
      */
-    @Override
-    ArrayList<EhrHealthEvent> selectByEhrAndPersonId(String ehrId, String personId);
-
+    ArrayList<T> selectByEhrAndPersonId(String ehrId, String personId);
 }

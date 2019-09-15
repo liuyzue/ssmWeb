@@ -1,20 +1,17 @@
-package com.founder.dao;
+package com.founder.service;
 
 import com.founder.entity.MsExpenseDetail;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 
 /**
  * @author create by lyz
  * @version: v1.0
- * @description: com.founder.dao
- * @date:2019/9/14
- * @time:22:57
+ * @description: com.founder.service
+ * @date:2019/9/15
+ * @time:14:15
  */
-@Repository
-public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
+public interface MsExpenseDetailService extends BaseService<MsExpenseDetail> {
 
     /**
      * 根据一段upload_time查询所有记录
@@ -24,7 +21,7 @@ public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
      * @return
      */
     @Override
-    ArrayList<MsExpenseDetail> selectAllByUploadTime(@Param("startTime") String startTime, @Param("endTime") String endTime);
+    ArrayList<MsExpenseDetail> selectAllByUploadTime(String startTime, String endTime);
 
     /**
      * 根据person_id查询记录
@@ -52,5 +49,5 @@ public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
      * @return
      */
     @Override
-    ArrayList<MsExpenseDetail> selectByEhrAndPersonId(@Param("ehr_id") String ehrId, @Param("person_id") String personId);
+    ArrayList<MsExpenseDetail> selectByEhrAndPersonId(String ehrId, String personId);
 }

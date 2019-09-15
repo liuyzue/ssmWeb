@@ -1,20 +1,17 @@
-package com.founder.dao;
+package com.founder.service;
 
-import com.founder.entity.MsSurgeryInfo;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
+import com.founder.entity.MsDrugUsage;
 
 import java.util.ArrayList;
 
 /**
  * @author create by lyz
  * @version: v1.0
- * @description: com.founder.dao
+ * @description: com.founder.service
  * @date:2019/9/15
- * @time:0:15
+ * @time:14:07
  */
-@Repository
-public interface MsSurgeryInfoDao extends BaseDao<MsSurgeryInfo> {
+public interface MsDrugUsageService extends BaseService<MsDrugUsage> {
 
     /**
      * 根据一段upload_time查询所有记录
@@ -24,7 +21,7 @@ public interface MsSurgeryInfoDao extends BaseDao<MsSurgeryInfo> {
      * @return
      */
     @Override
-    ArrayList<MsSurgeryInfo> selectAllByUploadTime(@Param("startTime") String startTime,@Param("endTime") String endTime);
+    ArrayList<MsDrugUsage> selectAllByUploadTime(String startTime, String endTime);
 
     /**
      * 根据person_id查询记录
@@ -33,7 +30,7 @@ public interface MsSurgeryInfoDao extends BaseDao<MsSurgeryInfo> {
      * @return
      */
     @Override
-    ArrayList<MsSurgeryInfo> selectByPeronId(String personId);
+    ArrayList<MsDrugUsage> selectByPeronId(String personId);
 
     /**
      * 根据ehr_id查询记录
@@ -42,7 +39,7 @@ public interface MsSurgeryInfoDao extends BaseDao<MsSurgeryInfo> {
      * @return
      */
     @Override
-    ArrayList<MsSurgeryInfo> selectByEhrId(String ehrId);
+    ArrayList<MsDrugUsage> selectByEhrId(String ehrId);
 
     /**
      * 根据ehr_id和person_id查询记录
@@ -52,5 +49,5 @@ public interface MsSurgeryInfoDao extends BaseDao<MsSurgeryInfo> {
      * @return
      */
     @Override
-    ArrayList<MsSurgeryInfo> selectByEhrAndPersonId(@Param("ehr_id") String ehrId,@Param("person_id") String personId);
+    ArrayList<MsDrugUsage> selectByEhrAndPersonId(String ehrId, String personId);
 }
