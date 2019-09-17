@@ -1,6 +1,8 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+
 /**
  * @author lyz
  */
@@ -49,6 +51,48 @@ public class EhrHealthEvent {
 
   public EhrHealthEvent(){
 
+  }
+
+  public EhrHealthEvent(String id, String ehrId, String ehrName, String physicalExamType, String personId, String name, String age, String marriage, String ehrType, String diseaseCode, String diseaseName, String clinicYear, String clinicMonth, Date clinicDate, String createOrganCode, String createOrganName, String createRoomCode, String createRoomName, Date createDate, String createPerson, String createIdcard, String updateOrganCode, String updateOrganName, String updateRoomCode, String updateRoomName, Date updateDate, String updateName, String updateIdcard, String clinicOrganCode, String clinicOrganName, String clinicRoomCode, String clinicRoomName, String isDelete, String gender, String dataSource, String ehrOldPepoleFlag, String isLimit, Date gatherDate, String idCard) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.ehrName = ehrName;
+    this.physicalExamType = physicalExamType;
+    this.personId = personId;
+    this.name = name;
+    this.age = age;
+    this.marriage = marriage;
+    this.ehrType = ehrType;
+    this.diseaseCode = diseaseCode;
+    this.diseaseName = diseaseName;
+    this.clinicYear = clinicYear;
+    this.clinicMonth = clinicMonth;
+    this.clinicDate = clinicDate;
+    this.createOrganCode = createOrganCode;
+    this.createOrganName = createOrganName;
+    this.createRoomCode = createRoomCode;
+    this.createRoomName = createRoomName;
+    this.createDate = createDate;
+    this.createPerson = createPerson;
+    this.createIdcard = createIdcard;
+    this.updateOrganCode = updateOrganCode;
+    this.updateOrganName = updateOrganName;
+    this.updateRoomCode = updateRoomCode;
+    this.updateRoomName = updateRoomName;
+    this.updateDate = updateDate;
+    this.updateName = updateName;
+    this.updateIdcard = updateIdcard;
+    this.clinicOrganCode = clinicOrganCode;
+    this.clinicOrganName = clinicOrganName;
+    this.clinicRoomCode = clinicRoomCode;
+    this.clinicRoomName = clinicRoomName;
+    this.isDelete = isDelete;
+    this.gender = gender;
+    this.dataSource = dataSource;
+    this.ehrOldPepoleFlag = ehrOldPepoleFlag;
+    this.isLimit = isLimit;
+    this.gatherDate = gatherDate;
+    this.idCard = idCard;
   }
 
   public String getId() {

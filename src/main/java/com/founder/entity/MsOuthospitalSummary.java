@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsOuthospitalSummary {
 
   private String id;
@@ -51,6 +54,58 @@ public class MsOuthospitalSummary {
   private String isLimit;
   private java.sql.Date gatherDate;
 
+  public MsOuthospitalSummary() {
+  }
+
+  public MsOuthospitalSummary(String id, String ehrId, String personId, String recordNumber, String admissionNo, String medicalRecordNo, String idcardHos, String name, String gender, String age, String hospitalCode, String hospitalName, String departmentCode, String departmentName, String sickAreaName, String sickroomNo, String sickbedNo, Timestamp inhosDate, String inhosCondition, String aeResult, String treatmentProcessDesc, String outhosState, String outhosSymptomBodyFeature, String outhosAdvice, Date outhosDate, String actualAdmissionDayTimes, Timestamp signatureDate, String isDelete, String marriage, String occupation, String occupationName, String inhosState, String doctorSignature, Timestamp doctorSignatureDate, String attendingDoctorSignature, Timestamp attendingSignatureDate, String icdCode, String othercardtype, String othercardno, String hpSNo, String woundHeal, String dptCode, Date rcdDt, String hpCurPro, String processStatus, String isLimit, Date gatherDate) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.recordNumber = recordNumber;
+    this.admissionNo = admissionNo;
+    this.medicalRecordNo = medicalRecordNo;
+    this.idcardHos = idcardHos;
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+    this.hospitalCode = hospitalCode;
+    this.hospitalName = hospitalName;
+    this.departmentCode = departmentCode;
+    this.departmentName = departmentName;
+    this.sickAreaName = sickAreaName;
+    this.sickroomNo = sickroomNo;
+    this.sickbedNo = sickbedNo;
+    this.inhosDate = inhosDate;
+    this.inhosCondition = inhosCondition;
+    this.aeResult = aeResult;
+    this.treatmentProcessDesc = treatmentProcessDesc;
+    this.outhosState = outhosState;
+    this.outhosSymptomBodyFeature = outhosSymptomBodyFeature;
+    this.outhosAdvice = outhosAdvice;
+    this.outhosDate = outhosDate;
+    this.actualAdmissionDayTimes = actualAdmissionDayTimes;
+    this.signatureDate = signatureDate;
+    this.isDelete = isDelete;
+    this.marriage = marriage;
+    this.occupation = occupation;
+    this.occupationName = occupationName;
+    this.inhosState = inhosState;
+    this.doctorSignature = doctorSignature;
+    this.doctorSignatureDate = doctorSignatureDate;
+    this.attendingDoctorSignature = attendingDoctorSignature;
+    this.attendingSignatureDate = attendingSignatureDate;
+    this.icdCode = icdCode;
+    this.othercardtype = othercardtype;
+    this.othercardno = othercardno;
+    this.hpSNo = hpSNo;
+    this.woundHeal = woundHeal;
+    this.dptCode = dptCode;
+    this.rcdDt = rcdDt;
+    this.hpCurPro = hpCurPro;
+    this.processStatus = processStatus;
+    this.isLimit = isLimit;
+    this.gatherDate = gatherDate;
+  }
 
   public String getId() {
     return id;

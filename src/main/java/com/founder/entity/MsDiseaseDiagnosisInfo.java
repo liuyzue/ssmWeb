@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsDiseaseDiagnosisInfo {
 
   private String id;
@@ -51,6 +54,58 @@ public class MsDiseaseDiagnosisInfo {
   private java.sql.Date gatherDate;
   private String opEmHpMark;
 
+  public MsDiseaseDiagnosisInfo() {
+  }
+
+  public MsDiseaseDiagnosisInfo(String id, String ehrId, String personId, String diagnosisCode, String diagnosisDesc, String diagnosisTypeCode, Timestamp pathogenesisDate, String primarySite, String secondarySite, String nlohmsiCode, String nlohmsiName, String treatmentPlan, String healthAssessment, String disposalPlan, String hospitalCode, String hospitalName, Date diagnoseDate, String diagnoseRoomCode, String diagnoseRoomName, String diagnoseDoctorCode, String diagnoseDoctorName, String diagnoseDoctorIdcard, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String name, String age, String gender, String marriage, String diseaseCode, String diseaseName, String inhosConditionCode, String inhosConditionName, String diagnosisNumber, String initSubsMark, String cmMdisCode, String cmMdisName, String pirncipalDiagnosis, String cmDisName, String cmDisCode, String wmDisName, String analysisStatus, String isLimit, String isAnalyse, Date gatherDate, String opEmHpMark) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.diagnosisCode = diagnosisCode;
+    this.diagnosisDesc = diagnosisDesc;
+    this.diagnosisTypeCode = diagnosisTypeCode;
+    this.pathogenesisDate = pathogenesisDate;
+    this.primarySite = primarySite;
+    this.secondarySite = secondarySite;
+    this.nlohmsiCode = nlohmsiCode;
+    this.nlohmsiName = nlohmsiName;
+    this.treatmentPlan = treatmentPlan;
+    this.healthAssessment = healthAssessment;
+    this.disposalPlan = disposalPlan;
+    this.hospitalCode = hospitalCode;
+    this.hospitalName = hospitalName;
+    this.diagnoseDate = diagnoseDate;
+    this.diagnoseRoomCode = diagnoseRoomCode;
+    this.diagnoseRoomName = diagnoseRoomName;
+    this.diagnoseDoctorCode = diagnoseDoctorCode;
+    this.diagnoseDoctorName = diagnoseDoctorName;
+    this.diagnoseDoctorIdcard = diagnoseDoctorIdcard;
+    this.updateName = updateName;
+    this.updateIdcard = updateIdcard;
+    this.updateDate = updateDate;
+    this.isDelete = isDelete;
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.marriage = marriage;
+    this.diseaseCode = diseaseCode;
+    this.diseaseName = diseaseName;
+    this.inhosConditionCode = inhosConditionCode;
+    this.inhosConditionName = inhosConditionName;
+    this.diagnosisNumber = diagnosisNumber;
+    this.initSubsMark = initSubsMark;
+    this.cmMdisCode = cmMdisCode;
+    this.cmMdisName = cmMdisName;
+    this.pirncipalDiagnosis = pirncipalDiagnosis;
+    this.cmDisName = cmDisName;
+    this.cmDisCode = cmDisCode;
+    this.wmDisName = wmDisName;
+    this.analysisStatus = analysisStatus;
+    this.isLimit = isLimit;
+    this.isAnalyse = isAnalyse;
+    this.gatherDate = gatherDate;
+    this.opEmHpMark = opEmHpMark;
+  }
 
   public String getId() {
     return id;

@@ -8,11 +8,11 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
     <!-- https://fonts.google.com/specimen/Open+Sans -->
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fontawesome.min.css" />
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/templatemo-style.css">
 
 </head>
 
@@ -143,9 +143,9 @@
 <%--        </p>--%>
     </div>
 </footer>
-<script src="js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
 <!-- https://jquery.com/download/ -->
-<script src="js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 <!-- https://getbootstrap.com/ -->
 </body>
 </html>

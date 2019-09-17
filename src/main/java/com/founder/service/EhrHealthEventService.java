@@ -25,6 +25,13 @@ public interface EhrHealthEventService extends BaseService<EhrHealthEvent> {
     ArrayList<EhrHealthEvent> selectAllByUploadTime(String startTime, String endTime);
 
     /**
+     * 根据ehr_type查询所有记录
+     * @param ehrType
+     * @return
+     */
+    ArrayList<EhrHealthEvent> selectAllByEhrType(String ehrType);
+
+    /**
      * 根据person_id查询记录
      *
      * @param personId
@@ -51,5 +58,19 @@ public interface EhrHealthEventService extends BaseService<EhrHealthEvent> {
      */
     @Override
     ArrayList<EhrHealthEvent> selectByEhrAndPersonId(String ehrId, String personId);
+
+    /**
+     * 事件表的记录是否在门诊记录表中
+     * @param ehrId
+     * @return
+     */
+    boolean isExistsInOutPatientInfo(String ehrId);
+
+    /**
+     * 事件表的记录是否在门诊记录表中
+     * @param ehrId
+     * @return
+     */
+    boolean isExistsInInPatientInfo(String ehrId);
 
 }

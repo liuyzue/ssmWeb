@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsExamineDetail {
 
   private String id;
@@ -39,6 +42,46 @@ public class MsExamineDetail {
   private String alanineAspartate;
   private String hbvDnaPosi;
 
+  public MsExamineDetail() {
+  }
+
+  public MsExamineDetail(String id, String ehrId, String personId, String recordNumber, String sampleId, String inspectionType, String inspectionItemCode, String inspectionItemName, String inspectionQuantifyResult, String inspectionResult, String inspectionUnit, String referenceRange, String prompt, String conclusion, Date checkDate, String detectionPeopleName, String detectionOrgName, String detectionRoomCode, String detectionRoomName, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String examinationNumber, String exProjSn, String ucl, String lcl, String analysisStatus, String isLimit, String hospitalCode, Date gatherDate, String sputumSmearPosi, String syphilisPosi, String alanineAspartate, String hbvDnaPosi) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.recordNumber = recordNumber;
+    this.sampleId = sampleId;
+    this.inspectionType = inspectionType;
+    this.inspectionItemCode = inspectionItemCode;
+    this.inspectionItemName = inspectionItemName;
+    this.inspectionQuantifyResult = inspectionQuantifyResult;
+    this.inspectionResult = inspectionResult;
+    this.inspectionUnit = inspectionUnit;
+    this.referenceRange = referenceRange;
+    this.prompt = prompt;
+    this.conclusion = conclusion;
+    this.checkDate = checkDate;
+    this.detectionPeopleName = detectionPeopleName;
+    this.detectionOrgName = detectionOrgName;
+    this.detectionRoomCode = detectionRoomCode;
+    this.detectionRoomName = detectionRoomName;
+    this.updateName = updateName;
+    this.updateIdcard = updateIdcard;
+    this.updateDate = updateDate;
+    this.isDelete = isDelete;
+    this.examinationNumber = examinationNumber;
+    this.exProjSn = exProjSn;
+    this.ucl = ucl;
+    this.lcl = lcl;
+    this.analysisStatus = analysisStatus;
+    this.isLimit = isLimit;
+    this.hospitalCode = hospitalCode;
+    this.gatherDate = gatherDate;
+    this.sputumSmearPosi = sputumSmearPosi;
+    this.syphilisPosi = syphilisPosi;
+    this.alanineAspartate = alanineAspartate;
+    this.hbvDnaPosi = hbvDnaPosi;
+  }
 
   public String getId() {
     return id;

@@ -1,10 +1,12 @@
 package com.founder.dao;
 
 import com.founder.entity.EhrHealthEvent;
+import com.founder.entity.PageBean;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 /**
  * @author create by lyz
@@ -37,6 +39,12 @@ public interface EhrHealthEventDao extends BaseDao<EhrHealthEvent>{
     ArrayList<EhrHealthEvent> selectByPeronId(@Param("person_id") String personId);
 
     /**
+     * 根据ehr_type查询所有记录
+     * @param ehrType
+     * @return
+     */
+    ArrayList<EhrHealthEvent> selectAllByEhrType(String ehrType);
+    /**
      * 根据ehr_id查询记录
      *
      * @param ehrId
@@ -54,6 +62,8 @@ public interface EhrHealthEventDao extends BaseDao<EhrHealthEvent>{
      */
     @Override
     ArrayList<EhrHealthEvent> selectByEhrAndPersonId(@Param("ehr_id") String ehrId,@Param("person_id") String personId);
+
+    ArrayList<EhrHealthEvent> selectByFenye();
 
 
 }

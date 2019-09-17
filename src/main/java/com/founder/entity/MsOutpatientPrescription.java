@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsOutpatientPrescription {
 
   private String id;
@@ -45,6 +48,52 @@ public class MsOutpatientPrescription {
   private String antibioticFlag;
   private java.sql.Date gatherDate;
 
+  public MsOutpatientPrescription() {
+  }
+
+  public MsOutpatientPrescription(String id, String ehrId, String personId, String outpatientNo, String recordNumber, String name, String gender, String age, String hospitalCode, String hospitalName, String prescribeRoomCode, String prescribeRoomName, String cmType, String drugType, String drugTypeName, String prescriptionNote, String prescriptionTotalCost, String prescribeDoctorNo, String prescribeDoctorName, String prescribeDoctorIdcard, Timestamp prescribeDate, String fillUserName, String fillUserIdcard, Timestamp fillTime, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String marriage, String othercardtype, String othercardno, String opEmHpMark, String ifCharge, String ifDispense, String tcmDecoct, String tcmUse, String tcmOdrno, String processStatus, String isLimit, String antibioticFlag, Date gatherDate) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.outpatientNo = outpatientNo;
+    this.recordNumber = recordNumber;
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+    this.hospitalCode = hospitalCode;
+    this.hospitalName = hospitalName;
+    this.prescribeRoomCode = prescribeRoomCode;
+    this.prescribeRoomName = prescribeRoomName;
+    this.cmType = cmType;
+    this.drugType = drugType;
+    this.drugTypeName = drugTypeName;
+    this.prescriptionNote = prescriptionNote;
+    this.prescriptionTotalCost = prescriptionTotalCost;
+    this.prescribeDoctorNo = prescribeDoctorNo;
+    this.prescribeDoctorName = prescribeDoctorName;
+    this.prescribeDoctorIdcard = prescribeDoctorIdcard;
+    this.prescribeDate = prescribeDate;
+    this.fillUserName = fillUserName;
+    this.fillUserIdcard = fillUserIdcard;
+    this.fillTime = fillTime;
+    this.updateName = updateName;
+    this.updateIdcard = updateIdcard;
+    this.updateDate = updateDate;
+    this.isDelete = isDelete;
+    this.marriage = marriage;
+    this.othercardtype = othercardtype;
+    this.othercardno = othercardno;
+    this.opEmHpMark = opEmHpMark;
+    this.ifCharge = ifCharge;
+    this.ifDispense = ifDispense;
+    this.tcmDecoct = tcmDecoct;
+    this.tcmUse = tcmUse;
+    this.tcmOdrno = tcmOdrno;
+    this.processStatus = processStatus;
+    this.isLimit = isLimit;
+    this.antibioticFlag = antibioticFlag;
+    this.gatherDate = gatherDate;
+  }
 
   public String getId() {
     return id;

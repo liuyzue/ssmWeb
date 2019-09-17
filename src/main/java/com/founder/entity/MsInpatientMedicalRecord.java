@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsInpatientMedicalRecord {
 
   private String id;
@@ -121,6 +124,128 @@ public class MsInpatientMedicalRecord {
   private java.sql.Date gatherDate;
   private String outhos15Flag;
 
+  public MsInpatientMedicalRecord() {
+  }
+
+  public MsInpatientMedicalRecord(String id, String ehrId, String personId, String medicalRecordNo, String admissionNo, String hospitalCode, String hospitalName, String name, String age, String monthAge, String neonatalBirthWeight, String neonatalinhosWeight, String birthProvince, String birthCity, String birthCountry, Timestamp inhosDate, String inhosMethod, String inhosDeptCode, String inhosDeptName, String inhosRoomCode, String inhosCount, String inhosPatientName, String inhosRescueTimes, String inhosRescueSuccessTimes, String inhosTreatmentResult, String inhosCondition, Date inhosAllergicStartDate, String inhosBloodTypeCode, String inhosBloodVolume, String inhosBloodVolumeCount, String inhosBloodReactionFlag, String inhosDays, String inhosCounts, String inhosAutopsyFlag, String inhosTeachCaseFlag, String inhosMedicalQualityCode, String outhosMethod, String outhosFlag, String outhosPurpose, Timestamp befInhoSmuDate, Timestamp aftInhoSmuDate, String medicalPayWay, String medicalSettlementWayCode, String personalExpenses, String medicalInsuranceCostSum, String otherSubsidiesCostSum, String admissionTotalAmount, String deptMasterSignature, String directorDoctorSignature, String attendingDoctorSignature, String admissionDoctorSignature, String primaryNurseSignature, String refresherDoctorsSignature, String internSignature, String medicalRecordSignature, String qcDoctorSignature, String qcNurseSignature, Date qcDate, String outhosRoom, String outhosDeptName, Date outHospitalDate, String isDelete, String gender, String marriage, String injuryPosionReason, String injuryDiseaseCode, String injuryPathologyNo, String medicalsExpense, String treatmentExpense, String nurseExpense, String otherMedicalsExpense, String pathologyDiagnosisExpense, String labDiagnosisExpense, String imagingDiagnosisExpense, String clinicalItemExpense, String nonSurgicalItemExpense, String clinicalTherapyExpense, String surgeryTreatmentExpense, String anesthesiaExpense, String surgeryExpense, String rehabilitationExpense, String cmTreatmentExpense, String wmExpense, String antibacterialExpense, String proprietaryCmExpense, String chmExpense, String bloodExpense, String albuminExpense, String globulinExpense, String clottingFactorExpense, String cytokinesExpense, String checkDmmExpense, String treatmentDmmExpense, String surgeryDmmExpense, String otherExpense, String transitionDeptCode, String transitionDeptName, String othercardtype, String othercardno, String hpSNo, String nation, String cureType, String cpwManaType, String cpwManaCode, String ifChDp, String ifChEqpt, String ifChTech, String ifDialNu, String ccasediagCi, String ophpdiagCi, String addiagCi, String operdiagCi, String rcasediagCi, String processStatus, String isLimit, Date gatherDate, String outhos15Flag) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.medicalRecordNo = medicalRecordNo;
+    this.admissionNo = admissionNo;
+    this.hospitalCode = hospitalCode;
+    this.hospitalName = hospitalName;
+    this.name = name;
+    this.age = age;
+    this.monthAge = monthAge;
+    this.neonatalBirthWeight = neonatalBirthWeight;
+    this.neonatalinhosWeight = neonatalinhosWeight;
+    this.birthProvince = birthProvince;
+    this.birthCity = birthCity;
+    this.birthCountry = birthCountry;
+    this.inhosDate = inhosDate;
+    this.inhosMethod = inhosMethod;
+    this.inhosDeptCode = inhosDeptCode;
+    this.inhosDeptName = inhosDeptName;
+    this.inhosRoomCode = inhosRoomCode;
+    this.inhosCount = inhosCount;
+    this.inhosPatientName = inhosPatientName;
+    this.inhosRescueTimes = inhosRescueTimes;
+    this.inhosRescueSuccessTimes = inhosRescueSuccessTimes;
+    this.inhosTreatmentResult = inhosTreatmentResult;
+    this.inhosCondition = inhosCondition;
+    this.inhosAllergicStartDate = inhosAllergicStartDate;
+    this.inhosBloodTypeCode = inhosBloodTypeCode;
+    this.inhosBloodVolume = inhosBloodVolume;
+    this.inhosBloodVolumeCount = inhosBloodVolumeCount;
+    this.inhosBloodReactionFlag = inhosBloodReactionFlag;
+    this.inhosDays = inhosDays;
+    this.inhosCounts = inhosCounts;
+    this.inhosAutopsyFlag = inhosAutopsyFlag;
+    this.inhosTeachCaseFlag = inhosTeachCaseFlag;
+    this.inhosMedicalQualityCode = inhosMedicalQualityCode;
+    this.outhosMethod = outhosMethod;
+    this.outhosFlag = outhosFlag;
+    this.outhosPurpose = outhosPurpose;
+    this.befInhoSmuDate = befInhoSmuDate;
+    this.aftInhoSmuDate = aftInhoSmuDate;
+    this.medicalPayWay = medicalPayWay;
+    this.medicalSettlementWayCode = medicalSettlementWayCode;
+    this.personalExpenses = personalExpenses;
+    this.medicalInsuranceCostSum = medicalInsuranceCostSum;
+    this.otherSubsidiesCostSum = otherSubsidiesCostSum;
+    this.admissionTotalAmount = admissionTotalAmount;
+    this.deptMasterSignature = deptMasterSignature;
+    this.directorDoctorSignature = directorDoctorSignature;
+    this.attendingDoctorSignature = attendingDoctorSignature;
+    this.admissionDoctorSignature = admissionDoctorSignature;
+    this.primaryNurseSignature = primaryNurseSignature;
+    this.refresherDoctorsSignature = refresherDoctorsSignature;
+    this.internSignature = internSignature;
+    this.medicalRecordSignature = medicalRecordSignature;
+    this.qcDoctorSignature = qcDoctorSignature;
+    this.qcNurseSignature = qcNurseSignature;
+    this.qcDate = qcDate;
+    this.outhosRoom = outhosRoom;
+    this.outhosDeptName = outhosDeptName;
+    this.outHospitalDate = outHospitalDate;
+    this.isDelete = isDelete;
+    this.gender = gender;
+    this.marriage = marriage;
+    this.injuryPosionReason = injuryPosionReason;
+    this.injuryDiseaseCode = injuryDiseaseCode;
+    this.injuryPathologyNo = injuryPathologyNo;
+    this.medicalsExpense = medicalsExpense;
+    this.treatmentExpense = treatmentExpense;
+    this.nurseExpense = nurseExpense;
+    this.otherMedicalsExpense = otherMedicalsExpense;
+    this.pathologyDiagnosisExpense = pathologyDiagnosisExpense;
+    this.labDiagnosisExpense = labDiagnosisExpense;
+    this.imagingDiagnosisExpense = imagingDiagnosisExpense;
+    this.clinicalItemExpense = clinicalItemExpense;
+    this.nonSurgicalItemExpense = nonSurgicalItemExpense;
+    this.clinicalTherapyExpense = clinicalTherapyExpense;
+    this.surgeryTreatmentExpense = surgeryTreatmentExpense;
+    this.anesthesiaExpense = anesthesiaExpense;
+    this.surgeryExpense = surgeryExpense;
+    this.rehabilitationExpense = rehabilitationExpense;
+    this.cmTreatmentExpense = cmTreatmentExpense;
+    this.wmExpense = wmExpense;
+    this.antibacterialExpense = antibacterialExpense;
+    this.proprietaryCmExpense = proprietaryCmExpense;
+    this.chmExpense = chmExpense;
+    this.bloodExpense = bloodExpense;
+    this.albuminExpense = albuminExpense;
+    this.globulinExpense = globulinExpense;
+    this.clottingFactorExpense = clottingFactorExpense;
+    this.cytokinesExpense = cytokinesExpense;
+    this.checkDmmExpense = checkDmmExpense;
+    this.treatmentDmmExpense = treatmentDmmExpense;
+    this.surgeryDmmExpense = surgeryDmmExpense;
+    this.otherExpense = otherExpense;
+    this.transitionDeptCode = transitionDeptCode;
+    this.transitionDeptName = transitionDeptName;
+    this.othercardtype = othercardtype;
+    this.othercardno = othercardno;
+    this.hpSNo = hpSNo;
+    this.nation = nation;
+    this.cureType = cureType;
+    this.cpwManaType = cpwManaType;
+    this.cpwManaCode = cpwManaCode;
+    this.ifChDp = ifChDp;
+    this.ifChEqpt = ifChEqpt;
+    this.ifChTech = ifChTech;
+    this.ifDialNu = ifDialNu;
+    this.ccasediagCi = ccasediagCi;
+    this.ophpdiagCi = ophpdiagCi;
+    this.addiagCi = addiagCi;
+    this.operdiagCi = operdiagCi;
+    this.rcasediagCi = rcasediagCi;
+    this.processStatus = processStatus;
+    this.isLimit = isLimit;
+    this.gatherDate = gatherDate;
+    this.outhos15Flag = outhos15Flag;
+  }
 
   public String getId() {
     return id;

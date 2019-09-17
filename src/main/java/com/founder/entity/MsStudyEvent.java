@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsStudyEvent {
 
   private String id;
@@ -61,6 +64,68 @@ public class MsStudyEvent {
   private java.sql.Date gatherDate;
   private String opEmInExMark;
 
+  public MsStudyEvent() {
+  }
+
+  public MsStudyEvent(String id, String ehrId, String personId, String recordNumber, String barCode, String invoiceNumber, String name, String gender, String age, String inspectionTitle, String inspectionType, String inspectionName, String inspectionItemCode, String inspectionItemName, String inspectionQuantifyResult, String inspectionResult, String inspectionUnit, String lesionsName, String findings, String conclusionCode, String conclusionDesc, String suggestion, String hospitalCode, String hospitalName, String applyRoomCode, String applyRoomName, String applyPeopleNo, String applyPeopleName, String applyPeopleIdcard, Date applyDate, String auditCode, String auditName, String auditIdcard, Date auditDate, String checkPeopleCode, String checkPeopleName, String checkPeopleIdcard, Date checkDate, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String marriage, String othercardtype, String othercardno, String projCatCode, String ckptCode, String ckptName, String imageUidaddr, String eqptCatCode, String eqptNo, String eqptName, String diagMark, String processStatus, String isLimit, Date gatherDate, String opEmInExMark) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.recordNumber = recordNumber;
+    this.barCode = barCode;
+    this.invoiceNumber = invoiceNumber;
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+    this.inspectionTitle = inspectionTitle;
+    this.inspectionType = inspectionType;
+    this.inspectionName = inspectionName;
+    this.inspectionItemCode = inspectionItemCode;
+    this.inspectionItemName = inspectionItemName;
+    this.inspectionQuantifyResult = inspectionQuantifyResult;
+    this.inspectionResult = inspectionResult;
+    this.inspectionUnit = inspectionUnit;
+    this.lesionsName = lesionsName;
+    this.findings = findings;
+    this.conclusionCode = conclusionCode;
+    this.conclusionDesc = conclusionDesc;
+    this.suggestion = suggestion;
+    this.hospitalCode = hospitalCode;
+    this.hospitalName = hospitalName;
+    this.applyRoomCode = applyRoomCode;
+    this.applyRoomName = applyRoomName;
+    this.applyPeopleNo = applyPeopleNo;
+    this.applyPeopleName = applyPeopleName;
+    this.applyPeopleIdcard = applyPeopleIdcard;
+    this.applyDate = applyDate;
+    this.auditCode = auditCode;
+    this.auditName = auditName;
+    this.auditIdcard = auditIdcard;
+    this.auditDate = auditDate;
+    this.checkPeopleCode = checkPeopleCode;
+    this.checkPeopleName = checkPeopleName;
+    this.checkPeopleIdcard = checkPeopleIdcard;
+    this.checkDate = checkDate;
+    this.updateName = updateName;
+    this.updateIdcard = updateIdcard;
+    this.updateDate = updateDate;
+    this.isDelete = isDelete;
+    this.marriage = marriage;
+    this.othercardtype = othercardtype;
+    this.othercardno = othercardno;
+    this.projCatCode = projCatCode;
+    this.ckptCode = ckptCode;
+    this.ckptName = ckptName;
+    this.imageUidaddr = imageUidaddr;
+    this.eqptCatCode = eqptCatCode;
+    this.eqptNo = eqptNo;
+    this.eqptName = eqptName;
+    this.diagMark = diagMark;
+    this.processStatus = processStatus;
+    this.isLimit = isLimit;
+    this.gatherDate = gatherDate;
+    this.opEmInExMark = opEmInExMark;
+  }
 
   public String getId() {
     return id;

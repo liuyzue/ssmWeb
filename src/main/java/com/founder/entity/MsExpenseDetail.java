@@ -1,6 +1,8 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+
 public class MsExpenseDetail {
 
   private String id;
@@ -31,6 +33,38 @@ public class MsExpenseDetail {
   private String isClose;
   private java.sql.Date gatherDate;
 
+  public MsExpenseDetail() {
+  }
+
+  public MsExpenseDetail(String id, String ehrId, String personId, String recordNumber, String hospitalCode, String hospitalName, String chargeCode, String detailItemCode, String detailItemName, String detailItemUnit, String detailItemPrice, String detailItemQuantity, String detailItemAmount, String medicalInsuranceCostSum, String personalExpenses, String isDelete, String costNumber, String totalCost, String admissionNo, String medicareCode, Date clinicDate, String clinicMark, String expenseType, String batchNo, Date createDate, String isClose, Date gatherDate) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.recordNumber = recordNumber;
+    this.hospitalCode = hospitalCode;
+    this.hospitalName = hospitalName;
+    this.chargeCode = chargeCode;
+    this.detailItemCode = detailItemCode;
+    this.detailItemName = detailItemName;
+    this.detailItemUnit = detailItemUnit;
+    this.detailItemPrice = detailItemPrice;
+    this.detailItemQuantity = detailItemQuantity;
+    this.detailItemAmount = detailItemAmount;
+    this.medicalInsuranceCostSum = medicalInsuranceCostSum;
+    this.personalExpenses = personalExpenses;
+    this.isDelete = isDelete;
+    this.costNumber = costNumber;
+    this.totalCost = totalCost;
+    this.admissionNo = admissionNo;
+    this.medicareCode = medicareCode;
+    this.clinicDate = clinicDate;
+    this.clinicMark = clinicMark;
+    this.expenseType = expenseType;
+    this.batchNo = batchNo;
+    this.createDate = createDate;
+    this.isClose = isClose;
+    this.gatherDate = gatherDate;
+  }
 
   public String getId() {
     return id;

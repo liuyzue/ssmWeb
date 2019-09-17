@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsExamineEvent {
 
   private String id;
@@ -54,6 +57,61 @@ public class MsExamineEvent {
   private String opEmInExMark;
   private String visitStatus;
 
+  public MsExamineEvent() {
+  }
+
+  public MsExamineEvent(String id, String ehrId, String personId, String recordNumber, String name, String gender, String age, String checkListTitle, String sampleTypeName, String inspectionType, String hospitalCode, String hospitalName, String applyRoomCode, String applyRoomName, String applyPeopleNo, String applyPeopleName, String applyPeopleIdcard, Date applyDate, String auditCode, String auditName, String auditIdcard, Date auditDate, String checkPeopleCode, String checkPeopleName, String checkPeopleIdcard, Date checkDate, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String marriage, String examinationNumber, String examinationCode, String examinationName, String othercardtype, String othercardno, String opEmHpExNo, String opEmHpExMark, String rptCatCode, Date sampDt, Date acceptDt, String eqptCatCode, String eqptNo, String eqptName, String testmethod, String processStatus, String isLimit, Date gatherDate, String opEmInExMark, String visitStatus) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.recordNumber = recordNumber;
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+    this.checkListTitle = checkListTitle;
+    this.sampleTypeName = sampleTypeName;
+    this.inspectionType = inspectionType;
+    this.hospitalCode = hospitalCode;
+    this.hospitalName = hospitalName;
+    this.applyRoomCode = applyRoomCode;
+    this.applyRoomName = applyRoomName;
+    this.applyPeopleNo = applyPeopleNo;
+    this.applyPeopleName = applyPeopleName;
+    this.applyPeopleIdcard = applyPeopleIdcard;
+    this.applyDate = applyDate;
+    this.auditCode = auditCode;
+    this.auditName = auditName;
+    this.auditIdcard = auditIdcard;
+    this.auditDate = auditDate;
+    this.checkPeopleCode = checkPeopleCode;
+    this.checkPeopleName = checkPeopleName;
+    this.checkPeopleIdcard = checkPeopleIdcard;
+    this.checkDate = checkDate;
+    this.updateName = updateName;
+    this.updateIdcard = updateIdcard;
+    this.updateDate = updateDate;
+    this.isDelete = isDelete;
+    this.marriage = marriage;
+    this.examinationNumber = examinationNumber;
+    this.examinationCode = examinationCode;
+    this.examinationName = examinationName;
+    this.othercardtype = othercardtype;
+    this.othercardno = othercardno;
+    this.opEmHpExNo = opEmHpExNo;
+    this.opEmHpExMark = opEmHpExMark;
+    this.rptCatCode = rptCatCode;
+    this.sampDt = sampDt;
+    this.acceptDt = acceptDt;
+    this.eqptCatCode = eqptCatCode;
+    this.eqptNo = eqptNo;
+    this.eqptName = eqptName;
+    this.testmethod = testmethod;
+    this.processStatus = processStatus;
+    this.isLimit = isLimit;
+    this.gatherDate = gatherDate;
+    this.opEmInExMark = opEmInExMark;
+    this.visitStatus = visitStatus;
+  }
 
   public String getId() {
     return id;

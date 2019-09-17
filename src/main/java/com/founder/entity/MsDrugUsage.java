@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsDrugUsage {
 
   private String id;
@@ -74,6 +77,81 @@ public class MsDrugUsage {
   private String narcoticFlag;
   private String toxicFlag;
 
+  public MsDrugUsage() {
+  }
+
+  public MsDrugUsage(String id, String ehrId, String personId, String admissionNo, String referralHospitalCode, String referralHospitalName, String name, String gender, String age, String cmType, String drugType, String drugDosage, String drugUseDays, String drugUseFrequency, String drugUseDoseUnit, String drugUseTotalDose, String drugUseRouteCode, Timestamp startDate, Timestamp stopDate, String drugGenericName, String drugTradeName, String drugSpecifications, String doctorAdvice, String productionUnitName, String executeMark, String executeFrequency, String executeResult, String unitPrice, String subtotal, String remarks, String fillUserName, String fillUserIdcard, Timestamp fillTime, String updateName, String updateIdcard, Timestamp updateDate, String recordNumber, String isDelete, String marriage, String medicationCompliance, String medicationComplianceName, String drugUseRouteName, String baseDrugCode, String internalDrugCode, String drugMedicareCode, String drugAgriculturalCode, String quantityUnit, String quantity, String drugUseDose, String drugUseState, Date clinicDate, String doctorNo, String doctorName, String clinicMark, String expenseType, String batchNo, String ifCharge, Date beginTime, Date odrisuDt, String odrType, Date stopDt, String stpdocIdcard, String processStatus, String isLimit, String baseDrugFlag, String antibioticFlag, String antibacterialsFlag, Date gatherDate, String narcoticFlag, String toxicFlag) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.admissionNo = admissionNo;
+    this.referralHospitalCode = referralHospitalCode;
+    this.referralHospitalName = referralHospitalName;
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+    this.cmType = cmType;
+    this.drugType = drugType;
+    this.drugDosage = drugDosage;
+    this.drugUseDays = drugUseDays;
+    this.drugUseFrequency = drugUseFrequency;
+    this.drugUseDoseUnit = drugUseDoseUnit;
+    this.drugUseTotalDose = drugUseTotalDose;
+    this.drugUseRouteCode = drugUseRouteCode;
+    this.startDate = startDate;
+    this.stopDate = stopDate;
+    this.drugGenericName = drugGenericName;
+    this.drugTradeName = drugTradeName;
+    this.drugSpecifications = drugSpecifications;
+    this.doctorAdvice = doctorAdvice;
+    this.productionUnitName = productionUnitName;
+    this.executeMark = executeMark;
+    this.executeFrequency = executeFrequency;
+    this.executeResult = executeResult;
+    this.unitPrice = unitPrice;
+    this.subtotal = subtotal;
+    this.remarks = remarks;
+    this.fillUserName = fillUserName;
+    this.fillUserIdcard = fillUserIdcard;
+    this.fillTime = fillTime;
+    this.updateName = updateName;
+    this.updateIdcard = updateIdcard;
+    this.updateDate = updateDate;
+    this.recordNumber = recordNumber;
+    this.isDelete = isDelete;
+    this.marriage = marriage;
+    this.medicationCompliance = medicationCompliance;
+    this.medicationComplianceName = medicationComplianceName;
+    this.drugUseRouteName = drugUseRouteName;
+    this.baseDrugCode = baseDrugCode;
+    this.internalDrugCode = internalDrugCode;
+    this.drugMedicareCode = drugMedicareCode;
+    this.drugAgriculturalCode = drugAgriculturalCode;
+    this.quantityUnit = quantityUnit;
+    this.quantity = quantity;
+    this.drugUseDose = drugUseDose;
+    this.drugUseState = drugUseState;
+    this.clinicDate = clinicDate;
+    this.doctorNo = doctorNo;
+    this.doctorName = doctorName;
+    this.clinicMark = clinicMark;
+    this.expenseType = expenseType;
+    this.batchNo = batchNo;
+    this.ifCharge = ifCharge;
+    this.beginTime = beginTime;
+    this.odrisuDt = odrisuDt;
+    this.odrType = odrType;
+    this.stopDt = stopDt;
+    this.stpdocIdcard = stpdocIdcard;
+    this.processStatus = processStatus;
+    this.isLimit = isLimit;
+    this.baseDrugFlag = baseDrugFlag;
+    this.antibioticFlag = antibioticFlag;
+    this.antibacterialsFlag = antibacterialsFlag;
+    this.gatherDate = gatherDate;
+    this.narcoticFlag = narcoticFlag;
+    this.toxicFlag = toxicFlag;
+  }
 
   public String getId() {
     return id;

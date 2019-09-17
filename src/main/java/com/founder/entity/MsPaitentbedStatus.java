@@ -1,6 +1,8 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+
 public class MsPaitentbedStatus {
 
   private String id;
@@ -13,6 +15,20 @@ public class MsPaitentbedStatus {
   private java.sql.Date createTime;
   private java.sql.Date updateTime;
 
+  public MsPaitentbedStatus() {
+  }
+
+  public MsPaitentbedStatus(String id, String hospitalCode, String depCode, String depName, String sumBed, String residueBed, String telNo, Date createTime, Date updateTime) {
+    this.id = id;
+    this.hospitalCode = hospitalCode;
+    this.depCode = depCode;
+    this.depName = depName;
+    this.sumBed = sumBed;
+    this.residueBed = residueBed;
+    this.telNo = telNo;
+    this.createTime = createTime;
+    this.updateTime = updateTime;
+  }
 
   public String getId() {
     return id;

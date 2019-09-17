@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/login")
 public class LoginController {
     private static final Logger logger= LogManager.getLogger(LoginController.class.getName());
 
@@ -48,13 +48,14 @@ public class LoginController {
 
 
     public boolean checkPassword(String username,String password){
-        if (username == null)
+        if (username == null) {
             return false;
-        else {
+        }else {
             if (userService.findPasswordByUsername(username).equals(password) && password != null)
-                return true;
-            else
+            { return true;}
+            else {
                 return false;
+            }
         }
     }
 

@@ -1,6 +1,8 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+
 public class ErrorInfo {
 
   private String id;
@@ -10,8 +12,21 @@ public class ErrorInfo {
   private java.sql.Date uploadDate;
   private java.sql.Date checkDate;
   private String personId;
-  private String ehrid;
+  private String ehrId;
 
+  public ErrorInfo() {
+  }
+
+  public ErrorInfo(String id, String sqlText, String tableName, String resultType, Date uploadDate, Date checkDate, String personId, String ehrId) {
+    this.id = id;
+    this.sqlText = sqlText;
+    this.tableName = tableName;
+    this.resultType = resultType;
+    this.uploadDate = uploadDate;
+    this.checkDate = checkDate;
+    this.personId = personId;
+    this.ehrId = ehrId;
+  }
 
   public String getId() {
     return id;
@@ -76,12 +91,12 @@ public class ErrorInfo {
   }
 
 
-  public String getEhrid() {
-    return ehrid;
+  public String getEhrId() {
+    return ehrId;
   }
 
-  public void setEhrid(String ehrid) {
-    this.ehrid = ehrid;
+  public void setEhrId(String ehrId) {
+    this.ehrId = ehrId;
   }
 
 }

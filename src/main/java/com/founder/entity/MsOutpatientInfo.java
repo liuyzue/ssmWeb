@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsOutpatientInfo {
 
   private String id;
@@ -54,6 +57,61 @@ public class MsOutpatientInfo {
   private String prescriptionRouteCount;
   private java.sql.Date gatherDate;
 
+  public MsOutpatientInfo() {
+  }
+
+  public MsOutpatientInfo(String id, String ehrId, String personId, String outpatientNo, String healthFileNo, String clinicRecordNo, String reportCardTypeCode, String recordNumber, String clinicOrganCode, String clinicOrganName, String medicalRoomCode, String medicalRoomName, Date clinicDate, String clinicPeopleName, String gender, String age, Date birthday, String marriage, String chiefComplaint, String consultationQuestion, String healthServicesRequires, Timestamp pathogenesisDate, String otherMedicalTreatment, String medicalCostPayWay, String outpatientCostAccountsWay, String outpatientCostTypeCode, String outpatientCostTypeName, String outpatientCostSum, String personalExpenses, String medicalInsuranceCostSum, String otherSubsidiesCostSum, String manaDoctorNo, String manaDoctorName, String manaDoctorIdcard, String fillUserName, String fillUserIdcard, Timestamp fillTime, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String outpatientType, String mainSymptoms, String processStatus, String visitStatus, String isLimit, String observedPatientFlag, String prescriptionCount, String prescriptionRouteCount, Date gatherDate) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.outpatientNo = outpatientNo;
+    this.healthFileNo = healthFileNo;
+    this.clinicRecordNo = clinicRecordNo;
+    this.reportCardTypeCode = reportCardTypeCode;
+    this.recordNumber = recordNumber;
+    this.clinicOrganCode = clinicOrganCode;
+    this.clinicOrganName = clinicOrganName;
+    this.medicalRoomCode = medicalRoomCode;
+    this.medicalRoomName = medicalRoomName;
+    this.clinicDate = clinicDate;
+    this.clinicPeopleName = clinicPeopleName;
+    this.gender = gender;
+    this.age = age;
+    this.birthday = birthday;
+    this.marriage = marriage;
+    this.chiefComplaint = chiefComplaint;
+    this.consultationQuestion = consultationQuestion;
+    this.healthServicesRequires = healthServicesRequires;
+    this.pathogenesisDate = pathogenesisDate;
+    this.otherMedicalTreatment = otherMedicalTreatment;
+    this.medicalCostPayWay = medicalCostPayWay;
+    this.outpatientCostAccountsWay = outpatientCostAccountsWay;
+    this.outpatientCostTypeCode = outpatientCostTypeCode;
+    this.outpatientCostTypeName = outpatientCostTypeName;
+    this.outpatientCostSum = outpatientCostSum;
+    this.personalExpenses = personalExpenses;
+    this.medicalInsuranceCostSum = medicalInsuranceCostSum;
+    this.otherSubsidiesCostSum = otherSubsidiesCostSum;
+    this.manaDoctorNo = manaDoctorNo;
+    this.manaDoctorName = manaDoctorName;
+    this.manaDoctorIdcard = manaDoctorIdcard;
+    this.fillUserName = fillUserName;
+    this.fillUserIdcard = fillUserIdcard;
+    this.fillTime = fillTime;
+    this.updateName = updateName;
+    this.updateIdcard = updateIdcard;
+    this.updateDate = updateDate;
+    this.isDelete = isDelete;
+    this.outpatientType = outpatientType;
+    this.mainSymptoms = mainSymptoms;
+    this.processStatus = processStatus;
+    this.visitStatus = visitStatus;
+    this.isLimit = isLimit;
+    this.observedPatientFlag = observedPatientFlag;
+    this.prescriptionCount = prescriptionCount;
+    this.prescriptionRouteCount = prescriptionRouteCount;
+    this.gatherDate = gatherDate;
+  }
 
   public String getId() {
     return id;

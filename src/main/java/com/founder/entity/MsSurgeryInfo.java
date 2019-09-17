@@ -1,6 +1,9 @@
 package com.founder.entity;
 
 
+import java.sql.Date;
+import java.sql.Timestamp;
+
 public class MsSurgeryInfo {
 
   private String id;
@@ -43,6 +46,50 @@ public class MsSurgeryInfo {
   private String isAnalyse;
   private java.sql.Date gatherDate;
 
+  public MsSurgeryInfo() {
+  }
+
+  public MsSurgeryInfo(String id, String ehrId, String personId, String hospitalCode, String hospitalName, String anesthesiaMethodCode, String anesthesiaMethodName, String anesthesiaDoctorCode, String anesthesiaDoctorName, String anesthesiaDoctorIdcard, String incisionHealingGradeCode, String incisionHealingGradeName, String opertationCode, String opertationName, String opertationDesc, String opertationTargetCode, String opertationTargetName, String operatorCode, String operatorName, String operationUnitName, String operatorIdcard, Timestamp opertationDate, String operationLevelName, String operationAssistantOne, String operationAssistantTwo, String isDelete, String name, String age, String gender, String marriage, String processStatus, String applyNo, Date beginTime, Date endTime, String analysisStatus, String opEmHpMark, String isLimit, String isAnalyse, Date gatherDate) {
+    this.id = id;
+    this.ehrId = ehrId;
+    this.personId = personId;
+    this.hospitalCode = hospitalCode;
+    this.hospitalName = hospitalName;
+    this.anesthesiaMethodCode = anesthesiaMethodCode;
+    this.anesthesiaMethodName = anesthesiaMethodName;
+    this.anesthesiaDoctorCode = anesthesiaDoctorCode;
+    this.anesthesiaDoctorName = anesthesiaDoctorName;
+    this.anesthesiaDoctorIdcard = anesthesiaDoctorIdcard;
+    this.incisionHealingGradeCode = incisionHealingGradeCode;
+    this.incisionHealingGradeName = incisionHealingGradeName;
+    this.opertationCode = opertationCode;
+    this.opertationName = opertationName;
+    this.opertationDesc = opertationDesc;
+    this.opertationTargetCode = opertationTargetCode;
+    this.opertationTargetName = opertationTargetName;
+    this.operatorCode = operatorCode;
+    this.operatorName = operatorName;
+    this.operationUnitName = operationUnitName;
+    this.operatorIdcard = operatorIdcard;
+    this.opertationDate = opertationDate;
+    this.operationLevelName = operationLevelName;
+    this.operationAssistantOne = operationAssistantOne;
+    this.operationAssistantTwo = operationAssistantTwo;
+    this.isDelete = isDelete;
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.marriage = marriage;
+    this.processStatus = processStatus;
+    this.applyNo = applyNo;
+    this.beginTime = beginTime;
+    this.endTime = endTime;
+    this.analysisStatus = analysisStatus;
+    this.opEmHpMark = opEmHpMark;
+    this.isLimit = isLimit;
+    this.isAnalyse = isAnalyse;
+    this.gatherDate = gatherDate;
+  }
 
   public String getId() {
     return id;
