@@ -63,7 +63,12 @@ public interface EhrHealthEventDao extends BaseDao<EhrHealthEvent>{
     @Override
     ArrayList<EhrHealthEvent> selectByEhrAndPersonId(@Param("ehr_id") String ehrId,@Param("person_id") String personId);
 
-    ArrayList<EhrHealthEvent> selectByFenye();
+    /**
+     * 查询某天上传的记录
+     * @param uploadTime
+     * @return
+     */
+    ArrayList<EhrHealthEvent> selectOneDayByUploadTime(String uploadTime);
 
 
 }

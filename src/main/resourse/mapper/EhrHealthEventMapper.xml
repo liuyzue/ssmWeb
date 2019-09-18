@@ -49,14 +49,26 @@
     </select>
 
     <select id="selectAllByEhrType" parameterType="String" resultType="com.founder.entity.EhrHealthEvent">
-        select id, ehr_id, ehr_name, physical_exam_type, person_id, name, age, marriage, ehr_type, disease_code,
+        select
+            <include refid="columnList"/>
+        from EHR_HEALTH_EVENT
+        where EHR_TYPE=#{ehr_type}
+    </select>
+
+    <select id="selectOneDayByUploadTime" parameterType="String" resultType="com.founder.entity.EhrHealthEvent">
+        select
+            <include refid="columnList"/>
+        from MSDBTF.EHR_HEALTH_EVENT
+        where GATHER_DATE=to_date(#{uploadTime},'yyyy/mm/dd HH24:MI:SS')
+    </select>
+
+    <sql id="columnList">
+        id, ehr_id, ehr_name, physical_exam_type, person_id, name, age, marriage, ehr_type, disease_code,
         disease_name, clinic_year, clinic_month, clinic_date, create_organ_code, create_organ_name, create_room_code,
         create_room_name, create_date, create_person, create_idcard, update_organ_code, update_organ_name,
         update_room_code, update_room_name, update_date, update_name, update_idcard, clinic_organ_code, clinic_organ_name,
          clinic_room_code, clinic_room_name, is_delete, gender, data_source, ehr_old_pepole_flag, is_limit, gather_date, id_card
-        from EHR_HEALTH_EVENT
-        where EHR_TYPE=#{ehr_type}
-    </select>
+    </sql>
 
 
 </mapper>

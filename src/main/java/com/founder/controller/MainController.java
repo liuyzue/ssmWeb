@@ -1,12 +1,11 @@
 package com.founder.controller;
 
-import com.founder.entity.EhrHealthEvent;
+import com.founder.cron.datacheck.relevance.EhrHealthEventRelev;
 import com.founder.entity.PageBean;
 import com.founder.service.EhrHealthEventService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * @author create by lyz
@@ -30,15 +30,17 @@ public class MainController {
 
     @Autowired
     EhrHealthEventService eventService;
+    @Autowired
+    EhrHealthEventRelev ehrHealthEventRelev;
 
-    PageBean<EhrHealthEvent> pageBean;
+    PageBean pageBean;
 
 
     @RequestMapping(value = "/fenye",method = RequestMethod.GET)
     public ModelAndView fenye(Integer currentPage, Integer pageSize){
         ModelAndView modelAndView = new ModelAndView();
         if (ObjectUtils.isEmpty(pageBean)){
-            initPageBean(eventService.selectAllByUploadTime("2019/8/21 0:0:0","2019/8/21 0:29:1"));
+            initPageBean(eventService.selectAllByUploadTime("2019/1/21 0:0:0","2019/1/22 0:29:1"));
         }
         if (!ObjectUtils.isEmpty(currentPage)) {
             pageBean.setCurrPage(currentPage);
@@ -52,11 +54,17 @@ public class MainController {
         return modelAndView;
     }
 
-    public void initPageBean(ArrayList<EhrHealthEvent> ehrHealthEvents){
+    @RequestMapping(value = "/doCheck")
+    public String doCheck(Date date){
+        ehrHealthEventRelev.checkOutpatient(date);
+        return "forward:/fenye";
+    }
+
+    public <T> void initPageBean(ArrayList<T> lists){
         pageBean= new PageBean<>();
-        pageBean.setTotalCount(ehrHealthEvents.size());
+        pageBean.setTotalCount(lists.size());
         pageBean.setCurrPage(1);
-        pageBean.setLists(ehrHealthEvents);
+        pageBean.setLists(lists);
         pageBean.setPageSize(10);
         pageBean.setTotalPage(pageBean.getTotalCount()/pageBean.getPageSize());
     }

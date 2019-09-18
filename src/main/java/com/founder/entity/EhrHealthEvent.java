@@ -445,4 +445,48 @@ public class EhrHealthEvent {
     this.idCard = idCard;
   }
 
+  @Override
+  public String toString() {
+    return "EhrHealthEvent{" +
+            "id='" + id + '\'' +
+            ", ehrId='" + ehrId + '\'' +
+            ", ehrName='" + ehrName + '\'' +
+            ", physicalExamType='" + physicalExamType + '\'' +
+            ", personId='" + personId + '\'' +
+            ", name='" + name + '\'' +
+            ", age='" + age + '\'' +
+            ", marriage='" + marriage + '\'' +
+            ", ehrType='" + ehrType + '\'' +
+            ", diseaseCode='" + diseaseCode + '\'' +
+            ", diseaseName='" + diseaseName + '\'' +
+            ", clinicYear='" + clinicYear + '\'' +
+            ", clinicMonth='" + clinicMonth + '\'' +
+            ", clinicDate=" + clinicDate +
+            ", createOrganCode='" + createOrganCode + '\'' +
+            ", createOrganName='" + createOrganName + '\'' +
+            ", createRoomCode='" + createRoomCode + '\'' +
+            ", createRoomName='" + createRoomName + '\'' +
+            ", createDate=" + createDate +
+            ", createPerson='" + createPerson + '\'' +
+            ", createIdcard='" + createIdcard + '\'' +
+            ", updateOrganCode='" + updateOrganCode + '\'' +
+            ", updateOrganName='" + updateOrganName + '\'' +
+            ", updateRoomCode='" + updateRoomCode + '\'' +
+            ", updateRoomName='" + updateRoomName + '\'' +
+            ", updateDate=" + updateDate +
+            ", updateName='" + updateName + '\'' +
+            ", updateIdcard='" + updateIdcard + '\'' +
+            ", clinicOrganCode='" + clinicOrganCode + '\'' +
+            ", clinicOrganName='" + clinicOrganName + '\'' +
+            ", clinicRoomCode='" + clinicRoomCode + '\'' +
+            ", clinicRoomName='" + clinicRoomName + '\'' +
+            ", isDelete='" + isDelete + '\'' +
+            ", gender='" + gender + '\'' +
+            ", dataSource='" + dataSource + '\'' +
+            ", ehrOldPepoleFlag='" + ehrOldPepoleFlag + '\'' +
+            ", isLimit='" + isLimit + '\'' +
+            ", gatherDate=" + gatherDate +
+            ", idCard='" + idCard + '\'' +
+            '}';
+  }
 }

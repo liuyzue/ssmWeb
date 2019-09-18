@@ -75,7 +75,7 @@ public class ErrorInfoServiceImpl implements ErrorInfoService {
      */
     @Override
     public void addErrorInfo(ErrorInfo errorInfo) {
-
+        errorInfoDao.addErrorInfo(errorInfo);
     }
 
     /**

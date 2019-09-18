@@ -1,7 +1,7 @@
 package com.founder.entity;
 
 
-import java.sql.Date;
+import java.util.Date;
 
 public class ErrorInfo {
 
@@ -9,8 +9,8 @@ public class ErrorInfo {
   private String sqlText;
   private String tableName;
   private String resultType;
-  private java.sql.Date uploadDate;
-  private java.sql.Date checkDate;
+  private Date uploadDate;
+  private Date checkDate;
   private String personId;
   private String ehrId;
 
@@ -64,20 +64,20 @@ public class ErrorInfo {
   }
 
 
-  public java.sql.Date getUploadDate() {
+  public Date getUploadDate() {
     return uploadDate;
   }
 
-  public void setUploadDate(java.sql.Date uploadDate) {
+  public void setUploadDate(Date uploadDate) {
     this.uploadDate = uploadDate;
   }
 
 
-  public java.sql.Date getCheckDate() {
+  public Date getCheckDate() {
     return checkDate;
   }
 
-  public void setCheckDate(java.sql.Date checkDate) {
+  public void setCheckDate(Date checkDate) {
     this.checkDate = checkDate;
   }
 
@@ -99,4 +99,17 @@ public class ErrorInfo {
     this.ehrId = ehrId;
   }
 
+  @Override
+  public String toString() {
+    return "ErrorInfo{" +
+            "id='" + id + '\'' +
+            ", sqlText='" + sqlText + '\'' +
+            ", tableName='" + tableName + '\'' +
+            ", resultType='" + resultType + '\'' +
+            ", uploadDate=" + uploadDate +
+            ", checkDate=" + checkDate +
+            ", personId='" + personId + '\'' +
+            ", ehrId='" + ehrId + '\'' +
+            '}';
+  }
 }

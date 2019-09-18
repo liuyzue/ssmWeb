@@ -10,44 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="796b70b0-39d7-4e5f-a4eb-c17fa66cdeb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/ErrorInfoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/PageBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/ErrorInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/ErrorInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resourse/mapper/ErrorInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/cron/CheckData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/cron/datacheck/relevance/EhrHealthEventRelev.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/PageBeanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/PageBeanServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/util/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/founder/cron/CheckDataTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/founder/util/DateUtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/EhrHealthEventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/EhrHealthEventDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/EhrHealthEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/EhrHealthEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/ErrorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/ErrorInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDiseaseDiagnosisInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDiseaseDiagnosisInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDoctorAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDoctorAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDoctorAdviceRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDoctorAdviceRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDrugUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDrugUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExamineDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExamineDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExamineEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExamineEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExpenseDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExpenseDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExpenseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExpenseInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsInpatientInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsInpatientInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsInpatientMedicalRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsInpatientMedicalRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOuthospitalSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOuthospitalSummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOutpatientInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOutpatientInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOutpatientPrescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOutpatientPrescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsPaitentbedStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsPaitentbedStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsRegisterRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsRegisterRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsStudyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsStudyEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsSurgeryInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsSurgeryInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/EhrHealthEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/EhrHealthEventService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/EhrHealthEventServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/EhrHealthEventServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/mvcConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/mvcConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/ErrorInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/ErrorInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/ErrorInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/ErrorInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/mybatis.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/EhrHealthEventMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/EhrHealthEventMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/founder/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/founder/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/ErrorInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/ErrorInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/founder/dao/EhrHealthEventDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/founder/dao/EhrHealthEventDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/mvcConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/mvcConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config/mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/mybatis.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,10 +72,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -152,6 +134,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.founder.cron" />
+      <recent name="com.founder.util" />
       <recent name="com.founder.dao" />
       <recent name="com.founder.service.impl" />
     </key>
@@ -183,23 +167,40 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.ssmweb">
-    <configuration name="EhrHealthEventDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.EhrHealthEventDaoTest.checkEhrOutpatient">
+    <configuration name="CheckDataTest.checkEhrOutpatient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssmWeb" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.founder.dao.*" />
+          <option name="PATTERN" value="com.founder.cron.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.founder.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.founder.dao.EhrHealthEventDaoTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.founder.cron" />
+      <option name="MAIN_CLASS_NAME" value="com.founder.cron.CheckDataTest" />
+      <option name="METHOD_NAME" value="checkEhrOutpatient" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EhrHealthEventDaoTest.findByPersonid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DateUtilTest.lastDay" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ssmWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.founder.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.founder.util" />
+      <option name="MAIN_CLASS_NAME" value="com.founder.util.DateUtilTest" />
+      <option name="METHOD_NAME" value="lastDay" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EhrHealthEventDaoTest.checkEhrOutpatient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssmWeb" />
       <extension name="coverage">
         <pattern>
@@ -209,7 +210,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.founder.dao" />
       <option name="MAIN_CLASS_NAME" value="com.founder.dao.EhrHealthEventDaoTest" />
-      <option name="METHOD_NAME" value="findByPersonid" />
+      <option name="METHOD_NAME" value="checkEhrOutpatient" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -227,21 +228,6 @@
       <option name="MAIN_CLASS_NAME" value="com.founder.dao.EhrHealthEventDaoTest" />
       <option name="METHOD_NAME" value="findPersonByEhrid" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EhrHealthEventServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ssmWeb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.founder.service.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.founder.service.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.founder.service.impl.EhrHealthEventServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -400,11 +386,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EhrHealthEventDaoTest.checkEhrOutpatient" />
+        <item itemvalue="JUnit.CheckDataTest.checkEhrOutpatient" />
+        <item itemvalue="JUnit.DateUtilTest.lastDay" />
         <item itemvalue="JUnit.EhrHealthEventServiceImplTest.printRecord" />
         <item itemvalue="JUnit.EhrHealthEventDaoTest.findPersonByEhrid" />
-        <item itemvalue="JUnit.EhrHealthEventServiceImplTest" />
-        <item itemvalue="JUnit.EhrHealthEventDaoTest" />
-        <item itemvalue="JUnit.EhrHealthEventDaoTest.findByPersonid" />
       </list>
     </recent_temporary>
   </component>
@@ -446,7 +432,9 @@
       <workItem from="1568365460094" duration="20602000" />
       <workItem from="1568465877465" duration="23210000" />
       <workItem from="1568598570996" duration="13049000" />
-      <workItem from="1568683757466" duration="10524000" />
+      <workItem from="1568683757466" duration="24222000" />
+      <workItem from="1568769951509" duration="1393000" />
+      <workItem from="1568771433275" duration="10565000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1566835109015</created>
@@ -539,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568531569880</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add pageshow,cron start">
+      <created>1568704013041</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1568704013041</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,6 +571,14 @@
     <MESSAGE value="add baseDao" />
     <MESSAGE value="Dao/Mapper done" />
     <MESSAGE value="service/impl done" />
-    <option name="LAST_COMMIT_MESSAGE" value="service/impl done" />
+    <MESSAGE value="add pageshow,cron start" />
+    <option name="LAST_COMMIT_MESSAGE" value="add pageshow,cron start" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((CheckData)this).calendar" custom="com.founder.cron.CheckData" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

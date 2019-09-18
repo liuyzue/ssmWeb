@@ -44,6 +44,7 @@ public interface ErrorInfoService {
     /**
      * 插入错误信息
      * @param errorInfo
+     * @return
      */
     void addErrorInfo(ErrorInfo errorInfo);
 

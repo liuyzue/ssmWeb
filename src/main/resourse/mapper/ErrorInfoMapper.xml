@@ -3,30 +3,30 @@
 
 <mapper namespace="com.founder.dao.ErrorInfoDao">
     <select id="selectAll" resultType="com.founder.entity.ErrorInfo">
-        select id, sql_text, table_name, result_type, upload_date, check_date, person_id, ehrid
+        select id, sql_text, table_name, result_type, upload_date, check_date, person_id, ehr_id
         from ERROR_INFO
     </select>
 
     <select id="selectByPersonId" parameterType="Integer" resultType="com.founder.entity.ErrorInfo">
-        select id, sql_text, table_name, result_type, upload_date, check_date, person_id, ehrid
+        select id, sql_text, table_name, result_type, upload_date, check_date, person_id, ehr_id
           from ERROR_INFO
           where PERSON_ID=#{person_id}
     </select>
 
     <select id="selectByUploadTime" resultType="com.founder.entity.ErrorInfo" parameterType="String">
-        select id, sql_text, table_name, result_type, upload_date, check_date, person_id, ehrid
+        select id, sql_text, table_name, result_type, upload_date, check_date, person_id, ehr_id
           from ERROR_INFO
           where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE&lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
     </select>
 
     <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.ErrorInfo">
-        select id, sql_text, table_name, result_type, upload_date, check_date, person_id, ehrid
+        select id, sql_text, table_name, result_type, upload_date, check_date, person_id, ehr_id
           from ERROR_INFO
           where EHR_ID=#{ehr_id}
     </select>
 
-    <insert id="addErrorInfo" parameterType="com.founder.entity.ErrorInfo" flushCache="true">
-        insert into ERROR_INFO (ID, SQL_TEXT, TABLE_NAME, RESULT_TYPE, UPLOAD_DATE, CHECK_DATE, PERSON_ID, EHRID)
+    <insert id="addErrorInfo" parameterType="com.founder.entity.ErrorInfo">
+        insert into ERROR_INFO (ID, SQL_TEXT, TABLE_NAME, RESULT_TYPE, UPLOAD_DATE, CHECK_DATE, PERSON_ID, EHR_ID)
         values (#{id},#{sqlText},#{tableName},#{resultType},#{uploadDate},#{checkDate},#{personId},#{ehrId})
     </insert>
 
