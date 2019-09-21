@@ -16,6 +16,15 @@ import java.util.ArrayList;
 @Repository
 public interface MsOuthospitalSummaryDao extends BaseDao<MsOuthospitalSummary> {
 
+
+    /**
+     * 查询所有记录
+     *
+     * @return
+     */
+    @Override
+    ArrayList<MsOuthospitalSummary> selectAll();
+
     /**
      * 根据一段upload_time查询所有记录
      *

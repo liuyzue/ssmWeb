@@ -71,11 +71,11 @@ public class ErrorInfoServiceImpl implements ErrorInfoService {
     /**
      * 插入错误信息
      *
-     * @param errorInfo
+     * @param errorInfoList
      */
     @Override
-    public void addErrorInfo(ErrorInfo errorInfo) {
-        errorInfoDao.addErrorInfo(errorInfo);
+    public void addErrorInfo(ArrayList<ErrorInfo> errorInfoList) {
+        errorInfoDao.addErrorInfo(errorInfoList);
     }
 
     /**

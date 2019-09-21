@@ -3,10 +3,10 @@ package com.founder.cron;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Commit;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.junit.Assert.*;
 
 /**
  * @author create by lyz
@@ -19,7 +19,15 @@ import static org.junit.Assert.*;
 @RunWith(SpringJUnit4ClassRunner.class)//固定写法
 //告诉junit spring的配置文件
 @ContextConfiguration({"classpath:config/springconfig.xml"})//spring与mybatis整合的配置文件
-public class CheckDataTest {
+@Commit
+public class RelevanceTest {
 
+    @Autowired
+    Relevance relevance;
+
+    @Test
+    public void test(){
+        relevance.checkAll();
+    }
 
 }

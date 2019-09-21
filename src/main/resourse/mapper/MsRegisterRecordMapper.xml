@@ -2,42 +2,41 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.founder.dao.MsRegisterRecordDao">
+    <select id="selectAll" resultType="com.founder.entity.MsRegisterRecord">
+        select <include refid="columnList"/>
+        from MS_REGISTER_RECORD
+    </select>
+
     <select id="selectByPeronId" resultType="com.founder.entity.MsRegisterRecord" parameterType="String">
-        select id, outpatient_no, ehr_id, person_id, health_file_no, othercardtype, othercardno, dpt_code, expert_idcard,
-        visit_date, visit_time, op_em_mark, op_em_no, op_em_sd_no, regi_fee, ind_pay, visit_status, rec_idcard, rec_dt,
-        fill_user_name, update_date, update_name, update_idcard, create_organ_code, create_organ_name, is_delete,
-         process_status, is_limit, gather_date
+        select <include refid="columnList"/>
         from MS_REGISTER_RECORD
         where PERSON_ID=#{person_id}
     </select>
 
     <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsRegisterRecord">
-        select id, outpatient_no, ehr_id, person_id, health_file_no, othercardtype, othercardno, dpt_code, expert_idcard,
-        visit_date, visit_time, op_em_mark, op_em_no, op_em_sd_no, regi_fee, ind_pay, visit_status, rec_idcard, rec_dt,
-        fill_user_name, update_date, update_name, update_idcard, create_organ_code, create_organ_name, is_delete,
-         process_status, is_limit, gather_date
+        select <include refid="columnList"/>
         from MS_REGISTER_RECORD
         where EHR_ID=#{ehr_id}
     </select>
 
     <select id="selectAllByUploadTime" resultType="com.founder.entity.MsRegisterRecord" parameterType="String">
-        select id, outpatient_no, ehr_id, person_id, health_file_no, othercardtype, othercardno, dpt_code, expert_idcard,
-        visit_date, visit_time, op_em_mark, op_em_no, op_em_sd_no, regi_fee, ind_pay, visit_status, rec_idcard, rec_dt,
-        fill_user_name, update_date, update_name, update_idcard, create_organ_code, create_organ_name, is_delete,
-         process_status, is_limit, gather_date
+        select <include refid="columnList"/>
         from MS_REGISTER_RECORD
         where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
     </select>
 
     <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsRegisterRecord">
-        select id, outpatient_no, ehr_id, person_id, health_file_no, othercardtype, othercardno, dpt_code, expert_idcard,
-        visit_date, visit_time, op_em_mark, op_em_no, op_em_sd_no, regi_fee, ind_pay, visit_status, rec_idcard, rec_dt,
-        fill_user_name, update_date, update_name, update_idcard, create_organ_code, create_organ_name, is_delete,
-         process_status, is_limit, gather_date
+        select
+            <include refid="columnList"/>
         from MS_REGISTER_RECORD
         where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
     </select>
 
-
+    <sql id="columnList">
+        id, outpatient_no, ehr_id, person_id, health_file_no, othercardtype, othercardno, dpt_code, expert_idcard,
+        visit_date, visit_time, op_em_mark, op_em_no, op_em_sd_no, regi_fee, ind_pay, visit_status, rec_idcard, rec_dt,
+        fill_user_name, update_date, update_name, update_idcard, create_organ_code, create_organ_name, is_delete,
+         process_status, is_limit, gather_date
+    </sql>
 
 </mapper>

@@ -16,6 +16,15 @@ import java.util.ArrayList;
 @Repository
 public interface MsExpenseDetailDao extends BaseDao<MsExpenseDetail> {
 
+
+    /**
+     * 查询所有记录
+     *
+     * @return
+     */
+    @Override
+    ArrayList<MsExpenseDetail> selectAll();
+
     /**
      * 根据一段upload_time查询所有记录
      *

@@ -41,12 +41,12 @@ public interface ErrorInfoService {
      */
     ArrayList<ErrorInfo> selectByUploadTime(@Param("startTime") String startTime, @Param("endTime") String endTime);
 
-    /**
+       /**
      * 插入错误信息
-     * @param errorInfo
+     * @param errorInfoList
      * @return
      */
-    void addErrorInfo(ErrorInfo errorInfo);
+    void addErrorInfo(ArrayList<ErrorInfo> errorInfoList);
 
     /**
      * 删除指定校验日期之前的错误信息

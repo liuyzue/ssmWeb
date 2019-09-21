@@ -2,59 +2,125 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.founder.dao.MsInpatientInfoDao">
+<!--    校验方法开始-->
+    <select id="msInpatientCheckMsDoctorAdv" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_DOCTOR_ADVICE where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_INPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_INPATIENT_INFO a
+        where not exists (select 1 from MS_DOCTOR_ADVICE b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msInpatientCheckMsExpenseInfo" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_EXPENSE_INFO where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_INPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_INPATIENT_INFO a
+        where not exists (select 1 from MS_EXPENSE_INFO b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msInpatientCheckMsDiseaseDia" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_DISEASE_DIAGNOSIS_INFO where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_INPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_INPATIENT_INFO a
+        where not exists (select 1 from MS_DISEASE_DIAGNOSIS_INFO b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msInpatientCheckMsExamineInfo" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_EXAMINE_EVENT where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_INPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_INPATIENT_INFO a
+        where not exists (select 1 from MS_EXAMINE_EVENT b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msInpatientCheckMsStudy" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_STUDY_EVENT where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_INPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_INPATIENT_INFO a
+        where not exists (select 1 from MS_STUDY_EVENT b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msInpatientCheckMsOutHospitalSum" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_OUTHOSPITAL_SUMMARY where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_INPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_INPATIENT_INFO a
+        where not exists (select 1 from MS_OUTHOSPITAL_SUMMARY b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msInpatientCheckMsInpatientMedical" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_INPATIENT_MEDICAL_RECORD where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_INPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_INPATIENT_INFO a
+        where not exists (select 1 from MS_INPATIENT_MEDICAL_RECORD b where a.EHR_ID=b.EHR_ID)
+    </select>
+<!--    校验方法结束-->
+
+
+    <select id="selectAll" resultType="com.founder.entity.MsInpatientInfo">
+        select <include refid="columnList"/>
+        from MS_INPATIENT_INFO
+    </select>
     <select id="selectByPeronId" resultType="com.founder.entity.MsInpatientInfo" parameterType="String">
-        select id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
-        inhos_state_code, inhos_days, inhos_rescue_times, inhos_rescue_success_times, inhos_condition_code,
-        dest_dept_code, dest_dept_name, dest_room_code, dest_room_name, referral_hospital_code, referral_hospital_name,
-         referral_dept_code, referral_dept_name, inhos_reason, inhos_date, name, gender, age, birthday, marriage,
-         inhos_infectivity_flag, inhos_cost_visit_flag, inhos_autopsy_flag, inhos_teach_case_flag,
-         other_medical_treatment, underlying_death_code, death_date, sick_area_name, sickroom_no, sickbed_no,
-         pathogenesis_date, treatment_results_code, related_physician_role_name, related_physician_name,
-         attending_physician_no, attending_physician_name, attending_physician_idcard, inhos_cost_pay_code,
-         inhos_settlement_code, personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum,
-         inhos_cost_sum, out_hospital_date, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
-         update_date, is_delete, othercardtype, othercardno, hp_s_no, source_code, providehx_name, rela_code,
-         ifaller_mark, dialectical, rcd_dt, process_status, is_limit, is_analyse, gather_date
+        select <include refid="columnList"/>
         from MS_INPATIENT_INFO
         where PERSON_ID=#{person_id}
     </select>
 
     <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsInpatientInfo">
-        select id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
-        inhos_state_code, inhos_days, inhos_rescue_times, inhos_rescue_success_times, inhos_condition_code,
-        dest_dept_code, dest_dept_name, dest_room_code, dest_room_name, referral_hospital_code, referral_hospital_name,
-         referral_dept_code, referral_dept_name, inhos_reason, inhos_date, name, gender, age, birthday, marriage,
-         inhos_infectivity_flag, inhos_cost_visit_flag, inhos_autopsy_flag, inhos_teach_case_flag,
-         other_medical_treatment, underlying_death_code, death_date, sick_area_name, sickroom_no, sickbed_no,
-         pathogenesis_date, treatment_results_code, related_physician_role_name, related_physician_name,
-         attending_physician_no, attending_physician_name, attending_physician_idcard, inhos_cost_pay_code,
-         inhos_settlement_code, personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum,
-         inhos_cost_sum, out_hospital_date, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
-         update_date, is_delete, othercardtype, othercardno, hp_s_no, source_code, providehx_name, rela_code,
-         ifaller_mark, dialectical, rcd_dt, process_status, is_limit, is_analyse, gather_date
+        select <include refid="columnList"/>
         from MS_INPATIENT_INFO
         where EHR_ID=#{ehr_id}
     </select>
 
     <select id="selectAllByUploadTime" resultType="com.founder.entity.MsInpatientInfo" parameterType="String">
-        select id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
-        inhos_state_code, inhos_days, inhos_rescue_times, inhos_rescue_success_times, inhos_condition_code,
-        dest_dept_code, dest_dept_name, dest_room_code, dest_room_name, referral_hospital_code, referral_hospital_name,
-         referral_dept_code, referral_dept_name, inhos_reason, inhos_date, name, gender, age, birthday, marriage,
-         inhos_infectivity_flag, inhos_cost_visit_flag, inhos_autopsy_flag, inhos_teach_case_flag,
-         other_medical_treatment, underlying_death_code, death_date, sick_area_name, sickroom_no, sickbed_no,
-         pathogenesis_date, treatment_results_code, related_physician_role_name, related_physician_name,
-         attending_physician_no, attending_physician_name, attending_physician_idcard, inhos_cost_pay_code,
-         inhos_settlement_code, personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum,
-         inhos_cost_sum, out_hospital_date, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
-         update_date, is_delete, othercardtype, othercardno, hp_s_no, source_code, providehx_name, rela_code,
-         ifaller_mark, dialectical, rcd_dt, process_status, is_limit, is_analyse, gather_date
+        select <include refid="columnList"/>
         from MS_INPATIENT_INFO
         where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
     </select>
 
     <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsInpatientInfo">
-        select id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
+        select
+            <include refid="columnList"/>
+        from MS_INPATIENT_INFO
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+    <sql id="columnList">
+        id, ehr_id, person_id, admission_no, health_file_no, medical_record_no, inhos_condition, inhos_count,
         inhos_state_code, inhos_days, inhos_rescue_times, inhos_rescue_success_times, inhos_condition_code,
         dest_dept_code, dest_dept_name, dest_room_code, dest_room_name, referral_hospital_code, referral_hospital_name,
          referral_dept_code, referral_dept_name, inhos_reason, inhos_date, name, gender, age, birthday, marriage,
@@ -66,10 +132,7 @@
          inhos_cost_sum, out_hospital_date, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
          update_date, is_delete, othercardtype, othercardno, hp_s_no, source_code, providehx_name, rela_code,
          ifaller_mark, dialectical, rcd_dt, process_status, is_limit, is_analyse, gather_date
-        from MS_INPATIENT_INFO
-        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
-    </select>
-
+    </sql>
 
 
 </mapper>

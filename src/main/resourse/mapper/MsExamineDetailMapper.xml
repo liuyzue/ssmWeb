@@ -2,46 +2,41 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.founder.dao.MsExamineDetailDao">
+    <select id="selectAll" resultType="com.founder.entity.MsExamineDetail">
+        select <include refid="columnList"/>
+        from MS_EXAMINE_DETAIL
+    </select>
     <select id="selectByPeronId" resultType="com.founder.entity.MsExamineDetail" parameterType="String">
-        select id, ehr_id, person_id, record_number, sample_id, inspection_type, inspection_item_code,
-        inspection_item_name, inspection_quantify_result, inspection_result, inspection_unit, reference_range, prompt,
-        conclusion, check_date, detection_people_name, detection_org_name, detection_room_code, detection_room_name,
-        update_name, update_idcard, update_date, is_delete, examination_number, ex_proj_sn, ucl, lcl, analysis_status,
-        is_limit, hospital_code, gather_date, sputum_smear_posi, syphilis_posi, alanine_aspartate, hbv_dna_posi
+        select <include refid="columnList"/>
         from MS_EXAMINE_DETAIL
         where PERSON_ID=#{person_id}
     </select>
 
     <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsExamineDetail">
-        select id, ehr_id, person_id, record_number, sample_id, inspection_type, inspection_item_code,
-        inspection_item_name, inspection_quantify_result, inspection_result, inspection_unit, reference_range, prompt,
-        conclusion, check_date, detection_people_name, detection_org_name, detection_room_code, detection_room_name,
-        update_name, update_idcard, update_date, is_delete, examination_number, ex_proj_sn, ucl, lcl, analysis_status,
-        is_limit, hospital_code, gather_date, sputum_smear_posi, syphilis_posi, alanine_aspartate, hbv_dna_posi
+        select <include refid="columnList"/>
         from MS_EXAMINE_DETAIL
         where EHR_ID=#{ehr_id}
     </select>
 
     <select id="selectAllByUploadTime" resultType="com.founder.entity.MsExamineDetail" parameterType="String">
-        select id, ehr_id, person_id, record_number, sample_id, inspection_type, inspection_item_code,
-        inspection_item_name, inspection_quantify_result, inspection_result, inspection_unit, reference_range, prompt,
-        conclusion, check_date, detection_people_name, detection_org_name, detection_room_code, detection_room_name,
-        update_name, update_idcard, update_date, is_delete, examination_number, ex_proj_sn, ucl, lcl, analysis_status,
-        is_limit, hospital_code, gather_date, sputum_smear_posi, syphilis_posi, alanine_aspartate, hbv_dna_posi
+        select <include refid="columnList"/>
         from MS_EXAMINE_DETAIL
         where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
     </select>
 
     <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsExamineDetail">
-        select id, ehr_id, person_id, record_number, sample_id, inspection_type, inspection_item_code,
-        inspection_item_name, inspection_quantify_result, inspection_result, inspection_unit, reference_range, prompt,
-        conclusion, check_date, detection_people_name, detection_org_name, detection_room_code, detection_room_name,
-        update_name, update_idcard, update_date, is_delete, examination_number, ex_proj_sn, ucl, lcl, analysis_status,
-        is_limit, hospital_code, gather_date, sputum_smear_posi, syphilis_posi, alanine_aspartate, hbv_dna_posi
+        select
+            <include refid="columnList"/>
         from MS_EXAMINE_DETAIL
         where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
     </select>
 
-
+    <sql id="columnList">
+        id, ehr_id, person_id, record_number, sample_id, inspection_type, inspection_item_code,
+        inspection_item_name, inspection_quantify_result, inspection_result, inspection_unit, reference_range, prompt,
+        conclusion, check_date, detection_people_name, detection_org_name, detection_room_code, detection_room_name,
+        update_name, update_idcard, update_date, is_delete, examination_number, ex_proj_sn, ucl, lcl, analysis_status,
+        is_limit, hospital_code, gather_date, sputum_smear_posi, syphilis_posi, alanine_aspartate, hbv_dna_posi
+    </sql>
 
 </mapper>

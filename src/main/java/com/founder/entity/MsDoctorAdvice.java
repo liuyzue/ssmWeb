@@ -6,7 +6,7 @@ import java.sql.Date;
 /**
  * @author F
  */
-public class MsDoctorAdvice {
+public class MsDoctorAdvice extends BaseEntity{
 
   private String id;
   private String ehrId;
@@ -47,44 +47,6 @@ public class MsDoctorAdvice {
   public MsDoctorAdvice() {
   }
 
-  public MsDoctorAdvice(String id, String ehrId, String personId, String healthFileNo, String othercardtype, String othercardno, String hpNo, String hpSNo, String odrNo, String otherOdr, String outHpOdr, String odrGn, String odrType, String ifDrug, String odrCode, String odrName, String odrNote, Date odrisuDt, Date beginTime, String nurseIdcard, Date nurEDt, Date stopDt, String stpdocIdcard, String docIdcard, String dptCode, String fillUserName, String fillUserIdcard, Date fillTime, String updateName, String updateIdcard, Date updateDate, String isDelete, String processStatus, String isLimit, Date gatherDate) {
-    this.id = id;
-    this.ehrId = ehrId;
-    this.personId = personId;
-    this.healthFileNo = healthFileNo;
-    this.othercardtype = othercardtype;
-    this.othercardno = othercardno;
-    this.hpNo = hpNo;
-    this.hpSNo = hpSNo;
-    this.odrNo = odrNo;
-    this.otherOdr = otherOdr;
-    this.outHpOdr = outHpOdr;
-    this.odrGn = odrGn;
-    this.odrType = odrType;
-    this.ifDrug = ifDrug;
-    this.odrCode = odrCode;
-    this.odrName = odrName;
-    this.odrNote = odrNote;
-    this.odrisuDt = odrisuDt;
-    this.beginTime = beginTime;
-    this.nurseIdcard = nurseIdcard;
-    this.nurEDt = nurEDt;
-    this.stopDt = stopDt;
-    this.stpdocIdcard = stpdocIdcard;
-    this.docIdcard = docIdcard;
-    this.dptCode = dptCode;
-    this.fillUserName = fillUserName;
-    this.fillUserIdcard = fillUserIdcard;
-    this.fillTime = fillTime;
-    this.updateName = updateName;
-    this.updateIdcard = updateIdcard;
-    this.updateDate = updateDate;
-    this.isDelete = isDelete;
-    this.processStatus = processStatus;
-    this.isLimit = isLimit;
-    this.gatherDate = gatherDate;
-  }
-
   public String getId() {
     return id;
   }
@@ -94,19 +56,23 @@ public class MsDoctorAdvice {
   }
 
 
+  @Override
   public String getEhrId() {
     return ehrId;
   }
 
+  @Override
   public void setEhrId(String ehrId) {
     this.ehrId = ehrId;
   }
 
 
+  @Override
   public String getPersonId() {
     return personId;
   }
 
+  @Override
   public void setPersonId(String personId) {
     this.personId = personId;
   }
@@ -391,10 +357,12 @@ public class MsDoctorAdvice {
   }
 
 
+  @Override
   public java.sql.Date getGatherDate() {
     return gatherDate;
   }
 
+  @Override
   public void setGatherDate(java.sql.Date gatherDate) {
     this.gatherDate = gatherDate;
   }

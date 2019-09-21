@@ -18,6 +18,13 @@ import java.util.ArrayList;
 public interface MsDoctorAdviceRecordDao extends BaseDao<MsDoctorAdviceRecord> {
 
     /**
+     * 查询所有记录
+     * @return
+     */
+    @Override
+    ArrayList<MsDoctorAdviceRecord> selectAll();
+
+    /**
      * 根据一段upload_time查询所有记录
      *
      * @param startTime yyyy-MM-dd hh24:mi:ss

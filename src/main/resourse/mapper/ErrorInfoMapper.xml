@@ -25,9 +25,17 @@
           where EHR_ID=#{ehr_id}
     </select>
 
-    <insert id="addErrorInfo" parameterType="com.founder.entity.ErrorInfo">
-        insert into ERROR_INFO (ID, SQL_TEXT, TABLE_NAME, RESULT_TYPE, UPLOAD_DATE, CHECK_DATE, PERSON_ID, EHR_ID)
-        values (#{id},#{sqlText},#{tableName},#{resultType},#{uploadDate},#{checkDate},#{personId},#{ehrId})
+    <insert id="addErrorInfo" parameterType="java.util.List" >
+        insert into ERROR_INFO (SQL_TEXT, table_name, RESULT_TYPE, UPLOAD_DATE, CHECK_DATE, PERSON_ID, EHR_ID)
+        select * from (
+            <foreach collection="errorInfoList" item="errorInfo" separator="UNION ALL">
+                select
+                #{errorInfo.sqlText},#{errorInfo.tableName},#{errorInfo.resultType},
+                #{errorInfo.uploadDate},#{errorInfo.checkDate},#{errorInfo.personId},
+                #{errorInfo.ehrId}
+                from dual
+            </foreach>
+        )
     </insert>
 
     <delete id="deleteErrorInfoByCheckTime" parameterType="String">

@@ -1,19 +1,12 @@
 package com.founder.dao;
 
-import com.founder.cron.CheckData;
-import com.founder.entity.*;
+import com.founder.cron.Relevance;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Commit;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.ArrayList;
-import java.util.Date;
-
-import static org.junit.Assert.*;
 
 /**
  * @author create by lyz
@@ -33,10 +26,10 @@ public class EhrHealthEventDaoTest {
     MsSurgeryInfoDao ehrHealthEventDao;
 
     @Autowired
-    CheckData checkData;
+    Relevance relevance;
 
     @Test
     public void checkEhrOutpatient() {
-        checkData.checkEhrOutpatient();
+        //checkData.checkEhrOutpatient();
     }
 }

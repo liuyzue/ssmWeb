@@ -14,6 +14,12 @@ import java.util.ArrayList;
 public interface BaseDao <T>{
 
     /**
+     * 查询所有记录
+     * @return
+     */
+    ArrayList<T> selectAll();
+
+    /**
      * 根据一段upload_time查询所有记录
      * @param startTime yyyy-MM-dd hh24:mi:ss
      * @param endTime yyyy-MM-dd hh24:mi:ss

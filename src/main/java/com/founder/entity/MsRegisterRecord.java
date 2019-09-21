@@ -3,7 +3,7 @@ package com.founder.entity;
 
 import java.sql.Date;
 
-public class MsRegisterRecord {
+public class MsRegisterRecord extends BaseEntity{
 
   private String id;
   private String outpatientNo;
@@ -38,38 +38,6 @@ public class MsRegisterRecord {
   public MsRegisterRecord() {
   }
 
-  public MsRegisterRecord(String id, String outpatientNo, String ehrId, String personId, String healthFileNo, String othercardtype, String othercardno, String dptCode, String expertIdcard, Date visitDate, String visitTime, String opEmMark, String opEmNo, String opEmSdNo, String regiFee, String indPay, String visitStatus, String recIdcard, Date recDt, String fillUserName, Date updateDate, String updateName, String updateIdcard, String createOrganCode, String createOrganName, String isDelete, String processStatus, String isLimit, Date gatherDate) {
-    this.id = id;
-    this.outpatientNo = outpatientNo;
-    this.ehrId = ehrId;
-    this.personId = personId;
-    this.healthFileNo = healthFileNo;
-    this.othercardtype = othercardtype;
-    this.othercardno = othercardno;
-    this.dptCode = dptCode;
-    this.expertIdcard = expertIdcard;
-    this.visitDate = visitDate;
-    this.visitTime = visitTime;
-    this.opEmMark = opEmMark;
-    this.opEmNo = opEmNo;
-    this.opEmSdNo = opEmSdNo;
-    this.regiFee = regiFee;
-    this.indPay = indPay;
-    this.visitStatus = visitStatus;
-    this.recIdcard = recIdcard;
-    this.recDt = recDt;
-    this.fillUserName = fillUserName;
-    this.updateDate = updateDate;
-    this.updateName = updateName;
-    this.updateIdcard = updateIdcard;
-    this.createOrganCode = createOrganCode;
-    this.createOrganName = createOrganName;
-    this.isDelete = isDelete;
-    this.processStatus = processStatus;
-    this.isLimit = isLimit;
-    this.gatherDate = gatherDate;
-  }
-
   public String getId() {
     return id;
   }
@@ -88,19 +56,23 @@ public class MsRegisterRecord {
   }
 
 
+  @Override
   public String getEhrId() {
     return ehrId;
   }
 
+  @Override
   public void setEhrId(String ehrId) {
     this.ehrId = ehrId;
   }
 
 
+  @Override
   public String getPersonId() {
     return personId;
   }
 
+  @Override
   public void setPersonId(String personId) {
     this.personId = personId;
   }
@@ -322,10 +294,12 @@ public class MsRegisterRecord {
   }
 
 
+  @Override
   public java.sql.Date getGatherDate() {
     return gatherDate;
   }
 
+  @Override
   public void setGatherDate(java.sql.Date gatherDate) {
     this.gatherDate = gatherDate;
   }

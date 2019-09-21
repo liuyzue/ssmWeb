@@ -1,5 +1,7 @@
 package com.founder.dao;
 
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsExamineEvent;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -15,6 +17,14 @@ import java.util.ArrayList;
  */
 @Repository
 public interface MsExamineEventDao extends BaseDao<MsExamineEvent> {
+
+    /**
+     * 查询所有记录
+     *
+     * @return
+     */
+    @Override
+    ArrayList<MsExamineEvent> selectAll();
 
     /**
      * 根据一段upload_time查询所有记录
@@ -53,4 +63,11 @@ public interface MsExamineEventDao extends BaseDao<MsExamineEvent> {
      */
     @Override
     ArrayList<MsExamineEvent> selectByEhrAndPersonId(@Param("ehr_id") String ehrId, @Param("person_id") String personId);
+
+    /**
+     * 校验 检验明细
+     * @return
+     */
+    ArrayList<ErrorInfo> msExamineCheckExamineDetail();
+
 }

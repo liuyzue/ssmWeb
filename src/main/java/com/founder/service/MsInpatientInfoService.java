@@ -1,5 +1,7 @@
 package com.founder.service;
 
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsInpatientInfo;
 
 import java.util.ArrayList;
@@ -50,4 +52,41 @@ public interface MsInpatientInfoService extends BaseService<MsInpatientInfo> {
      */
     @Override
     ArrayList<MsInpatientInfo> selectByEhrAndPersonId(String ehrId, String personId);
+
+    //校验方法
+    /**
+     * 校验 住院医嘱记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msInpatientCheckMsDoctorAdv();
+    /**
+     * 校验 费用记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msInpatientCheckMsExpenseInfo();
+    /**
+     * 校验 诊断记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msInpatientCheckMsDiseaseDia();
+    /**
+     * 校验 检验记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msInpatientCheckMsExamineInfo();
+    /**
+     * 校验 检查记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msInpatientCheckMsStudy();
+    /**
+     * 校验 出院小结记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msInpatientCheckMsOutHospitalSum();
+    /**
+     * 校验 病案首页记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msInpatientCheckMsInpatientMedical();
 }

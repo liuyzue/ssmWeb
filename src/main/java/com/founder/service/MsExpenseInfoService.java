@@ -1,5 +1,7 @@
 package com.founder.service;
 
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsExpenseInfo;
 
 import java.util.ArrayList;
@@ -50,4 +52,10 @@ public interface MsExpenseInfoService extends BaseService<MsExpenseInfo> {
      */
     @Override
     ArrayList<MsExpenseInfo> selectByEhrAndPersonId(String ehrId, String personId);
+
+    /**
+     * 校验 费用详细
+     * @return
+     */
+    ArrayList<ErrorInfo> msExpenseCheckExpenseDetail();
 }

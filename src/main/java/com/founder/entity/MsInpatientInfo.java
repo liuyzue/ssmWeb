@@ -4,7 +4,7 @@ package com.founder.entity;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-public class MsInpatientInfo {
+public class MsInpatientInfo extends BaseEntity{
 
   private String id;
   private String ehrId;
@@ -82,81 +82,6 @@ public class MsInpatientInfo {
   public MsInpatientInfo() {
   }
 
-  public MsInpatientInfo(String id, String ehrId, String personId, String admissionNo, String healthFileNo, String medicalRecordNo, String inhosCondition, String inhosCount, String inhosStateCode, String inhosDays, String inhosRescueTimes, String inhosRescueSuccessTimes, String inhosConditionCode, String destDeptCode, String destDeptName, String destRoomCode, String destRoomName, String referralHospitalCode, String referralHospitalName, String referralDeptCode, String referralDeptName, String inhosReason, Timestamp inhosDate, String name, String gender, String age, Date birthday, String marriage, String inhosInfectivityFlag, String inhosCostVisitFlag, String inhosAutopsyFlag, String inhosTeachCaseFlag, String otherMedicalTreatment, String underlyingDeathCode, Timestamp deathDate, String sickAreaName, String sickroomNo, String sickbedNo, Timestamp pathogenesisDate, String treatmentResultsCode, String relatedPhysicianRoleName, String relatedPhysicianName, String attendingPhysicianNo, String attendingPhysicianName, String attendingPhysicianIdcard, String inhosCostPayCode, String inhosSettlementCode, String personalExpenses, String medicalInsuranceCostSum, String otherSubsidiesCostSum, String inhosCostSum, Date outHospitalDate, String fillUserName, String fillUserIdcard, Timestamp fillTime, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String othercardtype, String othercardno, String hpSNo, String sourceCode, String providehxName, String relaCode, String ifallerMark, String dialectical, Date rcdDt, String processStatus, String isLimit, String isAnalyse, Date gatherDate) {
-    this.id = id;
-    this.ehrId = ehrId;
-    this.personId = personId;
-    this.admissionNo = admissionNo;
-    this.healthFileNo = healthFileNo;
-    this.medicalRecordNo = medicalRecordNo;
-    this.inhosCondition = inhosCondition;
-    this.inhosCount = inhosCount;
-    this.inhosStateCode = inhosStateCode;
-    this.inhosDays = inhosDays;
-    this.inhosRescueTimes = inhosRescueTimes;
-    this.inhosRescueSuccessTimes = inhosRescueSuccessTimes;
-    this.inhosConditionCode = inhosConditionCode;
-    this.destDeptCode = destDeptCode;
-    this.destDeptName = destDeptName;
-    this.destRoomCode = destRoomCode;
-    this.destRoomName = destRoomName;
-    this.referralHospitalCode = referralHospitalCode;
-    this.referralHospitalName = referralHospitalName;
-    this.referralDeptCode = referralDeptCode;
-    this.referralDeptName = referralDeptName;
-    this.inhosReason = inhosReason;
-    this.inhosDate = inhosDate;
-    this.name = name;
-    this.gender = gender;
-    this.age = age;
-    this.birthday = birthday;
-    this.marriage = marriage;
-    this.inhosInfectivityFlag = inhosInfectivityFlag;
-    this.inhosCostVisitFlag = inhosCostVisitFlag;
-    this.inhosAutopsyFlag = inhosAutopsyFlag;
-    this.inhosTeachCaseFlag = inhosTeachCaseFlag;
-    this.otherMedicalTreatment = otherMedicalTreatment;
-    this.underlyingDeathCode = underlyingDeathCode;
-    this.deathDate = deathDate;
-    this.sickAreaName = sickAreaName;
-    this.sickroomNo = sickroomNo;
-    this.sickbedNo = sickbedNo;
-    this.pathogenesisDate = pathogenesisDate;
-    this.treatmentResultsCode = treatmentResultsCode;
-    this.relatedPhysicianRoleName = relatedPhysicianRoleName;
-    this.relatedPhysicianName = relatedPhysicianName;
-    this.attendingPhysicianNo = attendingPhysicianNo;
-    this.attendingPhysicianName = attendingPhysicianName;
-    this.attendingPhysicianIdcard = attendingPhysicianIdcard;
-    this.inhosCostPayCode = inhosCostPayCode;
-    this.inhosSettlementCode = inhosSettlementCode;
-    this.personalExpenses = personalExpenses;
-    this.medicalInsuranceCostSum = medicalInsuranceCostSum;
-    this.otherSubsidiesCostSum = otherSubsidiesCostSum;
-    this.inhosCostSum = inhosCostSum;
-    this.outHospitalDate = outHospitalDate;
-    this.fillUserName = fillUserName;
-    this.fillUserIdcard = fillUserIdcard;
-    this.fillTime = fillTime;
-    this.updateName = updateName;
-    this.updateIdcard = updateIdcard;
-    this.updateDate = updateDate;
-    this.isDelete = isDelete;
-    this.othercardtype = othercardtype;
-    this.othercardno = othercardno;
-    this.hpSNo = hpSNo;
-    this.sourceCode = sourceCode;
-    this.providehxName = providehxName;
-    this.relaCode = relaCode;
-    this.ifallerMark = ifallerMark;
-    this.dialectical = dialectical;
-    this.rcdDt = rcdDt;
-    this.processStatus = processStatus;
-    this.isLimit = isLimit;
-    this.isAnalyse = isAnalyse;
-    this.gatherDate = gatherDate;
-  }
-
   public String getId() {
     return id;
   }
@@ -166,19 +91,23 @@ public class MsInpatientInfo {
   }
 
 
+  @Override
   public String getEhrId() {
     return ehrId;
   }
 
+  @Override
   public void setEhrId(String ehrId) {
     this.ehrId = ehrId;
   }
 
 
+  @Override
   public String getPersonId() {
     return personId;
   }
 
+  @Override
   public void setPersonId(String personId) {
     this.personId = personId;
   }
@@ -796,10 +725,12 @@ public class MsInpatientInfo {
   }
 
 
+  @Override
   public java.sql.Date getGatherDate() {
     return gatherDate;
   }
 
+  @Override
   public void setGatherDate(java.sql.Date gatherDate) {
     this.gatherDate = gatherDate;
   }

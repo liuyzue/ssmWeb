@@ -2,42 +2,42 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.founder.dao.MsDoctorAdviceDao">
+    <select id="selectAll" resultType="com.founder.entity.MsDoctorAdvice">
+        select
+            <include refid="columnList"/>
+        from MS_DOCTOR_ADVICE
+    </select>
     <select id="selectByPeronId" resultType="com.founder.entity.MsDoctorAdvice" parameterType="String">
-        select id, ehr_id, person_id, health_file_no, othercardtype, othercardno, hp_no, hp_s_no, odr_no, other_odr,
-        out_hp_odr, odr_gn, odr_type, if_drug, odr_code, odr_name, odr_note, odrisu_dt, begin_time, nurse_idcard,
-        nur_e_dt, stop_dt, stpdoc_idcard, doc_idcard, dpt_code, fill_user_name, fill_user_idcard, fill_time,
-        update_name, update_idcard, update_date, is_delete, process_status, is_limit, gather_date
+        select <include refid="columnList"/>
         from MS_DOCTOR_ADVICE
         where PERSON_ID=#{person_id}
     </select>
 
     <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsDoctorAdvice">
-        select id, ehr_id, person_id, health_file_no, othercardtype, othercardno, hp_no, hp_s_no, odr_no, other_odr,
-        out_hp_odr, odr_gn, odr_type, if_drug, odr_code, odr_name, odr_note, odrisu_dt, begin_time, nurse_idcard,
-        nur_e_dt, stop_dt, stpdoc_idcard, doc_idcard, dpt_code, fill_user_name, fill_user_idcard, fill_time,
-        update_name, update_idcard, update_date, is_delete, process_status, is_limit, gather_date
+        select <include refid="columnList"/>
         from MS_DOCTOR_ADVICE
         where EHR_ID=#{ehr_id}
     </select>
 
     <select id="selectAllByUploadTime" resultType="com.founder.entity.MsDoctorAdvice" parameterType="String">
-        select id, ehr_id, person_id, health_file_no, othercardtype, othercardno, hp_no, hp_s_no, odr_no, other_odr,
-        out_hp_odr, odr_gn, odr_type, if_drug, odr_code, odr_name, odr_note, odrisu_dt, begin_time, nurse_idcard,
-        nur_e_dt, stop_dt, stpdoc_idcard, doc_idcard, dpt_code, fill_user_name, fill_user_idcard, fill_time,
-        update_name, update_idcard, update_date, is_delete, process_status, is_limit, gather_date
+        select <include refid="columnList"/>
         from MS_DOCTOR_ADVICE
         where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
     </select>
 
     <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsDoctorAdvice">
-        select id, ehr_id, person_id, health_file_no, othercardtype, othercardno, hp_no, hp_s_no, odr_no, other_odr,
-        out_hp_odr, odr_gn, odr_type, if_drug, odr_code, odr_name, odr_note, odrisu_dt, begin_time, nurse_idcard,
-        nur_e_dt, stop_dt, stpdoc_idcard, doc_idcard, dpt_code, fill_user_name, fill_user_idcard, fill_time,
-        update_name, update_idcard, update_date, is_delete, process_status, is_limit, gather_date
+        select
+        <include refid="columnList"/>
         from MS_DOCTOR_ADVICE
         where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
     </select>
 
+    <sql id="columnList">
+        id, ehr_id, person_id, health_file_no, othercardtype, othercardno, hp_no, hp_s_no, odr_no, other_odr,
+        out_hp_odr, odr_gn, odr_type, if_drug, odr_code, odr_name, odr_note, odrisu_dt, begin_time, nurse_idcard,
+        nur_e_dt, stop_dt, stpdoc_idcard, doc_idcard, dpt_code, fill_user_name, fill_user_idcard, fill_time,
+        update_name, update_idcard, update_date, is_delete, process_status, is_limit, gather_date
+    </sql>
 
 
 </mapper>

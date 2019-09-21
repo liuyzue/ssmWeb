@@ -3,7 +3,10 @@ package com.founder.entity;
 
 import java.sql.Date;
 
-public class MsExpenseDetail {
+/**
+ * @author F
+ */
+public class MsExpenseDetail extends BaseEntity{
 
   private String id;
   private String ehrId;
@@ -75,19 +78,23 @@ public class MsExpenseDetail {
   }
 
 
+  @Override
   public String getEhrId() {
     return ehrId;
   }
 
+  @Override
   public void setEhrId(String ehrId) {
     this.ehrId = ehrId;
   }
 
 
+  @Override
   public String getPersonId() {
     return personId;
   }
 
+  @Override
   public void setPersonId(String personId) {
     this.personId = personId;
   }
@@ -300,10 +307,12 @@ public class MsExpenseDetail {
   }
 
 
+  @Override
   public java.sql.Date getGatherDate() {
     return gatherDate;
   }
 
+  @Override
   public void setGatherDate(java.sql.Date gatherDate) {
     this.gatherDate = gatherDate;
   }

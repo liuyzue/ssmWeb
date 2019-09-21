@@ -1,6 +1,8 @@
 package com.founder.service.impl;
 
 import com.founder.dao.MsExamineEventDao;
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsExamineEvent;
 import com.founder.service.MsExamineEventService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,5 +69,15 @@ public class MsExamineEventServiceImpl implements MsExamineEventService {
     public ArrayList<MsExamineEvent> selectByEhrAndPersonId(String ehrId, String personId) {
         ArrayList<MsExamineEvent> msExamineEvents=msExamineEventDao.selectByEhrAndPersonId(ehrId,personId);
         return msExamineEvents;
+    }
+
+    /**
+     * 校验 检验明细
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msExamineCheckExamineDetail() {
+        return msExamineEventDao.msExamineCheckExamineDetail();
     }
 }

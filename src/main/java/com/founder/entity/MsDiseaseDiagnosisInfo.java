@@ -4,7 +4,10 @@ package com.founder.entity;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-public class MsDiseaseDiagnosisInfo {
+/**
+ * @author F
+ */
+public class MsDiseaseDiagnosisInfo extends BaseEntity{
 
   private String id;
   private String ehrId;
@@ -57,56 +60,6 @@ public class MsDiseaseDiagnosisInfo {
   public MsDiseaseDiagnosisInfo() {
   }
 
-  public MsDiseaseDiagnosisInfo(String id, String ehrId, String personId, String diagnosisCode, String diagnosisDesc, String diagnosisTypeCode, Timestamp pathogenesisDate, String primarySite, String secondarySite, String nlohmsiCode, String nlohmsiName, String treatmentPlan, String healthAssessment, String disposalPlan, String hospitalCode, String hospitalName, Date diagnoseDate, String diagnoseRoomCode, String diagnoseRoomName, String diagnoseDoctorCode, String diagnoseDoctorName, String diagnoseDoctorIdcard, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String name, String age, String gender, String marriage, String diseaseCode, String diseaseName, String inhosConditionCode, String inhosConditionName, String diagnosisNumber, String initSubsMark, String cmMdisCode, String cmMdisName, String pirncipalDiagnosis, String cmDisName, String cmDisCode, String wmDisName, String analysisStatus, String isLimit, String isAnalyse, Date gatherDate, String opEmHpMark) {
-    this.id = id;
-    this.ehrId = ehrId;
-    this.personId = personId;
-    this.diagnosisCode = diagnosisCode;
-    this.diagnosisDesc = diagnosisDesc;
-    this.diagnosisTypeCode = diagnosisTypeCode;
-    this.pathogenesisDate = pathogenesisDate;
-    this.primarySite = primarySite;
-    this.secondarySite = secondarySite;
-    this.nlohmsiCode = nlohmsiCode;
-    this.nlohmsiName = nlohmsiName;
-    this.treatmentPlan = treatmentPlan;
-    this.healthAssessment = healthAssessment;
-    this.disposalPlan = disposalPlan;
-    this.hospitalCode = hospitalCode;
-    this.hospitalName = hospitalName;
-    this.diagnoseDate = diagnoseDate;
-    this.diagnoseRoomCode = diagnoseRoomCode;
-    this.diagnoseRoomName = diagnoseRoomName;
-    this.diagnoseDoctorCode = diagnoseDoctorCode;
-    this.diagnoseDoctorName = diagnoseDoctorName;
-    this.diagnoseDoctorIdcard = diagnoseDoctorIdcard;
-    this.updateName = updateName;
-    this.updateIdcard = updateIdcard;
-    this.updateDate = updateDate;
-    this.isDelete = isDelete;
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.marriage = marriage;
-    this.diseaseCode = diseaseCode;
-    this.diseaseName = diseaseName;
-    this.inhosConditionCode = inhosConditionCode;
-    this.inhosConditionName = inhosConditionName;
-    this.diagnosisNumber = diagnosisNumber;
-    this.initSubsMark = initSubsMark;
-    this.cmMdisCode = cmMdisCode;
-    this.cmMdisName = cmMdisName;
-    this.pirncipalDiagnosis = pirncipalDiagnosis;
-    this.cmDisName = cmDisName;
-    this.cmDisCode = cmDisCode;
-    this.wmDisName = wmDisName;
-    this.analysisStatus = analysisStatus;
-    this.isLimit = isLimit;
-    this.isAnalyse = isAnalyse;
-    this.gatherDate = gatherDate;
-    this.opEmHpMark = opEmHpMark;
-  }
-
   public String getId() {
     return id;
   }
@@ -116,19 +69,23 @@ public class MsDiseaseDiagnosisInfo {
   }
 
 
+  @Override
   public String getEhrId() {
     return ehrId;
   }
 
+  @Override
   public void setEhrId(String ehrId) {
     this.ehrId = ehrId;
   }
 
 
+  @Override
   public String getPersonId() {
     return personId;
   }
 
+  @Override
   public void setPersonId(String personId) {
     this.personId = personId;
   }
@@ -512,10 +469,12 @@ public class MsDiseaseDiagnosisInfo {
   }
 
 
+  @Override
   public java.sql.Date getGatherDate() {
     return gatherDate;
   }
 
+  @Override
   public void setGatherDate(java.sql.Date gatherDate) {
     this.gatherDate = gatherDate;
   }

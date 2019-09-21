@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author create by lyz
@@ -46,14 +47,20 @@ public interface ErrorInfoDao {
 
     /**
      * 插入错误信息
-     * @param errorInfo
+     * @param errorInfoList
      */
-    void addErrorInfo(ErrorInfo errorInfo);
+    void addErrorInfo(@Param("errorInfoList") List<ErrorInfo> errorInfoList);
 
     /**
      * 删除指定校验日期之前的错误信息
      * @param checkTime
      */
     void deleteErrorInfoByCheckTime(String checkTime);
+
+    /**
+     * 根据表名删除数据
+     * @param tableName
+     */
+    void deleteErrorInfoByTableName(String tableName);
 
 }

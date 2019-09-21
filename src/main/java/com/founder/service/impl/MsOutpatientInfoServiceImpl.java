@@ -1,6 +1,8 @@
 package com.founder.service.impl;
 
 import com.founder.dao.MsOutpatientInfoDao;
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsOutpatientInfo;
 import com.founder.service.MsOutpatientInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,5 +71,75 @@ public class MsOutpatientInfoServiceImpl implements MsOutpatientInfoService {
     public ArrayList<MsOutpatientInfo> selectByEhrAndPersonId(String ehrId, String personId) {
         ArrayList<MsOutpatientInfo> msOutpatientInfos=msOutpatientInfoDao.selectByEhrAndPersonId(ehrId,personId);
         return msOutpatientInfos;
+    }
+
+    /**
+     * 校验 挂号记录
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msOutpatientCheckMsRegister() {
+        return msOutpatientInfoDao.msOutpatientCheckMsRegister();
+    }
+
+    /**
+     * 校验 用药记录
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msOutpatientCheckMsDrug() {
+        return msOutpatientInfoDao.msOutpatientCheckMsDrug();
+    }
+
+    /**
+     * 校验 诊断记录
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msOutpatientCheckMsDiseaseDia() {
+        return msOutpatientInfoDao.msOutpatientCheckMsDiseaseDia();
+    }
+
+    /**
+     * 校验 门诊处方记录
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msOutpatientCheckMsOutpatientPres() {
+        return msOutpatientInfoDao.msOutpatientCheckMsOutpatientPres();
+    }
+
+    /**
+     * 校验 费用记录
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msOutpatientCheckMsExpInfo() {
+        return msOutpatientInfoDao.msOutpatientCheckMsExpInfo();
+    }
+
+    /**
+     * 校验 检验记录
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msOutpatientCheckMsExamine() {
+        return msOutpatientInfoDao.msOutpatientCheckMsExamine();
+    }
+
+    /**
+     * 校验 检查记录
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msOutpatientCheckMsStudy() {
+        return msOutpatientInfoDao.msOutpatientCheckMsStudy();
     }
 }

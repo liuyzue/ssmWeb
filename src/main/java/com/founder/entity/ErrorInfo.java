@@ -3,11 +3,17 @@ package com.founder.entity;
 
 import java.util.Date;
 
+/**
+ * @author F
+ */
 public class ErrorInfo {
 
   private String id;
   private String sqlText;
   private String tableName;
+  /**
+   * 错误类型 1：关联性错误  2：null错误
+   */
   private String resultType;
   private Date uploadDate;
   private Date checkDate;
@@ -15,17 +21,6 @@ public class ErrorInfo {
   private String ehrId;
 
   public ErrorInfo() {
-  }
-
-  public ErrorInfo(String id, String sqlText, String tableName, String resultType, Date uploadDate, Date checkDate, String personId, String ehrId) {
-    this.id = id;
-    this.sqlText = sqlText;
-    this.tableName = tableName;
-    this.resultType = resultType;
-    this.uploadDate = uploadDate;
-    this.checkDate = checkDate;
-    this.personId = personId;
-    this.ehrId = ehrId;
   }
 
   public String getId() {

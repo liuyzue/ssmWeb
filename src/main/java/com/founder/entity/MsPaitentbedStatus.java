@@ -3,6 +3,9 @@ package com.founder.entity;
 
 import java.sql.Date;
 
+/**
+ * @author lyz
+ */
 public class MsPaitentbedStatus {
 
   private String id;

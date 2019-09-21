@@ -1,6 +1,5 @@
 package com.founder.controller;
 
-import com.founder.cron.datacheck.relevance.EhrHealthEventRelev;
 import com.founder.entity.PageBean;
 import com.founder.service.EhrHealthEventService;
 import org.apache.logging.log4j.LogManager;
@@ -30,8 +29,6 @@ public class MainController {
 
     @Autowired
     EhrHealthEventService eventService;
-    @Autowired
-    EhrHealthEventRelev ehrHealthEventRelev;
 
     PageBean pageBean;
 
@@ -56,7 +53,7 @@ public class MainController {
 
     @RequestMapping(value = "/doCheck")
     public String doCheck(Date date){
-        ehrHealthEventRelev.checkOutpatient(date);
+       // ehrHealthEventRelev.checkOutpatient(date);
         return "forward:/fenye";
     }
 

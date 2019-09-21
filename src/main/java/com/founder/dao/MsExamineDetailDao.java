@@ -17,6 +17,14 @@ import java.util.ArrayList;
 public interface MsExamineDetailDao extends BaseDao<MsExamineDetail> {
 
     /**
+     * 查询所有记录
+     *
+     * @return
+     */
+    @Override
+    ArrayList<MsExamineDetail> selectAll();
+
+    /**
      * 根据一段upload_time查询所有记录
      *
      * @param startTime yyyy-MM-dd hh24:mi:ss

@@ -4,7 +4,10 @@ package com.founder.entity;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-public class MsExamineDetail {
+/**
+ * @author F
+ */
+public class MsExamineDetail extends BaseEntity{
 
   private String id;
   private String ehrId;
@@ -45,44 +48,6 @@ public class MsExamineDetail {
   public MsExamineDetail() {
   }
 
-  public MsExamineDetail(String id, String ehrId, String personId, String recordNumber, String sampleId, String inspectionType, String inspectionItemCode, String inspectionItemName, String inspectionQuantifyResult, String inspectionResult, String inspectionUnit, String referenceRange, String prompt, String conclusion, Date checkDate, String detectionPeopleName, String detectionOrgName, String detectionRoomCode, String detectionRoomName, String updateName, String updateIdcard, Timestamp updateDate, String isDelete, String examinationNumber, String exProjSn, String ucl, String lcl, String analysisStatus, String isLimit, String hospitalCode, Date gatherDate, String sputumSmearPosi, String syphilisPosi, String alanineAspartate, String hbvDnaPosi) {
-    this.id = id;
-    this.ehrId = ehrId;
-    this.personId = personId;
-    this.recordNumber = recordNumber;
-    this.sampleId = sampleId;
-    this.inspectionType = inspectionType;
-    this.inspectionItemCode = inspectionItemCode;
-    this.inspectionItemName = inspectionItemName;
-    this.inspectionQuantifyResult = inspectionQuantifyResult;
-    this.inspectionResult = inspectionResult;
-    this.inspectionUnit = inspectionUnit;
-    this.referenceRange = referenceRange;
-    this.prompt = prompt;
-    this.conclusion = conclusion;
-    this.checkDate = checkDate;
-    this.detectionPeopleName = detectionPeopleName;
-    this.detectionOrgName = detectionOrgName;
-    this.detectionRoomCode = detectionRoomCode;
-    this.detectionRoomName = detectionRoomName;
-    this.updateName = updateName;
-    this.updateIdcard = updateIdcard;
-    this.updateDate = updateDate;
-    this.isDelete = isDelete;
-    this.examinationNumber = examinationNumber;
-    this.exProjSn = exProjSn;
-    this.ucl = ucl;
-    this.lcl = lcl;
-    this.analysisStatus = analysisStatus;
-    this.isLimit = isLimit;
-    this.hospitalCode = hospitalCode;
-    this.gatherDate = gatherDate;
-    this.sputumSmearPosi = sputumSmearPosi;
-    this.syphilisPosi = syphilisPosi;
-    this.alanineAspartate = alanineAspartate;
-    this.hbvDnaPosi = hbvDnaPosi;
-  }
-
   public String getId() {
     return id;
   }
@@ -92,19 +57,23 @@ public class MsExamineDetail {
   }
 
 
+  @Override
   public String getEhrId() {
     return ehrId;
   }
 
+  @Override
   public void setEhrId(String ehrId) {
     this.ehrId = ehrId;
   }
 
 
+  @Override
   public String getPersonId() {
     return personId;
   }
 
+  @Override
   public void setPersonId(String personId) {
     this.personId = personId;
   }
@@ -353,10 +322,12 @@ public class MsExamineDetail {
   }
 
 
+  @Override
   public java.sql.Date getGatherDate() {
     return gatherDate;
   }
 
+  @Override
   public void setGatherDate(java.sql.Date gatherDate) {
     this.gatherDate = gatherDate;
   }

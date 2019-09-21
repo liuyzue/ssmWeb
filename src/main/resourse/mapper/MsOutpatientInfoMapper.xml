@@ -2,62 +2,135 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.founder.dao.MsOutpatientInfoDao">
+
+<!--    校验数据开始-->
+    <select id="msOutpatientCheckMsRegister" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_REGISTER_RECORD where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_OUTPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_OUTPATIENT_INFO a
+        where not exists (select 1 from MS_REGISTER_RECORD b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msOutpatientCheckMsDrug" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_DRUG_USAGE where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_OUTPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_OUTPATIENT_INFO a
+        where not exists (select 1 from MS_DRUG_USAGE b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msOutpatientCheckMsDiseaseDia" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_DISEASE_DIAGNOSIS_INFO where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_OUTPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_OUTPATIENT_INFO a
+        where not exists (select 1 from MS_DISEASE_DIAGNOSIS_INFO b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msOutpatientCheckMsOutpatientPres" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_OUTPATIENT_PRESCRIPTION where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_OUTPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_OUTPATIENT_INFO a
+        where not exists (select 1 from MS_OUTPATIENT_PRESCRIPTION b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msOutpatientCheckMsExpInfo" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_EXPENSE_INFO where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_OUTPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_OUTPATIENT_INFO a
+        where not exists (select 1 from MS_EXPENSE_INFO b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msOutpatientCheckMsExamine" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_EXAMINE_EVENT where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_OUTPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_OUTPATIENT_INFO a
+        where not exists (select 1 from MS_EXAMINE_EVENT b where a.EHR_ID=b.EHR_ID)
+    </select>
+    <select id="msOutpatientCheckMsStudy" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_STUDY_EVENT where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'MS_OUTPATIENT_INFO' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from MS_OUTPATIENT_INFO a
+        where not exists (select 1 from MS_STUDY_EVENT b where a.EHR_ID=b.EHR_ID)
+    </select>
+<!--    校验数据结束-->
+
+    <select id="selectAll" resultType="com.founder.entity.MsOutpatientInfo">
+        select <include refid="columnList"/>
+        from MS_OUTPATIENT_INFO
+    </select>
+
     <select id="selectByPeronId" resultType="com.founder.entity.MsOutpatientInfo" parameterType="String">
-        select id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
-        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
-        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
-        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
-        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
-        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
-        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
-        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
-        prescription_count, prescription_route_count, gather_date
+        select <include refid="columnList"/>
         from MS_OUTPATIENT_INFO
         where PERSON_ID=#{person_id}
     </select>
 
     <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsOutpatientInfo">
-        select id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
-        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
-        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
-        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
-        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
-        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
-        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
-        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
-        prescription_count, prescription_route_count, gather_date
+        select <include refid="columnList"/>
         from MS_OUTPATIENT_INFO
         where EHR_ID=#{ehr_id}
     </select>
 
     <select id="selectAllByUploadTime" resultType="com.founder.entity.MsOutpatientInfo" parameterType="String">
-        select id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
-        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
-        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
-        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
-        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
-        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
-        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
-        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
-        prescription_count, prescription_route_count, gather_date
+        select <include refid="columnList"/>
         from MS_OUTPATIENT_INFO
-        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss')
+        AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
     </select>
 
     <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsOutpatientInfo">
-        select id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
-        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
-        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
-        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
-        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
-        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
-        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
-        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
-        prescription_count, prescription_route_count, gather_date
+        select
+            <include refid="columnList"/>
         from MS_OUTPATIENT_INFO
         where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
     </select>
 
-
+    <sql id="columnList">
+        id, ehr_id, person_id, outpatient_no, health_file_no, clinic_record_no, report_card_type_code,
+        record_number, clinic_organ_code, clinic_organ_name, medical_room_code, medical_room_name, clinic_date,
+        clinic_people_name, gender, age, birthday, marriage, chief_complaint, consultation_question,
+        health_services_requires, pathogenesis_date, other_medical_treatment, medical_cost_pay_way,
+        outpatient_cost_accounts_way, outpatient_cost_type_code, outpatient_cost_type_name, outpatient_cost_sum,
+        personal_expenses, medical_insurance_cost_sum, other_subsidies_cost_sum, mana_doctor_no, mana_doctor_name,
+        mana_doctor_idcard, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date,
+        is_delete, outpatient_type, main_symptoms, process_status, visit_status, is_limit, observed_patient_flag,
+        prescription_count, prescription_route_count, gather_date
+    </sql>
 
 </mapper>

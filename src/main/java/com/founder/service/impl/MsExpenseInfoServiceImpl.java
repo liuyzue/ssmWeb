@@ -1,6 +1,8 @@
 package com.founder.service.impl;
 
 import com.founder.dao.MsExpenseInfoDao;
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsExpenseInfo;
 import com.founder.service.MsExpenseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,5 +71,15 @@ public class MsExpenseInfoServiceImpl implements MsExpenseInfoService {
     public ArrayList<MsExpenseInfo> selectByEhrAndPersonId(String ehrId, String personId) {
         ArrayList<MsExpenseInfo> msExpenseInfos=msExpenseInfoDao.selectByEhrAndPersonId(ehrId,personId);
         return msExpenseInfos;
+    }
+
+    /**
+     * 校验 费用详细
+     *
+     * @return
+     */
+    @Override
+    public ArrayList<ErrorInfo> msExpenseCheckExpenseDetail() {
+        return msExpenseInfoDao.msExpenseCheckExpenseDetail();
     }
 }

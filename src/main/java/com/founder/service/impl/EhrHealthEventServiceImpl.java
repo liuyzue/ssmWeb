@@ -3,7 +3,9 @@ package com.founder.service.impl;
 import com.founder.dao.EhrHealthEventDao;
 import com.founder.dao.MsInpatientInfoDao;
 import com.founder.dao.MsOutpatientInfoDao;
+import com.founder.entity.CheckUnit;
 import com.founder.entity.EhrHealthEvent;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsOutpatientInfo;
 import com.founder.service.EhrHealthEventService;
 import com.founder.service.ErrorInfoService;
@@ -94,25 +96,23 @@ public class EhrHealthEventServiceImpl implements EhrHealthEventService {
     }
 
     /**
-     * 事件表的记录是否在门诊记录表中
+     * 校验在门诊记录
      *
-     * @param ehrId
      * @return
      */
     @Override
-    public boolean isExistsInOutPatientInfo(String ehrId) {
-        if (!ObjectUtils.isEmpty(msOutpatientInfoDao.selectByEhrId(ehrId))){
-            return true;
-        }
-        return false;
+    public ArrayList<ErrorInfo> ehrCheckMsOutpatient() {
+        return ehrHealthEventDao.ehrCheckMsOutpatient();
     }
 
+    /**
+     * 校验住院记录
+     *
+     * @return
+     */
     @Override
-    public boolean isExistsInInPatientInfo(String ehrId) {
-        if (!ObjectUtils.isEmpty(msInpatientInfoDao.selectByEhrId(ehrId))){
-            return true;
-        }
-        return false;
+    public ArrayList<ErrorInfo> ehrCheckMsInpatient() {
+        return ehrHealthEventDao.ehrCheckMsInpatient();
     }
 
 }

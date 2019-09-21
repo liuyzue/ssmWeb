@@ -17,16 +17,6 @@ public class MsDoctorAdviceRecord {
   public MsDoctorAdviceRecord() {
   }
 
-  public MsDoctorAdviceRecord(String id, String ehrId, String hpNo, String hpSNo, String odrNo, String othercardtype, String othercardno, Date gatherDate) {
-    this.id = id;
-    this.ehrId = ehrId;
-    this.hpNo = hpNo;
-    this.hpSNo = hpSNo;
-    this.odrNo = odrNo;
-    this.othercardtype = othercardtype;
-    this.othercardno = othercardno;
-    this.gatherDate = gatherDate;
-  }
 
   public String getId() {
     return id;

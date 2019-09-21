@@ -4,7 +4,7 @@ package com.founder.entity;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-public class MsExpenseInfo {
+public class MsExpenseInfo extends BaseEntity{
 
   private String id;
   private String ehrId;
@@ -45,44 +45,6 @@ public class MsExpenseInfo {
   public MsExpenseInfo() {
   }
 
-  public MsExpenseInfo(String id, String ehrId, String personId, String recordNumber, String payBarCode, String hospitalCode, String hospitalName, String costTypeCode, String costTypeName, String medicalPayWay, String medicalPayWayName, String otherDesc, String medicalSettlementWayCode, String medicalSettlementWayName, String totalCost, String personalExpenses, String medicalInsuranceCostSum, String otherSubsidiesCostSum, Timestamp settlementDate, String isDelete, String name, String age, String gender, String marriage, String costNumber, String othercardtype, String othercardno, String opEmHpMark, String opEmHpNo, String rcdIdcard, String invoiceNo, String accountNo, String processStatus, String isLimit, Date gatherDate) {
-    this.id = id;
-    this.ehrId = ehrId;
-    this.personId = personId;
-    this.recordNumber = recordNumber;
-    this.payBarCode = payBarCode;
-    this.hospitalCode = hospitalCode;
-    this.hospitalName = hospitalName;
-    this.costTypeCode = costTypeCode;
-    this.costTypeName = costTypeName;
-    this.medicalPayWay = medicalPayWay;
-    this.medicalPayWayName = medicalPayWayName;
-    this.otherDesc = otherDesc;
-    this.medicalSettlementWayCode = medicalSettlementWayCode;
-    this.medicalSettlementWayName = medicalSettlementWayName;
-    this.totalCost = totalCost;
-    this.personalExpenses = personalExpenses;
-    this.medicalInsuranceCostSum = medicalInsuranceCostSum;
-    this.otherSubsidiesCostSum = otherSubsidiesCostSum;
-    this.settlementDate = settlementDate;
-    this.isDelete = isDelete;
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.marriage = marriage;
-    this.costNumber = costNumber;
-    this.othercardtype = othercardtype;
-    this.othercardno = othercardno;
-    this.opEmHpMark = opEmHpMark;
-    this.opEmHpNo = opEmHpNo;
-    this.rcdIdcard = rcdIdcard;
-    this.invoiceNo = invoiceNo;
-    this.accountNo = accountNo;
-    this.processStatus = processStatus;
-    this.isLimit = isLimit;
-    this.gatherDate = gatherDate;
-  }
-
   public String getId() {
     return id;
   }
@@ -92,19 +54,23 @@ public class MsExpenseInfo {
   }
 
 
+  @Override
   public String getEhrId() {
     return ehrId;
   }
 
+  @Override
   public void setEhrId(String ehrId) {
     this.ehrId = ehrId;
   }
 
 
+  @Override
   public String getPersonId() {
     return personId;
   }
 
+  @Override
   public void setPersonId(String personId) {
     this.personId = personId;
   }
@@ -389,10 +355,12 @@ public class MsExpenseInfo {
   }
 
 
+  @Override
   public java.sql.Date getGatherDate() {
     return gatherDate;
   }
 
+  @Override
   public void setGatherDate(java.sql.Date gatherDate) {
     this.gatherDate = gatherDate;
   }

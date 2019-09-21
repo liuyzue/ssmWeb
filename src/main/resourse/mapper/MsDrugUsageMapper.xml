@@ -2,53 +2,39 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.founder.dao.MsDrugUsageDao">
+
+    <select id="selectAll" resultType="com.founder.entity.MsDrugUsage">
+        select <include refid="columnList"/>
+        from MS_DRUG_USAGE
+    </select>
+
     <select id="selectByPeronId" resultType="com.founder.entity.MsDrugUsage" parameterType="String">
-        select id, ehr_id, person_id, admission_no, referral_hospital_code, referral_hospital_name, name, gender,
-         age, cm_type, drug_type, drug_dosage, drug_use_days, drug_use_frequency, drug_use_dose_unit,
-         drug_use_total_dose, drug_use_route_code, start_date, stop_date, drug_generic_name, drug_trade_name,
-         drug_specifications, doctor_advice, production_unit_name, execute_mark, execute_frequency, execute_result,
-         unit_price, subtotal, remarks, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
-         update_date, record_number, is_delete, marriage, medication_compliance, medication_compliance_name,
-         drug_use_route_name, base_drug_code, internal_drug_code, drug_medicare_code, drug_agricultural_code,
-         quantity_unit, quantity, drug_use_dose, drug_use_state, clinic_date, doctor_no, doctor_name, clinic_mark,
-         expense_type, batch_no, if_charge, begin_time, odrisu_dt, odr_type, stop_dt, stpdoc_idcard, process_status,
-         is_limit, base_drug_flag, antibiotic_flag, antibacterials_flag, gather_date, narcotic_flag, toxic_flag
+        select <include refid="columnList"/>
         from MS_DRUG_USAGE
         where PERSON_ID=#{person_id}
     </select>
 
     <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.EhrHealthEvent">
-        select id, ehr_id, person_id, admission_no, referral_hospital_code, referral_hospital_name, name, gender,
-         age, cm_type, drug_type, drug_dosage, drug_use_days, drug_use_frequency, drug_use_dose_unit,
-         drug_use_total_dose, drug_use_route_code, start_date, stop_date, drug_generic_name, drug_trade_name,
-         drug_specifications, doctor_advice, production_unit_name, execute_mark, execute_frequency, execute_result,
-         unit_price, subtotal, remarks, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
-         update_date, record_number, is_delete, marriage, medication_compliance, medication_compliance_name,
-         drug_use_route_name, base_drug_code, internal_drug_code, drug_medicare_code, drug_agricultural_code,
-         quantity_unit, quantity, drug_use_dose, drug_use_state, clinic_date, doctor_no, doctor_name, clinic_mark,
-         expense_type, batch_no, if_charge, begin_time, odrisu_dt, odr_type, stop_dt, stpdoc_idcard, process_status,
-         is_limit, base_drug_flag, antibiotic_flag, antibacterials_flag, gather_date, narcotic_flag, toxic_flag
+        select <include refid="columnList"/>
         from MS_DRUG_USAGE
         where EHR_ID=#{ehr_id}
     </select>
 
     <select id="selectAllByUploadTime" resultType="com.founder.entity.EhrHealthEvent" parameterType="String">
-        select id, ehr_id, person_id, admission_no, referral_hospital_code, referral_hospital_name, name, gender,
-         age, cm_type, drug_type, drug_dosage, drug_use_days, drug_use_frequency, drug_use_dose_unit,
-         drug_use_total_dose, drug_use_route_code, start_date, stop_date, drug_generic_name, drug_trade_name,
-         drug_specifications, doctor_advice, production_unit_name, execute_mark, execute_frequency, execute_result,
-         unit_price, subtotal, remarks, fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard,
-         update_date, record_number, is_delete, marriage, medication_compliance, medication_compliance_name,
-         drug_use_route_name, base_drug_code, internal_drug_code, drug_medicare_code, drug_agricultural_code,
-         quantity_unit, quantity, drug_use_dose, drug_use_state, clinic_date, doctor_no, doctor_name, clinic_mark,
-         expense_type, batch_no, if_charge, begin_time, odrisu_dt, odr_type, stop_dt, stpdoc_idcard, process_status,
-         is_limit, base_drug_flag, antibiotic_flag, antibacterials_flag, gather_date, narcotic_flag, toxic_flag
+        select <include refid="columnList"/>
         from MS_DRUG_USAGE
         where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
     </select>
 
     <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.EhrHealthEvent">
-        select id, ehr_id, person_id, admission_no, referral_hospital_code, referral_hospital_name, name, gender,
+        select
+            <include refid="columnList"/>
+        from MS_DRUG_USAGE
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+    <sql id="columnList">
+        id, ehr_id, person_id, admission_no, referral_hospital_code, referral_hospital_name, name, gender,
          age, cm_type, drug_type, drug_dosage, drug_use_days, drug_use_frequency, drug_use_dose_unit,
          drug_use_total_dose, drug_use_route_code, start_date, stop_date, drug_generic_name, drug_trade_name,
          drug_specifications, doctor_advice, production_unit_name, execute_mark, execute_frequency, execute_result,
@@ -58,9 +44,7 @@
          quantity_unit, quantity, drug_use_dose, drug_use_state, clinic_date, doctor_no, doctor_name, clinic_mark,
          expense_type, batch_no, if_charge, begin_time, odrisu_dt, odr_type, stop_dt, stpdoc_idcard, process_status,
          is_limit, base_drug_flag, antibiotic_flag, antibacterials_flag, gather_date, narcotic_flag, toxic_flag
-        from MS_DRUG_USAGE
-        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
-    </select>
+    </sql>
 
 
 

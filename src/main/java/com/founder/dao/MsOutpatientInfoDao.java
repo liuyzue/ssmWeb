@@ -1,5 +1,7 @@
 package com.founder.dao;
 
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsOutpatientInfo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -15,6 +17,14 @@ import java.util.ArrayList;
  */
 @Repository
 public interface MsOutpatientInfoDao extends BaseDao<MsOutpatientInfo> {
+
+    /**
+     * 查询所有记录
+     *
+     * @return
+     */
+    @Override
+    ArrayList<MsOutpatientInfo> selectAll();
 
     /**
      * 根据一段upload_time查询所有记录
@@ -53,4 +63,41 @@ public interface MsOutpatientInfoDao extends BaseDao<MsOutpatientInfo> {
      */
     @Override
     ArrayList<MsOutpatientInfo> selectByEhrAndPersonId(@Param("ehr_id") String ehrId, @Param("person_id") String personId);
+
+    /**
+     * 校验 挂号记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsRegister();
+
+    /**
+     * 校验 用药记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsDrug();
+    /**
+     * 校验 诊断记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsDiseaseDia();
+    /**
+     * 校验 门诊处方记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsOutpatientPres();
+    /**
+     * 校验 费用记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsExpInfo();
+    /**
+     * 校验 检验记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsExamine();
+    /**
+     * 校验 检查记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsStudy();
 }

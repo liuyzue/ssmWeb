@@ -1,6 +1,8 @@
 package com.founder.service;
 
+import com.founder.entity.CheckUnit;
 import com.founder.entity.EhrHealthEvent;
+import com.founder.entity.ErrorInfo;
 
 import java.util.ArrayList;
 
@@ -60,17 +62,15 @@ public interface EhrHealthEventService extends BaseService<EhrHealthEvent> {
     ArrayList<EhrHealthEvent> selectByEhrAndPersonId(String ehrId, String personId);
 
     /**
-     * 事件表的记录是否在门诊记录表中
-     * @param ehrId
+     * 校验在门诊记录
      * @return
      */
-    boolean isExistsInOutPatientInfo(String ehrId);
+    ArrayList<ErrorInfo> ehrCheckMsOutpatient();
 
     /**
-     * 事件表的记录是否在门诊记录表中
-     * @param ehrId
+     * 校验住院记录
      * @return
      */
-    boolean isExistsInInPatientInfo(String ehrId);
+    ArrayList<ErrorInfo> ehrCheckMsInpatient();
 
 }

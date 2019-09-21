@@ -1,5 +1,7 @@
 package com.founder.service;
 
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsExamineEvent;
 
 import java.util.ArrayList;
@@ -49,4 +51,10 @@ public interface MsExamineEventService extends BaseService<MsExamineEvent> {
      */
     @Override
     ArrayList<MsExamineEvent> selectByEhrAndPersonId(String ehrId, String personId);
+
+    /**
+     * 校验 检验明细
+     * @return
+     */
+    ArrayList<ErrorInfo> msExamineCheckExamineDetail();
 }

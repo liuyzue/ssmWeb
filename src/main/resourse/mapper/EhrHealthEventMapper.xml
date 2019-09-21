@@ -2,47 +2,80 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.founder.dao.EhrHealthEventDao">
+
+    <select id="ehrCheckMsOutpatient" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_OUTPATIENT_INFO where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'ehr_health_event' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from EHR_HEALTH_EVENT a
+        where EHR_TYPE='1' and
+        not exists(select 1 from MS_OUTPATIENT_INFO b where a.EHR_ID=b.EHR_ID)
+    </select>
+
+    <select id="ehrCheckMsInpatient" resultType="com.founder.entity.ErrorInfo">
+        select 'select * from MS_INPATIENT_INFO where ehr_id='||to_char('''')|| a.EHR_ID||to_char('''') as sql_text,
+        'ehr_health_event' as Table_Name,
+        case when a.PERSON_ID is null then '2'
+             else '1' end as result_type,
+        a.GATHER_DATE as UPLOAD_DATE,
+        sysdate as check_date,
+        a.PERSON_ID as personId,
+        a.EHR_ID as ehrId
+        from EHR_HEALTH_EVENT a
+        where EHR_TYPE='2' and
+        not exists(select 1 from MS_INPATIENT_INFO b where a.EHR_ID=b.EHR_ID)
+    </select>
+
+    <select id="selectBaseAll" resultType="com.founder.entity.ErrorInfo">
+        select
+        EHR_ID,PERSON_ID,GATHER_DATE,'EHR_HEALTH_EVENT' as table_name
+        from EHR_HEALTH_EVENT
+        where EHR_TYPE='1'
+        union all
+        select
+        EHR_ID,PERSON_ID,GATHER_DATE,'EHR_HEALTH_EVENT' as table_name
+        from EHR_HEALTH_EVENT
+        where EHR_TYPE='2'
+    </select>
+
+    <select id="selectAll" resultType="com.founder.entity.EhrHealthEvent">
+        select
+            <include refid="columnList"/>
+        from EHR_HEALTH_EVENT
+        where EHR_TYPE='1'
+        union
+        select
+        <include refid="columnList"/>
+        from EHR_HEALTH_EVENT
+        where EHR_TYPE='2'
+    </select>
+
     <select id="selectByPeronId" resultType="com.founder.entity.EhrHealthEvent" parameterType="String">
-        select id, ehr_id, ehr_name, physical_exam_type, person_id, name, age, marriage, ehr_type, disease_code,
-         disease_name, clinic_year, clinic_month, clinic_date, create_organ_code, create_organ_name, create_room_code,
-          create_room_name, create_date, create_person, create_idcard, update_organ_code, update_organ_name,
-          update_room_code, update_room_name, update_date, update_name, update_idcard, clinic_organ_code,
-          clinic_organ_name, clinic_room_code, clinic_room_name, is_delete, gender, data_source, ehr_old_pepole_flag,
-          is_limit, gather_date, id_card
+        select <include refid="columnList"/>
         from EHR_HEALTH_EVENT
         where PERSON_ID=#{person_id} and (EHR_TYPE='1' or EHR_TYPE='2')
     </select>
 
     <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.EhrHealthEvent">
-        select id, ehr_id, ehr_name, physical_exam_type, person_id, name, age, marriage, ehr_type, disease_code,
-         disease_name, clinic_year, clinic_month, clinic_date, create_organ_code, create_organ_name, create_room_code,
-          create_room_name, create_date, create_person, create_idcard, update_organ_code, update_organ_name,
-          update_room_code, update_room_name, update_date, update_name, update_idcard, clinic_organ_code,
-          clinic_organ_name, clinic_room_code, clinic_room_name, is_delete, gender, data_source, ehr_old_pepole_flag,
-          is_limit, gather_date, id_card
+        select <include refid="columnList"/>
           from EHR_HEALTH_EVENT
           where EHR_ID=#{ehr_id} and (EHR_TYPE='1' or EHR_TYPE='2')
     </select>
 
     <select id="selectAllByUploadTime" resultType="com.founder.entity.EhrHealthEvent" parameterType="String">
-        select id, ehr_id, ehr_name, physical_exam_type, person_id, name, age, marriage, ehr_type, disease_code,
-         disease_name, clinic_year, clinic_month, clinic_date, create_organ_code, create_organ_name, create_room_code,
-          create_room_name, create_date, create_person, create_idcard, update_organ_code, update_organ_name,
-          update_room_code, update_room_name, update_date, update_name, update_idcard, clinic_organ_code,
-          clinic_organ_name, clinic_room_code, clinic_room_name, is_delete, gender, data_source, ehr_old_pepole_flag,
-          is_limit, gather_date, id_card
+        select <include refid="columnList"/>
           from EHR_HEALTH_EVENT
           where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/mm/dd HH24:MI:SS') AND GATHER_DATE&lt;= to_date(#{endTime},'yyyy/mm/dd HH24:MI:SS')
           and (EHR_TYPE='1' or EHR_TYPE='2') and ID_CARD is not null
     </select>
 
     <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.EhrHealthEvent">
-        select id, ehr_id, ehr_name, physical_exam_type, person_id, name, age, marriage, ehr_type, disease_code,
-         disease_name, clinic_year, clinic_month, clinic_date, create_organ_code, create_organ_name, create_room_code,
-          create_room_name, create_date, create_person, create_idcard, update_organ_code, update_organ_name,
-          update_room_code, update_room_name, update_date, update_name, update_idcard, clinic_organ_code,
-          clinic_organ_name, clinic_room_code, clinic_room_name, is_delete, gender, data_source, ehr_old_pepole_flag,
-          is_limit, gather_date, id_card
+        select <include refid="columnList"/>
           from EHR_HEALTH_EVENT
           where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
           and (EHR_TYPE='1' or EHR_TYPE='2')

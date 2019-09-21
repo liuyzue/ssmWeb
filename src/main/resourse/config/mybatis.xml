@@ -5,5 +5,8 @@
         <setting name="logImpl" value="LOG4J2"/>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <setting name="jdbcTypeForNull" value="NULL" />
+        <setting name="defaultFetchSize" value="3000"/>
+        <setting name="defaultExecutorType" value="BATCH"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
     </settings>
 </configuration>

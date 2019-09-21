@@ -1,5 +1,7 @@
 package com.founder.service;
 
+import com.founder.entity.CheckUnit;
+import com.founder.entity.ErrorInfo;
 import com.founder.entity.MsOutpatientInfo;
 
 import java.util.ArrayList;
@@ -12,6 +14,8 @@ import java.util.ArrayList;
  * @time:14:17
  */
 public interface MsOutpatientInfoService extends BaseService<MsOutpatientInfo> {
+
+//通用查询
     /**
      * 根据一段upload_time查询所有记录
      *
@@ -49,4 +53,42 @@ public interface MsOutpatientInfoService extends BaseService<MsOutpatientInfo> {
      */
     @Override
     ArrayList<MsOutpatientInfo> selectByEhrAndPersonId(String ehrId, String personId);
+
+//校验方法
+    /**
+     * 校验 挂号记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsRegister();
+
+    /**
+     * 校验 用药记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsDrug();
+    /**
+     * 校验 诊断记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsDiseaseDia();
+    /**
+     * 校验 门诊处方记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsOutpatientPres();
+    /**
+     * 校验 费用记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsExpInfo();
+    /**
+     * 校验 检验记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsExamine();
+    /**
+     * 校验 检查记录
+     * @return
+     */
+    ArrayList<ErrorInfo> msOutpatientCheckMsStudy();
 }
