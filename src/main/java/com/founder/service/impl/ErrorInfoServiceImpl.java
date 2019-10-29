@@ -87,4 +87,12 @@ public class ErrorInfoServiceImpl implements ErrorInfoService {
     public void deleteErrorInfoByCheckTime(String checkTime) {
 
     }
+
+    /**
+     * 清空所有数据
+     */
+    @Override
+    public void truncateErrorInfo() {
+        errorInfoDao.truncateErrorInfo();
+    }
 }

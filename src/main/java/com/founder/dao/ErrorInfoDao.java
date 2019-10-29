@@ -58,9 +58,9 @@ public interface ErrorInfoDao {
     void deleteErrorInfoByCheckTime(String checkTime);
 
     /**
-     * 根据表名删除数据
-     * @param tableName
+     * 清空所有数据
+     * @param
      */
-    void deleteErrorInfoByTableName(String tableName);
+    void truncateErrorInfo();
 
 }

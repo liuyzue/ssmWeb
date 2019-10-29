@@ -1,9 +1,13 @@
 package com.founder.cron;
 
 import com.founder.cron.datacheck.relevance.RelevanceCheck;
+import com.founder.entity.ErrorInfo;
 import com.founder.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 
 /**
@@ -17,6 +21,8 @@ import org.springframework.stereotype.Component;
 public class Relevance {
 
     @Autowired
+    private ErrorInfoService errorInfoService;
+    @Autowired
     private RelevanceCheck relevanceCheck;
     @Autowired
     private EhrHealthEventService ehrHealthEventService;
@@ -29,7 +35,9 @@ public class Relevance {
     @Autowired
     private MsOutpatientInfoService msOutpatientInfoService;
 
+    @Scheduled(cron = "0 0 23 * * ? *")
     public void checkAll(){
+        errorInfoService.truncateErrorInfo();
         relevanceCheck.updateErrorInfo(ehrHealthEventService.ehrCheckMsInpatient());
         relevanceCheck.updateErrorInfo(ehrHealthEventService.ehrCheckMsOutpatient());
         relevanceCheck.updateErrorInfo(msExamineEventService.msExamineCheckExamineDetail());
@@ -48,6 +56,10 @@ public class Relevance {
         relevanceCheck.updateErrorInfo(msOutpatientInfoService.msOutpatientCheckMsOutpatientPres());
         relevanceCheck.updateErrorInfo(msOutpatientInfoService.msOutpatientCheckMsRegister());
         relevanceCheck.updateErrorInfo(msOutpatientInfoService.msOutpatientCheckMsStudy());
+    }
+
+    void checkOne(List<ErrorInfo> list){
+        relevanceCheck.updateErrorInfo(list);
     }
 
 

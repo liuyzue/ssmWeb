@@ -12,7 +12,7 @@ public class ErrorInfo {
   private String sqlText;
   private String tableName;
   /**
-   * 错误类型 1：关联性错误  2：null错误
+   * 错误类型 1：关联性错误  2：
    */
   private String resultType;
   private Date uploadDate;

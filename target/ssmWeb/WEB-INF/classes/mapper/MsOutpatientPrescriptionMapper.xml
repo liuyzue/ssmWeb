@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.founder.dao.MsOutpatientPrescriptionDao">
+    <select id="selectAll" resultType="com.founder.entity.MsOutpatientPrescription">
+        select <include refid="columnList"/>
+        from MS_OUTPATIENT_PRESCRIPTION
+    </select>
+
+    <select id="selectByPeronId" resultType="com.founder.entity.MsOutpatientPrescription" parameterType="String">
+        select <include refid="columnList"/>
+        from MS_OUTPATIENT_PRESCRIPTION
+        where PERSON_ID=#{person_id}
+    </select>
+
+    <select id="selectByEhrId" parameterType="String" resultType="com.founder.entity.MsOutpatientPrescription">
+        select <include refid="columnList"/>
+        from MS_OUTPATIENT_PRESCRIPTION
+        where EHR_ID=#{ehr_id}
+    </select>
+
+    <select id="selectAllByUploadTime" resultType="com.founder.entity.MsOutpatientPrescription" parameterType="String">
+        select <include refid="columnList"/>
+        from MS_OUTPATIENT_PRESCRIPTION
+        where GATHER_DATE &gt;= to_date(#{startTime},'yyyy/MM/dd hh24:mi:ss') AND GATHER_DATE &lt;= to_date(#{endTime},'yyyy/MM/dd hh24:mi:ss')
+    </select>
+
+    <select id="selectByEhrAndPersonId" parameterType="String" resultType="com.founder.entity.MsOutpatientPrescription">
+        select
+            <include refid="columnList"/>
+        from MS_OUTPATIENT_PRESCRIPTION
+        where EHR_ID=#{ehr_id} and PERSON_ID=#{person_id}
+    </select>
+
+    <sql id="columnList">
+        id, ehr_id, person_id, outpatient_no, record_number, name, gender, age, hospital_code, hospital_name,
+        prescribe_room_code, prescribe_room_name, cm_type, drug_type, drug_type_name, prescription_note,
+        prescription_total_cost, prescribe_doctor_no, prescribe_doctor_name, prescribe_doctor_idcard, prescribe_date,
+        fill_user_name, fill_user_idcard, fill_time, update_name, update_idcard, update_date, is_delete, marriage,
+        othercardtype, othercardno, op_em_hp_mark, if_charge, if_dispense, tcm_decoct, tcm_use, tcm_odrno, process_status,
+        is_limit, antibiotic_flag, gather_date
+    </sql>
+
+
+</mapper>

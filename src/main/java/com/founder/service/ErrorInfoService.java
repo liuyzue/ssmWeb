@@ -53,4 +53,10 @@ public interface ErrorInfoService {
      * @param checkTime
      */
     void deleteErrorInfoByCheckTime(String checkTime);
+
+    /**
+     * 清空所有数据
+     * @param
+     */
+    void truncateErrorInfo();
 }

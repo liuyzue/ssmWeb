@@ -2,6 +2,7 @@ package com.founder.dao;
 
 import com.founder.cron.Relevance;
 import com.founder.entity.EhrHealthEvent;
+import com.founder.service.ErrorInfoService;
 import com.founder.service.MsExamineEventService;
 import com.founder.service.MsOutpatientInfoService;
 import com.founder.util.DateUtil;
@@ -29,24 +30,27 @@ import java.util.List;
 @Commit
 public class BaseDaoTest {
 
-    @Autowired
-    Relevance relevance;
+//    @Autowired
+//    Relevance relevance;
 
     @Autowired
-    EhrHealthEventDao ehrHealthEventDao;
+    ErrorInfoService errorInfoService;
 
-    @Autowired
-    MsExamineEventService msExamineEventService;
-
-    @Autowired
-    MsOutpatientInfoService msOutpatientInfoService;
+//    @Autowired
+//    EhrHealthEventDao ehrHealthEventDao;
+//
+//    @Autowired
+//    MsExamineEventService msExamineEventService;
+//
+//    @Autowired
+//    MsOutpatientInfoService msOutpatientInfoService;
 
     @Test
     public void test1() {
         System.out.println(DateUtil.toDay(new Date()));
-        relevance.checkAll();
+        //relevance.checkAll();
        // List list=msOutpatientInfoService.msOutpatientCheckMsExamine();   ///2000   4m 34s  216w
-        //System.out.println(list.size());
+        System.out.println(errorInfoService.selectAll().size());
         System.out.println(DateUtil.toDay(new Date()));
     }
 }

@@ -10,90 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="796b70b0-39d7-4e5f-a4eb-c17fa66cdeb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/cron/MainCron.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/cron/Relevance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/CheckUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/util/TableNameMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourse/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/cron/CheckData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/cron/datacheck/relevance/EhrHealthEventRelev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/cron/datacheck/relevance/RelevanceCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/BaseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/EhrHealthEventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/EhrHealthEventDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/cron/Relevance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/cron/Relevance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/cron/datacheck/relevance/RelevanceCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/cron/datacheck/relevance/RelevanceCheck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/ErrorInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/ErrorInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsDiseaseDiagnosisInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsDiseaseDiagnosisInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsDoctorAdviceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsDoctorAdviceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsDoctorAdviceRecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsDoctorAdviceRecordDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsDrugUsageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsDrugUsageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsExamineDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsExamineDetailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsExamineEventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsExamineEventDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsExpenseDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsExpenseDetailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsExpenseInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsExpenseInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsInpatientInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsInpatientInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsInpatientMedicalRecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsInpatientMedicalRecordDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsOuthospitalSummaryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsOuthospitalSummaryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsOutpatientInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsOutpatientInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsOutpatientPrescriptionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsOutpatientPrescriptionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsRegisterRecordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsRegisterRecordDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsStudyEventDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsStudyEventDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsSurgeryInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/dao/MsSurgeryInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/EhrHealthEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/EhrHealthEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/ErrorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/ErrorInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDiseaseDiagnosisInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDiseaseDiagnosisInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDoctorAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDoctorAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDoctorAdviceRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDoctorAdviceRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDrugUsage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsDrugUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExamineDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExamineDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExamineEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExamineEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExpenseDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExpenseDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExpenseInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsExpenseInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsInpatientInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsInpatientInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsInpatientMedicalRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsInpatientMedicalRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOuthospitalSummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOuthospitalSummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOutpatientInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOutpatientInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOutpatientPrescription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsOutpatientPrescription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsPaitentbedStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsPaitentbedStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsRegisterRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsRegisterRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsStudyEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsStudyEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsSurgeryInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/MsSurgeryInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/EhrHealthEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/EhrHealthEventService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/ErrorInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/ErrorInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/MsExamineEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/MsExamineEventService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/MsExpenseInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/MsExpenseInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/MsInpatientInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/MsInpatientInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/MsOutpatientInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/MsOutpatientInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/EhrHealthEventServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/EhrHealthEventServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/ErrorInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/ErrorInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/MsExamineEventServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/MsExamineEventServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/MsExpenseInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/MsExpenseInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/MsInpatientInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/MsInpatientInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/MsOutpatientInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/MsOutpatientInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/EhrHealthEventMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/EhrHealthEventMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/springconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/springconfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/ErrorInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/ErrorInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsDiseaseDiagnosisInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsDiseaseDiagnosisInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsDoctorAdviceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsDoctorAdviceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsDoctorAdviceRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsDoctorAdviceRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsDrugUsageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsDrugUsageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsExamineDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsExamineDetailMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsExamineEventMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsExamineEventMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsExpenseDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsExpenseDetailMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsExpenseInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsExpenseInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsInpatientInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsInpatientInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsInpatientMedicalRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsInpatientMedicalRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsOuthospitalSummaryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsOuthospitalSummaryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsOutpatientInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsOutpatientInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsOutpatientPrescriptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsOutpatientPrescriptionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsRegisterRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsRegisterRecordMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsStudyEventMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsStudyEventMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/MsSurgeryInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/MsSurgeryInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/founder/cron/CheckDataTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/founder/cron/RelevanceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/operation.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/operation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/founder/dao/BaseDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/founder/dao/BaseDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/founder/dao/EhrHealthEventDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/founder/dao/EhrHealthEventDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/mybatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/springconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/springconfig.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +128,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.44942528" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Background" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -220,8 +154,8 @@
       <recent name="D:\Program\ssmWeb\ssmWeb\src\main" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Program\ssmWeb\ssmWeb\src\main\resourse\config" />
       <recent name="D:\Program\ssmWeb\ssmWeb\src\main\resourse" />
+      <recent name="D:\Program\ssmWeb\ssmWeb\src\main\resourse\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -236,7 +170,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BaseDaoTest.test1">
+  <component name="RunManager" selected="Tomcat Server.ssmweb">
     <configuration name="BaseDaoTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ssmWeb" />
       <extension name="coverage">
@@ -507,7 +441,10 @@
       <workItem from="1568855468462" duration="31294000" />
       <workItem from="1568943748527" duration="12114000" />
       <workItem from="1568996643156" duration="1990000" />
-      <workItem from="1569052330882" duration="20292000" />
+      <workItem from="1569052330882" duration="45437000" />
+      <workItem from="1569223490499" duration="1230000" />
+      <workItem from="1569396622010" duration="25000" />
+      <workItem from="1572351894002" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1566835109015</created>
@@ -614,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568815393754</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="relevance check done">
+      <created>1569087142627</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569087142627</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,7 +596,8 @@
     <MESSAGE value="Dao/Mapper done" />
     <MESSAGE value="service/impl done" />
     <MESSAGE value="add pageshow,cron start" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pageshow,cron start" />
+    <MESSAGE value="relevance check done" />
+    <option name="LAST_COMMIT_MESSAGE" value="relevance check done" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
