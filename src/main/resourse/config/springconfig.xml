@@ -87,7 +87,7 @@
 
 <!--    spring自动给dao层注入实现类-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.founder.dao"/>
+        <property name="basePackage" value="com.founder.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 

@@ -6,7 +6,43 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="796b70b0-39d7-4e5f-a4eb-c17fa66cdeb1" name="Default Changelist" comment="" />
+    <list default="true" id="796b70b0-39d7-4e5f-a4eb-c17fa66cdeb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/ContractTeamInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/DateForNow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/RecordContractByPeopleInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/RecordContractInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/RecordContractNumAllInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/entity/ReportDynamicDeteal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/mapper/ContractTeamInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/mapper/RecordContractBypeopleInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/mapper/RecordContractInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/mapper/RecordContractNumAllInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/mapper/TcmConclusionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/ContractTeamInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/Cron.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/RecordContractByPeopleInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/RecordContractInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/RecordContractNumAllInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/ContractTeamInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/RecordContractByPeopleInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/RecordContractInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/RecordContractNumAllInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/mainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourse/mapper/ContractTeamInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourse/mapper/RecordContractBypeopleInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourse/mapper/RecordContractInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resourse/mapper/RecordContractNumAllInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/controller/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/controller/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/mapper/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/TestServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/founder/service/impl/TestServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourse/config/springconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/config/springconfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resourse/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resourse/mapper/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssmWeb.iml" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +51,11 @@
   </component>
   <component name="Git.Settings">
     <option name="PATH_TO_GIT" value="D:\Program\Git\bin\git.exe" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -44,7 +85,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/founder/service" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -53,12 +94,16 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Program\ssmWeb\ssmWeb\src\main\resourse\config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Program\IDEA Projeccts\TF-DataTask\src\main\java\com\founder\service" />
+      <recent name="D:\Program\IDEA Projeccts\TF-DataTask\src\main\java\com\founder\dao" />
+      <recent name="D:\Program\IDEA Projeccts\TF-DataTask\src\main\resourse\mapper" />
+      <recent name="D:\Program\IDEA Projeccts\TF-DataTask\src\main\java\com\founder\entity" />
       <recent name="D:\Program\ssmWeb\ssmWeb\src\main\webapp" />
-      <recent name="D:\Program\ssmWeb\ssmWeb\src\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Program\IDEA Projeccts\TF-DataTask\src" />
+      <recent name="D:\Program\ssmWeb\ssmWeb\src\main\resourse\config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,6 +268,7 @@
       <workItem from="1566788563132" duration="14883000" />
       <workItem from="1566831017091" duration="4106000" />
       <workItem from="1566870771382" duration="717000" />
+      <workItem from="1572920478109" duration="4721000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1566835109015</created>

@@ -1,6 +1,6 @@
 package com.founder.service.impl;
 
-import com.founder.dao.UserDao;
+import com.founder.mapper.UserDao;
 import com.founder.entity.User;
 import com.founder.service.TestService;
 import org.apache.logging.log4j.LogManager;
@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author liuyuze
+ */
 @Service
 public class TestServiceImpl implements TestService {
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.founder.mapper.ContractTeamInfoMapper">
+
+    <resultMap id="findByCodeMap" type="com.founder.model.ContractTeamInfo">
+        <id property="team_name" column="organ_code"/>
+        <id property="peopleNum" column="num"/>
+    </resultMap>
+
+    <select id="findAll" resultType="com.founder.model.ContractTeamInfo">
+      select * from CONTRACT_TEAM_INFO
+    </select>
+    <select id="findByCode"  resultMap="findByCodeMap">
+      select count(*) num,t.organ_code  from SIGN@db_fds t where PAID_FLAG='1' and RESCIND_FLAG='0'group by t.organ_code order by num desc
+    </select>
+
+    <update id="updateRecord" parameterType="com.founder.model.ContractTeamInfo">
+        update CONTRACT_TEAM_INFO
+        <set>
+            <if test="team_name!=null">TEAM_NAME=#{team_name},</if>
+            <if test="peopleNum!=null">peopleNum=#{peopleNum},</if>
+            <if test="teamNo!=null">teamNo=#{teamNo},</if>
+            <if test="createDate">createDate=#{createDate}</if>
+        </set>
+        where rid=#{teamNo}
+    </update>
+    <insert id="insertRecord" parameterType="com.founder.model.ContractTeamInfo">
+        insert into CONTRACT_TEAM_INFO (rid,TEAM_NAME,peopleNum,teamNO,createDate)
+        values (#{teamNo},#{team_name},#{peopleNum},#{teamNo},#{createDate})
+    </insert>
+</mapper>

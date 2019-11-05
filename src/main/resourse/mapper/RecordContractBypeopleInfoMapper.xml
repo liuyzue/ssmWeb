@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.founder.mapper.RecordContractBypeopleInfoMapper">
+
+    <select id="findAll" resultType="com.founder.model.RecordContractByPeopleInfo">
+    select * from RECORD_CONTRACT_BYPEOPLE_INFO
+    </select>
+
+    <!-- 建档 人群分类查询 -->
+<!--    普通人群-->
+    <select id="findjdPnumbersPTRQ" resultType="int">
+    select count(*) from bi_person_info@db_phdbd B where FILING_FLAG='1' and MONTHS_BETWEEN(SYSDATE, B.BIRTHDAY)/12 >= 7
+    AND TO_CHAR(B.BIRTHDAY,'YYYY')>TO_CHAR(SYSDATE,'YYYY')-65
+    AND (MATERNAL_FLAG='1' or MATERNAL_FLAG is null)
+    AND NOT EXISTS( select person_id from DM_DISEASE_INFO@db_phdbd D where (D.HBP_FLAG=2  OR D.DI_FLAG=2) AND B.ID=D.PERSON_ID )
+   </select>
+<!--    老年人-->
+    <select id="findjdPnumbersLNR" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t where TO_CHAR(t.BIRTHDAY,'YYYY') &lt;= TO_CHAR(SYSDATE,'YYYY')-65
+     and t.filing_flag='1'
+   </select>
+<!--    儿童-->
+    <select id="findjdPnumbersET" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd B
+     where MONTHS_BETWEEN(SYSDATE, B.BIRTHDAY)/12 &lt; 7 AND MONTHS_BETWEEN(SYSDATE, B.BIRTHDAY)/12 &gt;= 0 and B.filing_flag='1'
+   </select>
+<!--    高血压-->
+    <select id="findjdPnumbersGXY" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd B
+     where EXISTS( select person_id from DM_DISEASE_INFO@db_phdbd D where D.HBP_FLAG=2 AND D.STATUS = 1 AND D.IS_DELETE = 0 AND B.ID=D.PERSON_ID )
+     and B.filing_flag='1'
+   </select>
+<!--    糖尿病-->
+    <select id="findjdPnumbersTNB" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd  B
+     where EXISTS( select person_id from DM_DISEASE_INFO@db_phdbd D where D.DI_FLAG=2 AND D.STATUS = 1 AND D.IS_DELETE = 0 AND B.ID=D.PERSON_ID )
+     and B.filing_flag='1'
+   </select>
+<!--    孕产妇-->
+    <select id="findjdPnumbersYCF" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t where MATERNAL_FLAG='2' and t.filing_flag='1'
+   </select>
+<!--    结核病-->
+    <select id="findjdPnumbersJHB" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd B
+     where EXISTS(select dh.person_id from DHS_DISEASE_HISTORY@db_phdbd dh where dh.DISEASE_CODE = '208' and dh.person_id = B.ID
+     and  EXISTS(select id from EHR_HEALTH_EVENT@db_msdb e where ehr_type = 'A00000002' and e.person_id = dh.person_id))
+     AND B.filing_flag='1'
+   </select>
+<!--    精神障碍患者-->
+    <select id="findjdPnumbersJSB" resultType="int">
+     select COUNT(*) from BI_PERSON_INFO@db_phdbd B
+     where
+     EXISTS(select dh.person_id from DHS_DISEASE_HISTORY@db_phdbd dh where dh.DISEASE_CODE = '207' and dh.person_id = B.ID
+     and EXISTS(select id from EHR_HEALTH_EVENT@db_msdb e where ehr_type = 'A00000002' and e.person_id = dh.person_id))
+     AND B.filing_flag='1'
+   </select>
+<!--    -->
+    <select id="findjdPnumbersPKRK" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t where POVERTY='2' and t.filing_flag='1'
+   </select>
+    <select id="findjdPnumbersCJR" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t where DISABLED='2' and t.filing_flag='1'
+   </select>
+    <select id="findjdPnumbersJSTK" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t where VERY_POVERTY='2' and t.filing_flag='1'
+   </select>
+
+    <!-- 签约 人群分类查询 -->
+    <select id="findqyPnumbersPTRQ" resultType="int">
+    select count(*) from bi_person_info@db_phdbd B
+    where FILING_FLAG='1'
+    and B.sign_flag=1
+    and MONTHS_BETWEEN(SYSDATE, B.BIRTHDAY)/12 >= 7
+    AND TO_CHAR(B.BIRTHDAY,'YYYY')>TO_CHAR(SYSDATE,'YYYY')-65
+    AND (MATERNAL_FLAG='1' or MATERNAL_FLAG is null)
+    AND NOT EXISTS( select person_id from DM_DISEASE_INFO@db_phdbd D where (D.HBP_FLAG=2  OR D.DI_FLAG=2) AND B.ID=D.PERSON_ID )
+   </select>
+    <select id="findqyPnumbersLNR" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t where TO_CHAR(t.BIRTHDAY,'YYYY') &lt;= TO_CHAR(SYSDATE,'YYYY')-65
+     and t.filing_flag='1'
+     AND t.sign_flag=1
+   </select>
+    <select id="findqyPnumbersET" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd B
+     where MONTHS_BETWEEN(SYSDATE, B.BIRTHDAY)/12 &lt; 7
+     AND MONTHS_BETWEEN(SYSDATE, B.BIRTHDAY)/12 &gt;= 0
+     and B.filing_flag='1'
+     AND B.sign_flag=1
+   </select>
+    <select id="findqyPnumbersGXY" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd B
+     where EXISTS( select person_id from DM_DISEASE_INFO@db_phdbd D where D.HBP_FLAG=2 AND D.STATUS = 1 AND D.IS_DELETE = 0 AND B.ID=D.PERSON_ID )
+     and B.filing_flag='1'
+     AND B.sign_flag=1
+   </select>
+    <select id="findqyPnumbersTNB" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd  B
+     where EXISTS( select person_id from DM_DISEASE_INFO@db_phdbd D where D.DI_FLAG=2 AND D.STATUS = 1 AND D.IS_DELETE = 0 AND B.ID=D.PERSON_ID )
+     and B.filing_flag='1'
+     AND B.sign_flag=1
+   </select>
+    <select id="findqyPnumbersYCF" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t
+     where MATERNAL_FLAG='2'
+     and t.filing_flag='1'
+     AND t.sign_flag=1
+   </select>
+    <select id="findqyPnumbersJHB" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd B
+     where EXISTS(select dh.person_id from DHS_DISEASE_HISTORY@db_phdbd dh where dh.DISEASE_CODE = '208' and dh.person_id = B.ID
+     and  EXISTS(select id from EHR_HEALTH_EVENT@db_msdb e where ehr_type = 'A00000002' and e.person_id = dh.person_id))
+     AND B.filing_flag='1'
+     AND B.sign_flag=1
+   </select>
+    <select id="findqyPnumbersJSB" resultType="int">
+     select COUNT(*) from BI_PERSON_INFO@db_phdbd B
+     where
+     EXISTS(select dh.person_id from DHS_DISEASE_HISTORY@db_phdbd dh where dh.DISEASE_CODE = '207' and dh.person_id = B.ID
+     and EXISTS(select id from EHR_HEALTH_EVENT@db_msdb e where ehr_type = 'A00000002' and e.person_id = dh.person_id))
+     AND B.filing_flag='1'
+     AND B.sign_flag=1
+   </select>
+    <select id="findqyPnumbersPKRK" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t
+     where POVERTY='2'
+     and t.filing_flag='1'
+     AND t.sign_flag=1
+   </select>
+    <select id="findqyPnumbersCJR" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t
+     where DISABLED='2'
+     and t.filing_flag='1'
+     AND t.sign_flag=1
+   </select>
+    <select id="findqyPnumbersJSTK" resultType="int">
+     select count(*) from BI_PERSON_INFO@db_phdbd t
+     where VERY_POVERTY='2'
+     and t.filing_flag='1'
+     and t.sign_flag=1
+   </select>
+
+    <update id="updateCard" parameterType="com.founder.model.RecordContractByPeopleInfo">
+        update RECORD_CONTRACT_BYPEOPLE_INFO
+        <set>
+            <if test="pnumbers != null">pnumbers=#{pnumbers},</if>
+            <if test="createDate !=null">createDate=#{createDate}</if>
+        </set>
+        <where>
+            PTYPENO=#{ptypecode} and flag=#{flag}
+        </where>
+    </update>
+</mapper>
